@@ -1,0 +1,122 @@
+{
+ "sender": "interface_1795544521",
+ "fluxos": {
+  "cadastro_agendamento": [
+   {
+    "paciente": "oi",
+    "bot": [
+     "Olá! Sou o assistente virtual da clínica. Posso ajudar você a agendar, cancelar ou reagendar consultas, tirar dúvidas sobre convênios, preços e horário de funcionamento. Como posso ajudar?",
+     "Seus dados só são tratados com a sua autorização. Para saber mais, digite \"política de privacidade\"."
+    ]
+   },
+   {
+    "paciente": "quero marcar uma consulta com cardiologista",
+    "bot": [
+     "Para agendar, preciso fazer seu cadastro rápido e registrar a sua autorização para o uso dos dados (LGPD). Você pode digitar \"cancelar\" a qualquer momento.",
+     "Consentimento (Lei Geral de Proteção de Dados, Lei 13.709/2018): para agendar consultas vou registrar seu nome, data de nascimento, telefone e convênio, além das consultas marcadas. São dados de saúde, considerados sensíveis, e serão usados somente para agendamento e atendimento administrativo da clínica, com acesso restrito à equipe. Você pode revogar essa autorização quando quiser, dizendo \"revogar consentimento\". Você autoriza? Responda SIM ou NÃO."
+    ]
+   },
+   {
+    "paciente": "sim",
+    "bot": [
+     "Você também autoriza o envio de lembretes de consulta por este chat e a confirmação de presença? É opcional: se responder NÃO, você agenda normalmente, mas não recebe lembretes. Responda SIM ou NÃO."
+    ]
+   },
+   {
+    "paciente": "sim",
+    "bot": [
+     "Qual é o seu nome completo?"
+    ]
+   },
+   {
+    "paciente": "Maria Exemplo da Silva",
+    "bot": [
+     "Qual é a sua data de nascimento? (dd/mm/aaaa)"
+    ]
+   },
+   {
+    "paciente": "10/05/1990",
+    "bot": [
+     "Qual é o seu telefone com DDD?"
+    ]
+   },
+   {
+    "paciente": "(45) 99999-1234",
+    "bot": [
+     "Você tem convênio? Informe o nome ou responda \"particular\"."
+    ]
+   },
+   {
+    "paciente": "particular",
+    "bot": [
+     "Cadastro e consentimento registrados. Vamos continuar com o seu agendamento.",
+     "Encontrei estas opções:\n1. Dr. Bruno Alves — quinta-feira, 03/12/2026, às 08:30\n2. Dr. Bruno Alves — quinta-feira, 03/12/2026, às 15:30\n3. Dr. Bruno Alves — quinta-feira, 03/12/2026, às 16:00",
+     "Qual desses horários você prefere? Responda com o número da opção (1, 2, 3...), o horário (ex.: 08:30) ou o nome do médico."
+    ]
+   },
+   {
+    "paciente": "1",
+    "bot": [
+     "Você escolheu: Dr. Bruno Alves — quinta-feira, 03/12/2026, às 08:30. Confirma o agendamento?"
+    ]
+   },
+   {
+    "paciente": "sim",
+    "bot": [
+     "Consulta agendada com sucesso!\nDr. Bruno Alves (Cardiologia)\nquinta-feira, 03/12/2026, às 08:30"
+    ]
+   }
+  ],
+  "convenio": [
+   {
+    "paciente": "vocês aceitam Unimed?",
+    "bot": [
+     "Sim, atendemos pelo convênio Unimed."
+    ]
+   }
+  ],
+  "consulta": [
+   {
+    "paciente": "qual data eu agendei?",
+    "bot": [
+     "Sua consulta está marcada com Dr. Bruno Alves (Cardiologia) para quinta-feira, 03/12/2026, às 08:30."
+    ]
+   }
+  ],
+  "remarcacao": [
+   {
+    "paciente": "quero remarcar minha consulta",
+    "bot": [
+     "Encontrei estas opções:\n1. Dr. Bruno Alves — quinta-feira, 03/12/2026, às 15:30\n2. Dr. Bruno Alves — quinta-feira, 03/12/2026, às 16:00\n3. Dr. Bruno Alves — quinta-feira, 03/12/2026, às 16:30",
+     "Qual desses horários você prefere? Responda com o número da opção (1, 2, 3...), o horário (ex.: 08:30) ou o nome do médico."
+    ]
+   },
+   {
+    "paciente": "2",
+    "bot": [
+     "Você escolheu: Dr. Bruno Alves — quinta-feira, 03/12/2026, às 16:00. Confirma o agendamento?"
+    ]
+   },
+   {
+    "paciente": "sim",
+    "bot": [
+     "Sua consulta foi reagendada com sucesso!\nDr. Bruno Alves (Cardiologia)\nquinta-feira, 03/12/2026, às 16:00"
+    ]
+   }
+  ],
+  "cancelamento": [
+   {
+    "paciente": "quero cancelar minha consulta",
+    "bot": [
+     "Você quer cancelar a consulta com Dr. Bruno Alves (Cardiologia) em quinta-feira, 03/12/2026, às 16:00? Responda sim ou não."
+    ]
+   },
+   {
+    "paciente": "sim",
+    "bot": [
+     "Sua consulta foi cancelada com sucesso."
+    ]
+   }
+  ]
+ }
+}

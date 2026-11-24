@@ -287,7 +287,7 @@ Na área da saúde, os chatbots e demais soluções de automação assistida por
 Para esse segmento, interessa investigar soluções que funcionem com recursos limitados: de baixo custo, executáveis localmente e capazes de se conectar aos processos internos da clínica, como o agendamento e o cadastro de pacientes. Essa necessidade constitui o problema de pesquisa deste trabalho.
 
 \subsection{Problema}
-Em que medida um protótipo de chatbot baseado em Processamento de Linguagem Natural, executado localmente com Rasa Open Source e BERTimbau, consegue automatizar o agendamento, o cancelamento e o reagendamento de consultas em clínicas de pequeno e médio porte (cenário de aplicação: Foz do Iguaçu e região), em ambiente simulado, com desempenho de compreensão de linguagem, taxa de conclusão de tarefas e usabilidade aceitáveis e em aderência aos requisitos da LGPD? A redução do tempo de espera e do custo operacional em relação aos processos manuais, embora seja a motivação do trabalho, não é medida nesta pesquisa e é indicada como trabalho futuro (seção~\ref{sec:trabalhos-futuros}).
+Em que medida um protótipo de chatbot baseado em Processamento de Linguagem Natural, executado localmente com Rasa Open Source e BERTimbau, consegue automatizar o agendamento, o cancelamento e o reagendamento de consultas em clínicas de pequeno e médio porte (cenário de aplicação: Foz do Iguaçu e região), em ambiente simulado, com desempenho de compreensão de linguagem, taxa de aprovação nos cenários de teste e usabilidade aceitáveis e em aderência aos requisitos da LGPD? A redução do tempo de espera e do custo operacional em relação aos processos manuais, embora seja a motivação do trabalho, não é medida nesta pesquisa e é indicada como trabalho futuro (seção~\ref{sec:trabalhos-futuros}).
 
 \subsection{Justificativa}
 O agendamento de consultas médicas é a base para que o paciente seja atendido por um médico, e sua gestão ineficiente compromete diretamente a experiência do usuário e a operação da clínica. Do ponto de vista prático, a evolução da tecnologia e a expansão da Tecnologia da Informação nas áreas comerciais, hoje entendida como investimento estratégico, evidenciam a necessidade de automatizar o atendimento ao cliente, considerando que muitas clínicas lidam com grande volume de ligações, mensagens e cancelamentos de consultas, gerando sobrecarga tanto para a clínica quanto para o paciente (NEWBOULD et al., 2019).
@@ -1022,6 +1022,12 @@ O banco de dados local é utilizado para representar a agenda médica simulada e
 
 O protótipo é implementado em Python 3.8, com a versão 3.6.20 do Rasa Open Source e a versão 3.6.2 do Rasa SDK. A lógica de negócio é executada em ações customizadas (\textit{custom actions}) servidas por um servidor de ações independente do servidor de diálogo. O banco de dados local é o SQLite, acessado diretamente pelas ações. A conversa ocorre pelo Telegram, por meio da API de bots, e, durante o desenvolvimento, o servidor local é exposto ao Telegram por um túnel HTTPS (ngrok). O canal de entrada nativo do Rasa para o Telegram apresentou falha de execução no ambiente utilizado (\texttt{RuntimeError: Event loop is closed}, originada na biblioteca \texttt{aiogram}); por isso foi desenvolvido um canal customizado, que recebe as mensagens pelo \textit{webhook} e responde diretamente pela API HTTP do Telegram. O envio dos lembretes é realizado por um serviço independente, escrito em Python, que consulta periodicamente o banco de dados.
 
+\textbf{Recursos de hardware.} O desenvolvimento, o treinamento do modelo e todos os testes foram realizados em um único notebook, com processador AMD Ryzen 5 7235HS, cerca de 12 GB de memória e sistema operacional Windows 11, sem uso de placa de vídeo dedicada nem de servidores externos, o que é coerente com a proposta de execução local em clínicas de pequeno porte. Para a interação pelo Telegram, foi usado o aplicativo em um telefone celular e na versão web.
+
+\textbf{Recursos de software.} Além das tecnologias citadas, foram utilizados o editor Visual Studio Code, para o código e o texto; o Git, para o controle de versões; a distribuição TeX Live, para a redação do trabalho em \LaTeX; e o Google Forms, para a aplicação do questionário SUS. As ferramentas empregadas nos testes estão listadas na Tabela~\ref{tab:ferramentas}.
+
+\textbf{Ferramentas de prototipação.} Por se tratar de uma interface conversacional, executada dentro do aplicativo de mensagens, não foram usadas ferramentas de prototipação de telas, como o Figma. Os fluxos de conversa foram projetados como diagramas de atividades (seção~\ref{sec:modelagem-uml}) e implementados diretamente nas regras e nos formulários do Rasa, o que permitiu testá-los no próprio canal desde as primeiras versões; os diagramas do trabalho foram elaborados em TikZ.
+
 A utilização dessas tecnologias está diretamente relacionada aos requisitos de execução local, processamento em português brasileiro, automação dos processos administrativos e simulação da integração com sistemas de agendamento.
 
 \subsubsection{Arquitetura do sistema}
@@ -1226,6 +1232,7 @@ Entre as principais funcionalidades do sistema, destacam-se: (a) o agendamento d
 O sistema foi concebido para que o processamento da linguagem natural, o gerenciamento do diálogo, a lógica de negócio e o armazenamento dos dados ocorram em ambiente local (\textit{on-premise}), sem o uso de serviços proprietários de processamento de linguagem, requisito que, conforme discutido na seção 2.4.3 deste trabalho, fundamentou a escolha do Rasa Open Source em detrimento de soluções como o Dialogflow, e que decorre das exigências de conformidade com a LGPD no tratamento de dados sensíveis de saúde (art. 5º, II, da Lei nº 13.709/2018). Ressalta-se, contudo, que no protótipo a interface com o paciente é o Telegram, plataforma de mensageria externa: as mensagens trocadas trafegam pela infraestrutura do Telegram e, durante o desenvolvimento, por um túnel HTTPS de terceiros, de modo que o requisito de não envio de dados a servidores externos é atendido para o núcleo do sistema, mas não para o canal de comunicação. Essa limitação é discutida na seção~\ref{sec:limitacoes}. Dessa forma, o chatbot atua não apenas como uma interface de atendimento, mas como um componente de automação de processos de negócio (\textit{Business Process Management}), na medida em que integra a recepção da solicitação, o consentimento e o cadastro do paciente, a verificação de disponibilidade, a confirmação do agendamento, o envio de lembretes e o registro da consulta em um único fluxo automatizado (WESKE, 2019).
 
 \subsection{Requisitos Funcionais e Não Funcionais}
+\label{sec:requisitos}
 
 A definição dos requisitos seguiu a distinção clássica proposta por Sommerville (2016), segundo a qual requisitos funcionais descrevem os serviços que o sistema deve fornecer, a forma como reage a entradas específicas e como se comporta em determinadas situações, enquanto requisitos não funcionais estabelecem restrições sobre os serviços ou funções oferecidos, relacionadas a atributos como desempenho, segurança, usabilidade e conformidade regulatória. Os requisitos foram derivados dos objetivos específicos definidos na seção 1.3.2, do referencial teórico apresentado no capítulo 2 e do cenário de aplicação descrito na seção~\ref{sec:procedimentos}.
 
@@ -1297,7 +1304,47 @@ RNF10 & O código-fonte e os componentes de terceiros utilizados devem ser prima
 \footnotesize{Fonte: Elaborado pelo autor (2026), com base em Sommerville (2016) e Brooke (1996).}
 
 
+\subsection{Regras de Negócio}
+\label{sec:regras-negocio}
+
+As regras de negócio definem as restrições que o protótipo aplica em todos os fluxos, independentemente da forma como o paciente se expressa. Elas foram implementadas no servidor de ações e no banco de dados (seção~\ref{sec:implementacao}) e são apresentadas na Tabela~\ref{tab:regras-negocio}, com os requisitos funcionais a que se relacionam.
+
+\begin{xltabular}{\textwidth}{p{1.1cm}Yp{2.1cm}}
+\caption{Regras de negócio do protótipo}
+\label{tab:regras-negocio}\\
+\hline
+\textbf{Regra} & \textbf{Descrição} & \textbf{Requisitos} \\
+\hline
+\endfirsthead
+\multicolumn{3}{l}{\small Tabela~\thetable\ (continuação)} \\
+\hline
+\textbf{Regra} & \textbf{Descrição} & \textbf{Requisitos} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+RN01 & Nenhum dado pessoal é coletado antes do consentimento: o pedido de agendamento de um paciente sem cadastro inicia o termo de consentimento, e a recusa encerra o atendimento sem gravar dados. & RF10, RF11 \\
+RN02 & O consentimento é registrado separadamente por finalidade (agendamento e lembretes); o paciente pode aceitar o agendamento e recusar os lembretes. & RF11 \\
+RN03 & Para agendar, a especialidade é obrigatória; se a mensagem não a informar, o chatbot pergunta antes de oferecer horários. & RF02, RF03 \\
+RN04 & São oferecidos até três horários livres e futuros por vez, sem repetir os já mostrados na mesma conversa. & RF03 \\
+RN05 & Um horário só pode ter uma consulta ativa; a reserva só ocorre se o horário ainda estiver livre no momento da confirmação. & RF04 \\
+RN06 & Nenhum agendamento, reagendamento ou cancelamento é gravado sem confirmação explícita do paciente; a confirmação do cancelamento vale por cinco minutos. & RF04--RF06 \\
+RN07 & Cancelar não apaga a consulta: ela é mantida como histórico, o horário volta a ficar disponível e os lembretes pendentes são anulados. & RF05 \\
+RN08 & No reagendamento, o novo horário é reservado antes de o antigo ser liberado, e a consulta mantém o mesmo registro. & RF06 \\
+RN09 & Se um paciente que já tem consulta futura pede um novo horário, o chatbot pergunta se ele deseja trocar a consulta existente ou marcar outra. & RF04, RF06 \\
+RN10 & Com duas ou mais consultas futuras, o paciente escolhe qual deseja cancelar ou remarcar. & RF05, RF06 \\
+RN11 & O lembrete é programado para 24 horas antes da consulta, somente com consentimento para lembretes, e reenviado se, faltando até três horas, o primeiro tiver sido enviado há pelo menos duas horas sem confirmação. & RF08, RF09 \\
+RN12 & Mensagens não compreendidas com confiança suficiente são encaminhadas ao atendimento humano; pedidos de emergência recebem orientação para acionar o SAMU, sem iniciar agendamento. & RF12 \\
+\end{xltabular}
+\vspace{0.3cm}
+
+\footnotesize{Fonte: Elaborado pelo autor, 2026.}
+
+\normalsize
 \subsection{Modelagem UML}
+\label{sec:modelagem-uml}
 
 A modelagem apresentada nesta seção corresponde aos artefatos UML (\textit{Unified Modeling Language}) do sistema, elaborados conforme a especificação da Object Management Group (OMG, 2017) e as diretrizes de modelagem orientada a objetos propostas por Larman (2004). Optou-se pela UML por se tratar da notação predominante para a representação de requisitos funcionais e da estrutura de sistemas orientados a objetos, permitindo comunicar decisões de projeto de forma independente da linguagem de implementação. Os diagramas representam o protótipo implementado; as diferenças em relação à arquitetura-alvo, em especial na camada de integração com um sistema de agendamento real, são indicadas na Tabela~\ref{tab:fhir-correspondencia}.
 
@@ -1791,6 +1838,124 @@ O dicionário de dados descreve, para cada tabela do modelo lógico, o nome, o t
     {\raggedright\footnotesize Fonte: Elaborado pelo autor, 2026.\par}
 \end{table}
 
+\subsection{Prototipação da Interface}
+\label{sec:interface}
+
+A interface do protótipo é a própria conversa no Telegram, e não uma tela desenvolvida para o sistema. Por isso, a prototipação consistiu em projetar o fluxo das mensagens: os diagramas de atividades (seção~\ref{sec:modelagem-uml}) definiram a ordem das perguntas e as decisões, e o texto de cada mensagem foi escrito no domínio do Rasa e nas ações customizadas. Algumas decisões de interface valem para todos os fluxos: o consentimento é apresentado antes de qualquer pergunta sobre dados pessoais; as opções de horário são numeradas, e o paciente pode responder pelo número, pelo horário ou pelo nome do médico; nenhum registro é gravado sem uma pergunta de confirmação explícita; e o paciente pode digitar ``cancelar'' para interromper o cadastro a qualquer momento.
+
+As Figuras~\ref{fig:conversa-cadastro}, \ref{fig:conversa-agendamento} e~\ref{fig:conversa-remarcacao} reproduzem uma conversa realizada com o protótipo em funcionamento, por um paciente fictício criado pelo autor no banco de dados de teste. As mensagens do chatbot são transcritas sem alteração; apenas a aparência das telas foi redesenhada para impressão.
+
+\begin{figure}[H]
+\centering
+\caption{Tela de conversa: saudação, consentimento e cadastro}
+\label{fig:conversa-cadastro}
+\includegraphics[height=0.78\textheight,keepaspectratio]{fig_conversa_cadastro.png}\par
+\vspace{0.2cm}
+\footnotesize{Fonte: Elaborado pelo autor, 2026, a partir de conversa com o protótipo (paciente fictício, banco de dados de teste).}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\caption{Tela de conversa: escolha do horário, confirmação, convênio e consulta do agendamento}
+\label{fig:conversa-agendamento}
+\includegraphics[width=0.75\textwidth]{fig_conversa_agendamento.png}\par
+\vspace{0.2cm}
+\footnotesize{Fonte: Elaborado pelo autor, 2026, a partir de conversa com o protótipo (paciente fictício, banco de dados de teste).}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\caption{Tela de conversa: reagendamento e cancelamento}
+\label{fig:conversa-remarcacao}
+\includegraphics[width=0.75\textwidth]{fig_conversa_remarcacao.png}\par
+\vspace{0.2cm}
+\footnotesize{Fonte: Elaborado pelo autor, 2026, a partir de conversa com o protótipo (paciente fictício, banco de dados de teste).}
+\end{figure}
+
+\subsection{Implementação do Sistema}
+\label{sec:implementacao}
+
+Esta seção descreve como o projeto apresentado foi implementado: a organização dos módulos, as funcionalidades implementadas e a integração entre os componentes. O código-fonte, os dados de teste e os resultados de cada execução estão disponíveis no repositório público do trabalho (\url{https://github.com/Jiibara/TCC}).
+
+\subsubsection{Estrutura dos módulos}
+
+O protótipo segue a organização de um projeto Rasa, com o código próprio concentrado no servidor de ações e no canal do Telegram. A Tabela~\ref{tab:modulos} descreve os principais arquivos.
+
+\begin{xltabular}{\textwidth}{p{5.2cm}Y}
+\caption{Estrutura dos módulos do protótipo}
+\label{tab:modulos}\\
+\hline
+\textbf{Arquivo} & \textbf{Função} \\
+\hline
+\endfirsthead
+\multicolumn{2}{l}{\small Tabela~\thetable\ (continuação)} \\
+\hline
+\textbf{Arquivo} & \textbf{Função} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+\texttt{rasa/config.yml} & \textit{Pipeline} de NLU (BERTimbau e \texttt{DIETClassifier}), limiares de \textit{fallback} e política de diálogo (\texttt{RulePolicy}) \\
+\texttt{rasa/data/nlu.yml} & Corpus de treinamento: 703 frases em 21 intenções, com as entidades anotadas \\
+\texttt{rasa/data/rules.yml} & Regras que associam cada intenção, no contexto da conversa, à ação a executar \\
+\texttt{rasa/domain.yml} & Intenções, entidades, \textit{slots} (memória da conversa), formulários e respostas fixas \\
+\texttt{rasa/actions/actions.py} & Servidor de ações: regras de negócio, consentimento, agendamento, cancelamento, reagendamento, lembretes e acesso ao banco \\
+\texttt{rasa/telegram\_custom.py} & Canal do Telegram: recebe as mensagens pelo \textit{webhook}, confirma o recebimento e devolve as respostas \\
+\texttt{rasa/enviar\_lembretes.py} & Serviço de lembretes, executado a cada minuto, independente da conversa \\
+\texttt{rasa/endpoints.yml} e \texttt{credentials.yml} & Endereço do servidor de ações e configuração dos canais (o token do bot fica fora do repositório) \\
+\texttt{schema.sql} e \texttt{seed\_horarios.py} & Criação do banco SQLite e geração dos horários livres da agenda simulada \\
+\texttt{cenarios/}, \texttt{ablacao/}, \texttt{resultados/} & Testes funcionais automatizados, experimento de ablação e medições, com os resultados de cada execução \\
+\end{xltabular}
+\vspace{0.3cm}
+
+\footnotesize{Fonte: Elaborado pelo autor, 2026.}
+
+\normalsize
+\subsubsection{Funcionalidades implementadas}
+
+Todos os requisitos funcionais da seção~\ref{sec:requisitos} foram implementados. A Tabela~\ref{tab:funcionalidades} relaciona cada requisito ao componente que o implementa e aos cenários de teste que o verificam (Tabela~\ref{tab:funcionais} e Apêndice~\ref{ap:cenarios}).
+
+\begin{xltabular}{\textwidth}{p{1.9cm}Yp{2.2cm}}
+\caption{Requisitos funcionais, componentes que os implementam e cenários de teste}
+\label{tab:funcionalidades}\\
+\hline
+\textbf{Requisito} & \textbf{Implementação} & \textbf{Cenários} \\
+\hline
+\endfirsthead
+\multicolumn{3}{l}{\small Tabela~\thetable\ (continuação)} \\
+\hline
+\textbf{Requisito} & \textbf{Implementação} & \textbf{Cenários} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+RF01, RF02 & \textit{Pipeline} de NLU (\texttt{config.yml}, \texttt{nlu.yml}) & 1, 2, 16 \\
+RF03 & \texttt{ActionConsultarDisponibilidade} & 1, 22 \\
+RF04 & \texttt{ActionSelecionarHorario}, \texttt{ActionConfirmarAgendamento} & 1, 18, 19, 21 \\
+RF05 & \texttt{ActionPedirConfirmacaoCancelamento}, \texttt{executar\_cancelamento} & 3, 19, 23, 25 \\
+RF06 & \texttt{ActionConfirmarAgendamento} (reagendamento), \texttt{ActionSelecionarConsulta} & 4, 20, 26 \\
+RF07 & \texttt{ActionInformarConvenio} & 5 \\
+RF08, RF09 & \texttt{registrar\_lembrete}, \texttt{enviar\_lembretes.py}, \texttt{ActionConfirmarPresenca} & 6, 7 \\
+RF10 & \texttt{cadastro\_form}, \texttt{ActionFinalizarCadastro}, \texttt{ActionAtualizarCadastro} & 8, 11, 12, 13 \\
+RF11 & \texttt{ActionVerificarCadastro}, tabela \texttt{consentimento\_lgpd} & 8, 9, 10 \\
+RF12 & \texttt{FallbackClassifier}, \texttt{ActionEncaminharAtendimentoHumano} & 16 \\
+RF13 & \texttt{ActionLogInteracao}, tabela \texttt{log\_interacao} & 24 \\
+RF14 & \texttt{ActionRevogarConsentimento} & 14 \\
+RF15 & Resposta de política de privacidade (\texttt{domain.yml} e \texttt{rules.yml}) & 15 \\
+\end{xltabular}
+\vspace{0.3cm}
+
+\footnotesize{Fonte: Elaborado pelo autor, 2026.}
+
+\normalsize
+\subsubsection{Integração entre componentes}
+
+Os quatro processos do protótipo se comunicam da seguinte forma. O Telegram envia cada mensagem, por HTTPS, ao \textit{webhook} do canal customizado, que confirma o recebimento imediatamente e repassa a mensagem ao servidor do Rasa. O servidor do Rasa aplica o \textit{pipeline} de NLU, identifica a intenção e as entidades, e a \texttt{RulePolicy} escolhe a próxima ação. Quando a ação é customizada, o servidor do Rasa a solicita ao servidor de ações por HTTP, em endereço local (\texttt{endpoints.yml}), enviando o estado da conversa; o servidor de ações executa a regra de negócio, lê ou grava no banco SQLite e devolve as mensagens e as atualizações de \textit{slots}. As respostas voltam ao paciente pela API do Telegram. O serviço de lembretes não participa da conversa: a cada minuto, consulta o banco, envia pela API do Telegram os lembretes devidos e registra o envio, e a resposta do paciente ao lembrete volta pelo mesmo caminho das demais mensagens. Essa separação permite reiniciar ou alterar um componente sem afetar os demais, conforme o RNF07.
+
 \newpage
 
 % ==========================================
@@ -2224,7 +2389,7 @@ Entre os pontos fortes observados, destacam-se:
 \section{Considerações Finais}
 \label{cap:conclusao}
 
-Este trabalho investigou em que medida um protótipo de chatbot baseado em Processamento de Linguagem Natural, executado localmente com Rasa Open Source e BERTimbau, consegue automatizar o agendamento, o cancelamento e o reagendamento de consultas em ambiente simulado, com desempenho de compreensão de linguagem, taxa de conclusão de tarefas e usabilidade aceitáveis e em aderência à LGPD. Em resposta, o protótipo atingiu, na validação cruzada repetida, F1-score macro de 0,85 e acurácia de 86,3\% (0,86 e 87,9\% no conjunto de teste), concluiu com sucesso as 74 execuções dos 26 cenários de teste funcional, respondeu em 0,31 s em média e obteve pontuação SUS média de 87,5 com cinco avaliadores, atendendo aos critérios de compreensão de linguagem, de conclusão de tarefas, de tempo de resposta e de usabilidade. Os resultados demonstram a viabilidade técnica da abordagem em ambiente simulado; não permitem, contudo, afirmar redução de tempo de espera ou de custo operacional em clínicas reais, pois não houve comparação com o processo manual.
+Este trabalho investigou em que medida um protótipo de chatbot baseado em Processamento de Linguagem Natural, executado localmente com Rasa Open Source e BERTimbau, consegue automatizar o agendamento, o cancelamento e o reagendamento de consultas em ambiente simulado, com desempenho de compreensão de linguagem, taxa de aprovação nos cenários de teste e usabilidade aceitáveis e em aderência à LGPD. Em resposta, o protótipo atingiu, na validação cruzada repetida, F1-score macro de 0,85 e acurácia de 86,3\% (0,86 e 87,9\% no conjunto de teste), concluiu com sucesso as 74 execuções dos 26 cenários de teste funcional, respondeu em 0,31 s em média e obteve pontuação SUS média de 87,5 com cinco avaliadores, atendendo aos critérios de compreensão de linguagem, de conclusão de tarefas, de tempo de resposta e de usabilidade. Os resultados demonstram a viabilidade técnica da abordagem em ambiente simulado; não permitem, contudo, afirmar redução de tempo de espera ou de custo operacional em clínicas reais, pois não houve comparação com o processo manual.
 
 O primeiro objetivo específico, analisar os processos administrativos passíveis de automação, foi atendido por meio de levantamento bibliográfico e documental (Seções~\ref{cap:referencial} e~\ref{cap:metodologia}), que resultou na seleção do agendamento, do cancelamento, do reagendamento, dos lembretes, da consulta de convênios e do cadastro com consentimento. A análise não envolveu validação com profissionais de uma clínica. O segundo, projetar a arquitetura, foi atendido na Seção~\ref{cap:projeto}, com requisitos, modelagem UML, modelagem de banco de dados e requisitos de conformidade com a LGPD. O terceiro, implementar o protótipo, resultou em uma arquitetura de quatro processos (servidor do Rasa, servidor de ações, canal de mensageria e serviço de lembretes), descrita na seção~\ref{sec:arquitetura}, com \textit{pipeline} de NLU baseado em \texttt{DIETClassifier} e BERTimbau (Apêndice~\ref{ap:config}), cuja contribuição foi verificada pela ablação: com o modelo, a acurácia média na validação cruzada passou de 83,4\% para 86,3\%, diferença significativa pelo teste $t$ corrigido (p = 0,035), e o F1-score macro médio, de 0,822 para 0,854, na mesma direção, mas sem significância estatística após a correção (p = 0,076). O quarto, avaliar desempenho, usabilidade e eficiência, foi atendido (Seção~\ref{cap:resultados}): o NLU atingiu as metas de F1-score e de acurácia, os 26 cenários funcionais foram concluídos, o tempo médio de resposta foi de 0,31 s e a usabilidade foi classificada como excelente pelo SUS, ainda que com amostra pequena.
 

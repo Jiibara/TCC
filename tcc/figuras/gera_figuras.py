@@ -19,6 +19,9 @@ SAIDA = {
     "classes": "DiagramaClasses (2).png",
     "classificador_intencoes": "fig_classificador_intencoes.png",
     "ner_exemplo": "fig_ner_exemplo.png",
+    "conversa_cadastro": "fig_conversa_cadastro.png",
+    "conversa_agendamento": "fig_conversa_agendamento.png",
+    "conversa_remarcacao": "fig_conversa_remarcacao.png",
 }
 
 nomes = sys.argv[1:] or list(SAIDA)

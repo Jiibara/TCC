@@ -1,0 +1,48 @@
+\documentclass[border=6pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{varwidth}
+\usepackage{tikz}
+\usetikzlibrary{calc,backgrounds}
+\renewcommand{\familydefault}{\sfdefault}
+\tikzset{
+  bot/.style={rectangle, rounded corners=6pt, fill=white, draw=black!25, inner sep=5pt, align=left},
+  pac/.style={rectangle, rounded corners=6pt, fill=green!12, draw=green!45!black!40, inner sep=5pt, align=left},
+}
+\begin{document}
+\small\hyphenpenalty=10000\exhyphenpenalty=10000
+\begin{tikzpicture}
+\def\W{12}
+\node[anchor=north west, fill=blue!55!black, text=white, minimum width=\W cm, minimum height=0.9cm,
+      inner sep=0pt, font=\bfseries] (topo) at (0,0) {\hspace{8pt}Clínica — assistente virtual (Telegram)};
+\coordinate (dir) at ({\W-0.3},0);
+\coordinate (esq) at (0.3,0);
+
+\path (topo.south) ++(0,-3.5mm) coordinate (c1);
+\node[pac, anchor=north east] (m1) at (dir |- c1) {\begin{varwidth}{7.5cm}quero remarcar minha consulta\end{varwidth}};
+\path (m1.south) ++(0,-3.5mm) coordinate (c2);
+\node[bot, anchor=north west] (m2) at (esq |- c2) {\begin{varwidth}{9cm}Encontrei estas opções:\\1. Dr. Bruno Alves — quinta-feira, 03/12/2026, às 15:30\\2. Dr. Bruno Alves — quinta-feira, 03/12/2026, às 16:00\\3. Dr. Bruno Alves — quinta-feira, 03/12/2026, às 16:30\end{varwidth}};
+\path (m2.south) ++(0,-3.5mm) coordinate (c3);
+\node[bot, anchor=north west] (m3) at (esq |- c3) {\begin{varwidth}{9cm}Qual desses horários você prefere? Responda com o número da opção (1, 2, 3...), o horário (ex.: 08:30) ou o nome do médico.\end{varwidth}};
+\path (m3.south) ++(0,-3.5mm) coordinate (c4);
+\node[pac, anchor=north east] (m4) at (dir |- c4) {\begin{varwidth}{7.5cm}2\end{varwidth}};
+\path (m4.south) ++(0,-3.5mm) coordinate (c5);
+\node[bot, anchor=north west] (m5) at (esq |- c5) {\begin{varwidth}{9cm}Você escolheu: Dr. Bruno Alves — quinta-feira, 03/12/2026, às 16:00. Confirma o agendamento?\end{varwidth}};
+\path (m5.south) ++(0,-3.5mm) coordinate (c6);
+\node[pac, anchor=north east] (m6) at (dir |- c6) {\begin{varwidth}{7.5cm}sim\end{varwidth}};
+\path (m6.south) ++(0,-3.5mm) coordinate (c7);
+\node[bot, anchor=north west] (m7) at (esq |- c7) {\begin{varwidth}{9cm}Sua consulta foi reagendada com sucesso!\\Dr. Bruno Alves (Cardiologia)\\quinta-feira, 03/12/2026, às 16:00\end{varwidth}};
+\path (m7.south) ++(0,-3.5mm) coordinate (c8);
+\node[pac, anchor=north east] (m8) at (dir |- c8) {\begin{varwidth}{7.5cm}quero cancelar minha consulta\end{varwidth}};
+\path (m8.south) ++(0,-3.5mm) coordinate (c9);
+\node[bot, anchor=north west] (m9) at (esq |- c9) {\begin{varwidth}{9cm}Você quer cancelar a consulta com Dr. Bruno Alves (Cardiologia) em quinta-feira, 03/12/2026, às 16:00? Responda sim ou não.\end{varwidth}};
+\path (m9.south) ++(0,-3.5mm) coordinate (c10);
+\node[pac, anchor=north east] (m10) at (dir |- c10) {\begin{varwidth}{7.5cm}sim\end{varwidth}};
+\path (m10.south) ++(0,-3.5mm) coordinate (c11);
+\node[bot, anchor=north west] (m11) at (esq |- c11) {\begin{varwidth}{9cm}Sua consulta foi cancelada com sucesso.\end{varwidth}};
+\path (m11.south) ++(0,-4mm) coordinate (fim);
+\begin{scope}[on background layer]
+  \fill[blue!4] (topo.north west) rectangle (topo.east |- fim);
+\end{scope}
+\end{tikzpicture}
+\end{document}
