@@ -7,7 +7,7 @@ consentimento (sender "latencia"), repetindo um ciclo realista de conversa:
 saudacao, convenio, agendamento (busca, escolha, confirmacao), consulta do
 agendamento e cancelamento.
 
-Pre-requisitos (ver CLAUDE.md, item E2):
+Pre-requisitos:
   - rasa\\credentials.yml com a linha `rest:`
   - banco de teste: copia do clinica.db com o paciente "latencia" cadastrado
   - rasa run actions  com  set CLINICA_DB=<caminho do banco de teste>
