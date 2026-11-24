@@ -79,6 +79,9 @@
 \setlength{\tabcolsep}{4pt}
 
 \begin{document}
+\pagestyle{empty}% pre-textuais: contadas, sem numero (ABNT)
+\let\estiloOriginal\thispagestyle
+\renewcommand{\thispagestyle}[1]{\estiloOriginal{empty}}% listas e sumario tambem sem numero
 
 % ==========================================
 % CAPA
@@ -116,6 +119,7 @@
         \textbf{2026}
     \end{center}
 \end{titlepage}
+\setcounter{page}{2}% a folha de rosto conta como pagina 1
 
 % ==========================================
 % FOLHA DE APROVAÇÃO (confirme o modelo exigido pela coordenação)
@@ -179,7 +183,6 @@
 % LISTA DE ABREVIATURAS
 % ==========================================
 \newpage
-\setcounter{page}{1}
 \begin{center}
     \textbf{LISTA DE ABREVIATURAS E SIGLAS}
 \end{center}
@@ -272,6 +275,8 @@
 \tableofcontents
 
 \newpage
+\let\thispagestyle\estiloOriginal
+\pagestyle{plain}% numero visivel a partir da Introducao
 \onehalfspacing
 
 % ==========================================
@@ -2669,8 +2674,9 @@ ZETETIC. \textbf{SQLCipher}: full database encryption for SQLite. [S. l.], 2026.
 % ==========================================
 \newpage
 \appendix
+\newcommand{\apendice}[1]{\refstepcounter{section}\section*{APÊNDICE \thesection\ -- #1}\addcontentsline{toc}{section}{APÊNDICE \thesection\ -- #1}}
 
-\section{Script DDL do banco de dados}
+\apendice{Script DDL do banco de dados}
 \label{ap:ddl}
 
 O script abaixo cria o esquema físico do protótipo (SQLite 3), incluindo o índice único parcial que impede o duplo agendamento ativo de um mesmo horário.
@@ -2678,19 +2684,19 @@ O script abaixo cria o esquema físico do protótipo (SQLite 3), incluindo o ín
 \lstinputlisting[language=SQL]{schema.sql}
 
 \newpage
-\section{Configuração do \textit{pipeline} de NLU e das políticas de diálogo}
+\apendice{Configuração do \textit{pipeline} de NLU e das políticas de diálogo}
 \label{ap:config}
 
 \lstinputlisting{config.yml}
 
 \newpage
-\section{Distribuição do corpus de treinamento}
+\apendice{Distribuição do corpus de treinamento}
 \label{ap:corpus}
 
 \input{tabela_corpus}
 
 \newpage
-\section{Roteiro dos cenários de teste funcional}
+\apendice{Roteiro dos cenários de teste funcional}
 \label{ap:cenarios}
 
 Os cenários automatizados estão no \textit{script} \texttt{cenarios/cenarios.py}, que envia as mensagens ao canal REST do Rasa (o cenário 24, ao \textit{webhook} do canal do Telegram) e, após cada passo, confere a resposta do chatbot e o banco de dados de teste. Cada execução usa um paciente novo. Salvo indicação em contrário, o paciente é cadastrado antes do cenário, com consentimento para agendamento e lembretes, e ``agendamento'' designa o pedido ``quero marcar uma consulta com cardiologista'', a escolha da opção 1 e a confirmação ``sim''. Os cenários 6 e 7 foram executados manualmente pelo Telegram. Os resultados de cada execução estão em \texttt{cenarios/resultados.csv} (primeiro ciclo), \texttt{cenarios/resultados\_ciclo2.csv} (segundo ciclo) e \texttt{cenarios/resultados\_ciclo3.csv} (terceiro ciclo, com os 26 cenários); o cenário 20, com a frase de entrada atual, foi executado novamente, com sucesso nas três repetições (\texttt{cenarios/resultados\_ciclo3\_c20\_frase\_nova.csv}).
@@ -2745,7 +2751,7 @@ Os cenários automatizados estão no \textit{script} \texttt{cenarios/cenarios.p
 \footnotesize{Fonte: Elaborado pelo autor, 2026.}
 
 \newpage
-\section{Questionário SUS e termo de consentimento}
+\apendice{Questionário SUS e termo de consentimento}
 \label{ap:sus}
 
 \subsection*{Questionário \textit{System Usability Scale} (SUS)}
