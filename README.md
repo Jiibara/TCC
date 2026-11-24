@@ -11,10 +11,13 @@ O núcleo roda localmente: **Rasa Open Source 3.6.20** com o modelo **BERTimbau*
 compreensão de linguagem, ações em Python, banco **SQLite** e o **Telegram** como canal. O cadastro
 do paciente só ocorre após o consentimento por finalidade (LGPD).
 
+O texto completo do trabalho está em [`TCC_Adnan_Jibara.pdf`](TCC_Adnan_Jibara.pdf).
+
 ## Estrutura
 
 | Pasta / arquivo | Conteúdo |
 |---|---|
+| `TCC_Adnan_Jibara.pdf` | Texto completo do TCC, com apêndices |
 | `rasa/` | Projeto Rasa: `config.yml`, `domain.yml`, `data/` (corpus, regras), `actions/actions.py` (regras de negócio e acesso ao banco), `telegram_custom.py` (canal do Telegram) e `enviar_lembretes.py` (serviço de lembretes) |
 | `schema.sql` | Esquema do banco de dados (DDL) |
 | `seed_horarios.py` | Cria o banco a partir do `schema.sql` e gera horários livres |
