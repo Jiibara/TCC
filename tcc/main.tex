@@ -235,6 +235,7 @@
 \textbf{VC} & Validação Cruzada \\
 \textbf{XML} & eXtensible Markup Language (Linguagem de Marcação Extensível) \\
 \end{xltabular}
+\addtocounter{table}{-1}% a lista de siglas nao e uma tabela numerada
 
 % ==========================================
 % LISTA DE GRÁFICOS
@@ -420,7 +421,7 @@ THORAT e JADHAV (2020) enfatizam que compor regras para todas as variações pos
 
 No contexto de uma clínica médica, essa limitação é crítica: pacientes utilizam vocabulários variados para descrever a mesma necessidade, como ``quero marcar'', ``preciso de uma consulta'' ou ``tem horário disponível'', e sistemas baseados em regras falham sistematicamente nessas variações. Caldarini et al. (2022) complementam que sistemas \textit{rule-based} são um ``legado útil'' para finalidades simples, mas que abordagens híbridas com IA são necessárias para resolver a complexidade clínica.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Limitações do Padrão de Correspondência (\textit{Pattern Matching}) em sistemas baseados em regras}
 \label{tab:limitacoes-pattern-matching}
@@ -488,7 +489,7 @@ Os chatbots baseados em Inteligência Artificial são capazes de realizar tarefa
 
 No campo dos modelos de linguagem aplicados à saúde, destaca-se o uso de arquiteturas baseadas em BERT (\textit{Bidirectional Encoder Representations from Transformers}), que demonstraram desempenho superior na classificação de textos médicos em comparação a modelos anteriores. Sung, Park e Kim (2023) confirmaram a eficácia do BERT na classificação de dados de aconselhamento em saúde, concluindo que sua capacidade bidirecional de representação contextual o torna particularmente adequado para a compreensão de terminologias médicas variadas. Em clínicas, essas capacidades se traduzem em benefícios concretos: o sistema pode interpretar solicitações variadas como reagendamentos, cancelamentos e dúvidas sobre convênios, adaptando-se ao vocabulário informal dos pacientes sem necessidade de reformulação.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \caption{Funcionamento BERT}
     \includegraphics[width=0.9\textwidth]{FuncBert.png}
@@ -578,7 +579,7 @@ Também há diferentes tipos de abordagens a respeito de como a IA ``aprende'', 
 
 Uma distinção conceitual adicional, essencial para a compreensão crítica dos sistemas modernos, é a diferença entre IA simbólica e IA conexionista. A IA simbólica representa o conhecimento por meio de símbolos e regras lógicas explícitas, operando de forma transparente e interpretável, porém com baixa tolerância à variabilidade e ao ruído dos dados. A IA conexionista, em contraste, aprende representações implicitamente a partir de grandes volumes de dados por meio de redes neurais, o que confere maior capacidade de generalização, mas impõe desafios de interpretabilidade e pode introduzir vieses presentes nos dados de treinamento (RUSSELL; NORVIG, 2021; GOODFELLOW; BENGIO; COURVILLE, 2016). Essa distinção é relevante para o contexto clínico, onde a explicabilidade das decisões do sistema é um requisito ético e regulatório importante.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \caption{IA Simbólica e IA Conexionista}
     \includegraphics[width=0.85\textwidth]{IaConexionistaIaSimbolica.png}
@@ -590,7 +591,7 @@ Uma distinção conceitual adicional, essencial para a compreensão crítica dos
 
 Especificamente no que diz respeito aos modelos de linguagem de larga escala (Large Language Models -- LLMs), uma limitação crítica amplamente documentada na literatura é o fenômeno das alucinações: a geração de informações plausíveis, mas incorretas ou inteiramente inventadas pelo próprio modelo. Roustan e Bastardot (2025) alertam que as implicações para a prática clínica incluem desde a geração de informações diagnósticas e terapêuticas imprecisas até o reforço de raciocínios diagnósticos errados, além da falta de confiabilidade quando utilizados sem supervisão adequada. No contexto de um chatbot para clínicas, esse risco justifica a adoção de arquiteturas controladas com fluxos de decisão delimitados, em oposição ao uso irrestrito de LLMs generativos, especialmente para funções que envolvem dados sensíveis de saúde.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \caption{Relação entre Inteligência Artificial, Machine Learning e Deep Learning}
     \includegraphics[width=0.85\textwidth]{IaMlDl.png}
@@ -617,7 +618,7 @@ Uma inovação no PLN moderno é o uso de \textit{embeddings}: representações 
 
 No entanto, tanto o Word2Vec quanto o GloVe produzem representações estáticas, ou seja, a mesma palavra recebe o mesmo vetor independentemente do contexto em que aparece. Essa limitação foi superada pelos modelos contextuais, especialmente o BERT (\textit{Bidirectional Encoder Representations from Transformers}), desenvolvido por Devlin et al. (2019). O BERT gera representações dinâmicas: o vetor de uma palavra é calculado em função do contexto completo da sentença, capturando diferenças como multiplicidade de sentidos e dependências sintáticas de longo alcance. Essa capacidade bidirecional o torna especialmente eficaz para tarefas como classificação de intenção e extração de entidades em sistemas conversacionais para saúde, onde a precisão semântica é crítica (SUNG; PARK; KIM, 2023).
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \caption{Como funcionam: GloVe, BERT, Word2Vec}
     \includegraphics[width=0.85\textwidth]{GloveBertWord.png}
@@ -1154,7 +1155,7 @@ Todo código e todo número apresentados foram executados ou recalculados pelo a
 
 As decisões de pesquisa, incluindo a formulação do problema, os objetivos, as escolhas metodológicas, a interpretação dos resultados e as conclusões, são do autor, que responde por todo o conteúdo deste trabalho.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Síntese do Delineamento Metodológico}
 \label{tab:delineamento}
