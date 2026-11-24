@@ -1,0 +1,133 @@
+[
+  {
+    "text": "tem horário disponível para cardiologia na terça?",
+    "entities": [
+      {
+        "start": 28,
+        "end": 39,
+        "value": "cardiologia",
+        "entity": "especialidade"
+      },
+      {
+        "start": 43,
+        "end": 48,
+        "value": "terça",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 28,
+        "end": 42,
+        "confidence_entity": 0.5390114188194275,
+        "value": "cardiologia na",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "data",
+        "start": 43,
+        "end": 48,
+        "confidence_entity": 0.877909779548645,
+        "value": "terça",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tem vaga pra dia 15?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 19,
+        "value": "dia 15",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 17,
+        "end": 19,
+        "confidence_entity": 0.9995641112327576,
+        "value": "15",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "trabalham com Amil?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 18,
+        "value": "Amil",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "eu tenho particular, consigo marcar consulta?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 19,
+        "value": "particular",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "atende SulAmérica?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 17,
+        "value": "SulAmérica",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "quanto é 25 vezes 4?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 9,
+        "end": 11,
+        "confidence_entity": 0.8272333741188049,
+        "value": "25",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "data",
+        "start": 18,
+        "end": 19,
+        "confidence_entity": 0.9685623645782471,
+        "value": "4",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "como faço pra trabalhar na clínica?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 27,
+        "end": 34,
+        "confidence_entity": 0.5935037732124329,
+        "value": "clínica",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

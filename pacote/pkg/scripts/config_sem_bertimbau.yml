@@ -1,0 +1,47 @@
+recipe: default.v1
+language: pt
+
+# ------------------------------------------------------------------
+# BASELINE da ablacao (E4): identico ao rasa/config.yml, exceto pela
+# remocao do LanguageModelFeaturizer (BERTimbau). O DIETClassifier
+# passa a consumir apenas as features esparsas (bag-of-words de
+# palavras e de caracteres, regex e lexico-sintaticas). Todo o resto
+# (epochs, limiares, policies) e igual.
+# ------------------------------------------------------------------
+pipeline:
+- name: WhitespaceTokenizer
+
+- name: RegexFeaturizer
+
+- name: LexicalSyntacticFeaturizer
+
+- name: CountVectorsFeaturizer
+
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+
+- name: DIETClassifier
+  epochs: 150
+  entity_recognition: true
+  constrain_similarities: true
+
+- name: EntitySynonymMapper
+
+- name: FallbackClassifier
+  # Abaixo desse limiar de confianca, a intencao e tratada como
+  # nlu_fallback (RF12: encaminhamento para atendimento humano).
+  threshold: 0.70
+  ambiguity_threshold: 0.10
+
+# ------------------------------------------------------------------
+# Policies de gerenciamento de dialogo (iguais as do config.yml;
+# nao influenciam a avaliacao de NLU)
+# ------------------------------------------------------------------
+policies:
+- name: RulePolicy
+  core_fallback_threshold: 0.40
+  core_fallback_action_name: "action_encaminhar_atendimento_humano"
+  enable_fallback_prediction: true
+assistant_id: 20261003-000111-creamy-emmentaler

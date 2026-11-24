@@ -1,0 +1,506 @@
+[
+  {
+    "text": "vim marcar uma consulta pelo Bradesco Saúde",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9998584985733032
+    }
+  },
+  {
+    "text": "quero remarcar meu horário com convênio Unimed",
+    "intent": "reagendarConsulta",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.8592313528060913
+    }
+  },
+  {
+    "text": "dá pra mover minha consulta uns dias?",
+    "intent": "reagendarConsulta",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9581833481788635
+    }
+  },
+  {
+    "text": "não, cancela essa opção",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9999414682388306
+    }
+  },
+  {
+    "text": "deixa que eu ligo depois",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.693848729133606
+    }
+  },
+  {
+    "text": "menos quinta mesmo",
+    "intent": "negar_data",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.3489711582660675
+    }
+  },
+  {
+    "text": "você é um robô?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "falar_com_atendente",
+      "confidence": 0.880768358707428
+    }
+  },
+  {
+    "text": "me explica como funciona o SUS",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.7345403432846069
+    }
+  },
+  {
+    "text": "oi, gostaria de uma informação",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9992126226425171
+    }
+  },
+  {
+    "text": "olá, preciso de uma informação",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.614722490310669
+    }
+  },
+  {
+    "text": "encerro por aqui, obrigado",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.8327150344848633
+    }
+  },
+  {
+    "text": "vlw",
+    "intent": "agradecimento",
+    "intent_prediction": {
+      "name": "despedida",
+      "confidence": 0.996971845626831
+    }
+  },
+  {
+    "text": "qual CEP da clínica?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.6853331327438354
+    }
+  },
+  {
+    "text": "vocês parcelam a consulta particular?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9874902367591858
+    }
+  },
+  {
+    "text": "tem algum valor promocional pra primeira consulta?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9895155429840088
+    }
+  },
+  {
+    "text": "quero reclamar com um atendente de verdade",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9881607294082642
+    }
+  },
+  {
+    "text": "vcs tem horario pra amanha?",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.1855957955121994
+    }
+  },
+  {
+    "text": "surgiu um imprevisto, não vou poder comparecer",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.44169190526008606
+    }
+  },
+  {
+    "text": "não quero segunda",
+    "intent": "negar_data",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.993703305721283
+    }
+  },
+  {
+    "text": "qual o telefone da farmácia mais próxima?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "endereco_clinica",
+      "confidence": 0.5067126750946045
+    }
+  },
+  {
+    "text": "vocês vendem remédio aqui?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.33588913083076477
+    }
+  },
+  {
+    "text": "você pode marcar uma reunião de trabalho pra mim?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9981805086135864
+    }
+  },
+  {
+    "text": "como faço pra chegar até a clínica de carro?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "endereco_clinica",
+      "confidence": 0.9991899132728577
+    }
+  },
+  {
+    "text": "por hoje é só, valeu",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.33227744698524475
+    }
+  },
+  {
+    "text": "tem expediente à noite?",
+    "intent": "horario_funcionamento",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.35848477482795715
+    }
+  },
+  {
+    "text": "me passa o endereço, por favor",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.46786385774612427
+    }
+  },
+  {
+    "text": "qual o valor da consulta sem convênio?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9722387194633484
+    }
+  },
+  {
+    "text": "tem algum valor fixo ou varia por especialidade?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.8179188966751099
+    }
+  },
+  {
+    "text": "isso aqui tem atendimento humano?",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.8219727277755737
+    }
+  },
+  {
+    "text": "preciso de ajuda de uma pessoa, não do robô",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9999167919158936
+    }
+  },
+  {
+    "text": "preciso remover minha consulta da agenda",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.9999998807907104
+    }
+  },
+  {
+    "text": "retira minha consulta de sábado da agenda",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.8161413669586182
+    }
+  },
+  {
+    "text": "eu tenho particular, consigo marcar consulta?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9973341226577759
+    }
+  },
+  {
+    "text": "aceito esse horário",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.7194647192955017
+    }
+  },
+  {
+    "text": "eu quero falar com uma pessoa de verdade",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "falar_com_atendente",
+      "confidence": 0.9974258542060852
+    }
+  },
+  {
+    "text": "quero saber sobre vagas de emprego na clínica",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9456614255905151
+    }
+  },
+  {
+    "text": "como tá o trânsito aí perto?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "endereco_clinica",
+      "confidence": 0.9912942051887512
+    }
+  },
+  {
+    "text": "tem algum concurso público aberto na área da saúde?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9979478716850281
+    }
+  },
+  {
+    "text": "alo",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.43829721212387085
+    }
+  },
+  {
+    "text": "falou",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.8423709869384766
+    }
+  },
+  {
+    "text": "até que horas dá pra marcar consulta hoje?",
+    "intent": "horario_funcionamento",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9999666213989258
+    }
+  },
+  {
+    "text": "aceita cartão pra pagar a consulta?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.5773701071739197
+    }
+  },
+  {
+    "text": "pode chamar alguém pra me ajudar?",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.5763949155807495
+    }
+  },
+  {
+    "text": "quero dar baixa na minha consulta",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.9877921938896179
+    }
+  },
+  {
+    "text": "qual o horário de funcionamento do banco?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.9679461121559143
+    }
+  },
+  {
+    "text": "pode chamar um médico agora, é urgente",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9861560463905334
+    }
+  },
+  {
+    "text": "qual o valor do aluguel dessa sala?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.7008962631225586
+    }
+  },
+  {
+    "text": "meu computador não liga, pode me ajudar?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.6294432282447815
+    }
+  },
+  {
+    "text": "já vou indo, obrigado",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.8212447762489319
+    }
+  },
+  {
+    "text": "como chego até aí?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.6907296180725098
+    }
+  },
+  {
+    "text": "como faço pra chegar de ônibus até aí?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9993526339530945
+    }
+  },
+  {
+    "text": "quanto sai no total sem usar convênio?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.7643898725509644
+    }
+  },
+  {
+    "text": "tem algum horário livre para pediatra amanhã de manhã?",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "negar_data",
+      "confidence": 0.9811863899230957
+    }
+  },
+  {
+    "text": "tem como marcar pra depois de amanhã?",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "negar_data",
+      "confidence": 0.9804243445396423
+    }
+  },
+  {
+    "text": "vocês têm parceria com algum plano de saúde?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9191838502883911
+    }
+  },
+  {
+    "text": "a consulta particular tem algum valor específico?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.9951370358467102
+    }
+  },
+  {
+    "text": "preciso confirmar se o Bradesco Saúde é aceito",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.8896722793579102
+    }
+  },
+  {
+    "text": "prefiro outro horário",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.6951773762702942
+    }
+  },
+  {
+    "text": "não, tenta outro",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "negar_data",
+      "confidence": 0.6605623960494995
+    }
+  },
+  {
+    "text": "qual seu nome?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "endereco_clinica",
+      "confidence": 0.7896254658699036
+    }
+  },
+  {
+    "text": "tem estacionamento aí perto?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.26940155029296875
+    }
+  },
+  {
+    "text": "pode me transferir pra uma pessoa de verdade?",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9885031580924988
+    }
+  },
+  {
+    "text": "prefiro falar com uma pessoa",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9642937183380127
+    }
+  }
+]

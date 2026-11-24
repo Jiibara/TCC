@@ -1,0 +1,150 @@
+[
+  {
+    "text": "preciso consultar com clinico geral, tem horario?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 35,
+        "value": "clinico geral",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 30,
+        "end": 35,
+        "confidence_entity": 0.9914299845695496,
+        "value": "geral",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "quero agendar com convênio Unimed pra cardiologia",
+    "entities": [
+      {
+        "start": 18,
+        "end": 33,
+        "value": "convênio Unimed",
+        "entity": "convenio"
+      },
+      {
+        "start": 38,
+        "end": 49,
+        "value": "cardiologia",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "convenio",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.9822922945022583,
+        "value": "Unimed",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "especialidade",
+        "start": 38,
+        "end": 49,
+        "confidence_entity": 0.9993129968643188,
+        "value": "cardiologia",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "consegue marcar pra semana que vem?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 34,
+        "value": "semana que vem",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 27,
+        "end": 34,
+        "confidence_entity": 0.6597727537155151,
+        "value": "que vem",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "cancela minha consulta com o cardiologista",
+    "entities": [
+      {
+        "start": 29,
+        "end": 42,
+        "value": "cardiologista",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "quero passar minha consulta pra semana que vem",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 32,
+        "end": 46,
+        "confidence_entity": 0.6710505485534668,
+        "value": "semana que vem",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "eu tenho particular, consigo marcar consulta?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 19,
+        "value": "particular",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "atende SulAmérica?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 17,
+        "value": "SulAmérica",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "tirando amanhã, tem mais alguma opção?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 14,
+        "value": "amanhã",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

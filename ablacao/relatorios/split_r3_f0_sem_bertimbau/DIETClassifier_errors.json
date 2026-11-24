@@ -1,0 +1,70 @@
+[
+  {
+    "text": "confirmo a consulta de amanhã",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 23,
+        "end": 29,
+        "confidence_entity": 0.8525693416595459,
+        "value": "amanhã",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "qual o preço da consulta de endocrinologia?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 28,
+        "end": 42,
+        "confidence_entity": 0.995610773563385,
+        "value": "endocrinologia",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "quanto é a consulta com o clínico geral?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 26,
+        "end": 39,
+        "confidence_entity": 0.9994151592254639,
+        "value": "clínico geral",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "qual o valor pra endocrinologia particular?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 17,
+        "end": 31,
+        "confidence_entity": 0.9965692758560181,
+        "value": "endocrinologia",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

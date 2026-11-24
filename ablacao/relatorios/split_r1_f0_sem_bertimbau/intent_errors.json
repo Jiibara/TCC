@@ -1,0 +1,178 @@
+[
+  {
+    "text": "até a próxima",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.6413413882255554
+    }
+  },
+  {
+    "text": "era isso, obrigado pela ajuda",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.8556520342826843
+    }
+  },
+  {
+    "text": "confirmo a consulta de amanhã",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "negar_data",
+      "confidence": 0.5036698579788208
+    }
+  },
+  {
+    "text": "confirmo o horário",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.6145939826965332
+    }
+  },
+  {
+    "text": "preciso mudar meu telefone",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.9955226182937622
+    }
+  },
+  {
+    "text": "não concordo mais com o uso dos meus dados",
+    "intent": "revogar_consentimento",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.4238489866256714
+    }
+  },
+  {
+    "text": "quero saber sobre a LGPD",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.45906415581703186
+    }
+  },
+  {
+    "text": "não pode ser terça",
+    "intent": "negar_data",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.9973933696746826
+    }
+  },
+  {
+    "text": "qual o preço da consulta de endocrinologia?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.6945274472236633
+    }
+  },
+  {
+    "text": "quanto é a consulta com o clínico geral?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9984833598136902
+    }
+  },
+  {
+    "text": "preciso de ajuda com um problema jurídico",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "falar_com_atendente",
+      "confidence": 0.49113360047340393
+    }
+  },
+  {
+    "text": "qual seu nome?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.9307298064231873
+    }
+  },
+  {
+    "text": "isso aqui é seguro? vocês vazam meus dados?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.9687063097953796
+    }
+  },
+  {
+    "text": "qual a melhor dieta pra emagrecer?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.5218688249588013
+    }
+  },
+  {
+    "text": "qual o telefone da prefeitura?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "atualizar_cadastro",
+      "confidence": 0.38116779923439026
+    }
+  },
+  {
+    "text": "quanto é 25 vezes 4?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9994500279426575
+    }
+  },
+  {
+    "text": "preciso trocar o dia da minha consulta com endocrinologista",
+    "intent": "reagendarConsulta",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9811020493507385
+    }
+  },
+  {
+    "text": "preciso cancelar meu atendimento com endocrinologista",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.6517041921615601
+    }
+  },
+  {
+    "text": "certo, pode confirmar",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.7385950088500977
+    }
+  },
+  {
+    "text": "pode confirmar",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9910992980003357
+    }
+  },
+  {
+    "text": "beleza, confirmado",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.6149811148643494
+    }
+  },
+  {
+    "text": "confirmado, obrigado",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9909058809280396
+    }
+  }
+]

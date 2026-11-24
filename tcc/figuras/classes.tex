@@ -1,0 +1,95 @@
+% Diagrama de classes do prototipo implementado. Gera "DiagramaClasses (2).png".
+\documentclass[border=8pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes.multipart,positioning,arrows.meta,calc}
+\renewcommand{\familydefault}{\sfdefault}
+\tikzset{
+  classe/.style={rectangle split, rectangle split parts=3, draw, line width=0.6pt,
+    text width=5.3cm, font=\small, inner sep=3pt,
+    rectangle split part align={center,left,left}},
+  comp/.style={classe, fill=black!4},
+  assoc/.style={draw, line width=0.6pt},
+  dep/.style={draw, dashed, -{Straight Barb[length=2mm]}, line width=0.6pt},
+  nav/.style={draw, -{Straight Barb[length=2mm]}, line width=0.6pt},
+  mult/.style={font=\footnotesize},
+}
+\newcommand{\nome}[2]{\textbf{#1}\ifx&#2&\else\\{\footnotesize\guillemotleft#2\guillemotright}\fi}
+\begin{document}
+\hyphenpenalty=10000
+\begin{tikzpicture}
+% ---------------- componentes
+\node[comp, text width=4.6cm] (canal) at (0,0) {\nome{CanalTelegram}{canal customizado}
+  \nodepart{two} --
+  \nodepart{three} +receberMensagem(update)\\ +enviarMensagem(chatId, texto)};
+\node[comp, text width=4.6cm] (rasa) at (6.6,0) {\nome{AssistenteRasa}{NLU e diálogo}
+  \nodepart{two} -pipeline: DIET + BERTimbau\\ -politica: RulePolicy
+  \nodepart{three} +classificarIntencao(texto)\\ +extrairEntidades(texto)\\ +preverAcao()};
+\node[comp] (acoes) at (13.2,0) {\nome{ServidorAcoes}{custom actions}
+  \nodepart{two} --
+  \nodepart{three} +verificarCadastro()\\ +consultarDisponibilidade()\\ +confirmarAgendamento()\\
+    +pedirConfirmacaoCancelamento()\\ +registrarLembrete()\\ +encaminharAtendente()};
+\node[comp] (servico) at (19.8,0) {\nome{ServicoLembretes}{processo assíncrono}
+  \nodepart{two} -intervalo: 60 s
+  \nodepart{three} +enviarLembretesVencidos()\\ +programarReenvio()\\ +ignorarVencidos()};
+
+% ---------------- dominio
+\node[classe] (convenio) at (-0.6,-6.6) {\nome{Convenio}{}
+  \nodepart{two} -id: int\\ -nome: str\\ -ativo: bool
+  \nodepart{three} --};
+\node[classe, text width=4.2cm] (pc) at (-0.6,-2.9) {\nome{PacienteConvenio}{classe de associação}
+  \nodepart{two} -numeroCarteirinha: str\\ -principal: bool
+  \nodepart{three} --};
+\node[classe] (paciente) at (6.6,-6.6) {\nome{Paciente}{}
+  \nodepart{two} -id: int\\ -nome: str\\ -telefone: str\\ -dataNascimento: date\\ -criadoEm: datetime\\ -telegramChatId: str
+  \nodepart{three} +cadastrar()\\ +atualizarDados()};
+\node[classe] (consulta) at (13.2,-6.6) {\nome{Consulta}{Appointment}
+  \nodepart{two} -id: int\\ -status: \{agendada, cancelada,\\ \quad reagendada, concluida\}\\ -criadoEm: datetime\\ -atualizadoEm: datetime
+  \nodepart{three} +agendar(horario)\\ +cancelar()\\ +reagendar(novoHorario)};
+\node[classe] (lembrete) at (19.8,-6.6) {\nome{Lembrete}{}
+  \nodepart{two} -id: int\\ -dataEnvio: datetime\\ -enviadoEm: datetime\\ -statusConfirmacao: \{pendente,\\ \quad confirmado, ignorado\}
+  \nodepart{three} +enviar()\\ +confirmar()};
+
+\node[classe] (consent) at (-0.6,-12.3) {\nome{ConsentimentoLGPD}{}
+  \nodepart{two} -id: int\\ -finalidade: str\\ -baseLegal: str\\ -concedidoEm: datetime\\ -revogadoEm: datetime
+  \nodepart{three} +registrar()\\ +revogar()};
+\node[classe] (log) at (6.6,-12.3) {\nome{LogInteracao}{}
+  \nodepart{two} -id: int\\ -intentDetectado: str\\ -confianca: float\\ -timestamp: datetime\\ -canal: str
+  \nodepart{three} +registrar()};
+\node[classe] (horario) at (13.2,-12.3) {\nome{Horario}{Slot}
+  \nodepart{two} -id: int\\ -data: date\\ -horaInicio: time\\ -horaFim: time\\ -status: \{disponivel, reservado,\\ \quad bloqueado\}
+  \nodepart{three} +reservar()\\ +liberar()};
+\node[classe] (handoff) at (19.8,-12.3) {\nome{Handoff}{atendimento humano}
+  \nodepart{two} -id: int\\ -senderId: str\\ -motivo: str\\ -status: \{aguardando,\\ \quad em\_atendimento, encerrado\}\\ -criadoEm: datetime
+  \nodepart{three} +abrir()};
+
+\node[classe] (medico) at (13.2,-17.0) {\nome{Medico}{Practitioner}
+  \nodepart{two} -id: int\\ -nome: str
+  \nodepart{three} --};
+\node[classe] (esp) at (6.6,-17.0) {\nome{Especialidade}{}
+  \nodepart{two} -id: int\\ -nome: str
+  \nodepart{three} --};
+
+% ---------------- relacoes entre componentes
+\draw[nav] (canal.east) -- node[mult,above]{encaminha} (canal.east -| rasa.west);
+\draw[nav] (rasa.east) -- node[mult,above]{aciona} (rasa.east -| acoes.west);
+\draw[dep] (acoes.south) -- node[mult,right]{usa} (consulta.north);
+\draw[dep] (servico.south) -- node[mult,right]{usa} (lembrete.north);
+
+% ---------------- associacoes do dominio
+\draw[assoc] (convenio.east) -- node[mult,pos=0.12,above]{0..*} node[mult,pos=0.88,above]{0..*} (convenio.east -| paciente.west);
+\draw[assoc, dashed] (pc.south) -- ($(convenio.east)!0.5!(convenio.east -| paciente.west)$);
+\draw[assoc] (paciente.east) -- node[mult,pos=0.12,above]{1} node[mult,pos=0.88,above]{0..*} (paciente.east -| consulta.west);
+\draw[assoc] (consulta.east) -- node[mult,pos=0.12,above]{1} node[mult,pos=0.88,above]{0..*} (consulta.east -| lembrete.west);
+\draw[assoc] (consulta.south) -- node[mult,pos=0.15,right]{0..*} node[mult,midway,right]{\scriptsize(no máximo 1 ativa)} node[mult,pos=0.85,right]{1} (horario.north);
+\draw[assoc] (horario.south) -- node[mult,pos=0.12,right]{0..*} node[mult,pos=0.88,right]{1} (medico.north);
+\draw[assoc] (esp.east) -- node[mult,pos=0.12,above]{0..*} node[mult,pos=0.88,above]{0..*} (esp.east -| medico.west);
+\draw[assoc] (paciente.south) -- node[mult,pos=0.1,right]{0..1} node[mult,pos=0.9,right]{0..*} (log.north);
+\draw[assoc] ($(paciente.south west)+(0.6,0)$) -- node[mult,pos=0.1,left]{1} node[mult,pos=0.9,left]{0..*} (consent.north east);
+\node[font=\footnotesize, text width=6cm, align=left, anchor=north west] at ($(esp.south west)+(0,-0.4)$)
+  {Médico e Especialidade: associação N:N com o atributo \texttt{principal} (tabela \texttt{medico\_especialidade}).};
+\node[font=\footnotesize, text width=5.3cm, align=left, below=3pt of handoff]
+  {Sem associação: o chamado guarda o chat do remetente (\texttt{senderId}), que pode ainda não ser paciente.};
+\end{tikzpicture}
+\end{document}

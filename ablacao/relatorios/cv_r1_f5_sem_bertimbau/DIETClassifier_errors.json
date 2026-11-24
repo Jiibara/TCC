@@ -1,0 +1,109 @@
+[
+  {
+    "text": "pode mudar minha consulta para as 15h?",
+    "entities": [
+      {
+        "start": 34,
+        "end": 37,
+        "value": "15h",
+        "entity": "horario"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "quero remarcar minha consulta de amanhã com o cardiologista",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 33,
+        "end": 39,
+        "confidence_entity": 0.9980005621910095,
+        "value": "amanhã",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "especialidade",
+        "start": 46,
+        "end": 59,
+        "confidence_entity": 0.9997062087059021,
+        "value": "cardiologista",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "remarca minha consulta de clínica geral por favor",
+    "entities": [
+      {
+        "start": 26,
+        "end": 39,
+        "value": "clínica geral",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 34,
+        "end": 39,
+        "confidence_entity": 0.8769233226776123,
+        "value": "geral",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "não quero segunda",
+    "entities": [
+      {
+        "start": 10,
+        "end": 17,
+        "value": "segunda",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "quanto custa consultar com pediatra particular?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 27,
+        "end": 35,
+        "confidence_entity": 0.9993489384651184,
+        "value": "pediatra",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "quanto fica a consulta de pediatria?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 26,
+        "end": 35,
+        "confidence_entity": 0.9993396401405334,
+        "value": "pediatria",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

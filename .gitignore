@@ -1,0 +1,32 @@
+# segredos: nunca versionar o token do bot
+rasa/credentials.yml
+.env
+
+# bancos de dados (gerados por seed_horarios.py)
+*.db
+*.db.bak
+*.db-journal
+
+# ambiente e modelos treinados
+.venv/
+__pycache__/
+*.pyc
+models/
+rasa/models/
+rasa/.rasa/
+*.tar.gz
+ablacao/modelos/
+ablacao/logs/
+
+# LaTeX: auxiliares e PDFs gerados
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.equ
+tcc/main*.pdf

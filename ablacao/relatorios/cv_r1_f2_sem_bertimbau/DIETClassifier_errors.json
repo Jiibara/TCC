@@ -1,0 +1,227 @@
+[
+  {
+    "text": "gostaria de marcar consulta de pediatria para semana que vem",
+    "entities": [
+      {
+        "start": 31,
+        "end": 40,
+        "value": "pediatria",
+        "entity": "especialidade"
+      },
+      {
+        "start": 46,
+        "end": 60,
+        "value": "semana que vem",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 28,
+        "end": 30,
+        "confidence_entity": 0.8783054351806641,
+        "value": "de",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "especialidade",
+        "start": 31,
+        "end": 40,
+        "confidence_entity": 0.9916563034057617,
+        "value": "pediatria",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "data",
+        "start": 46,
+        "end": 60,
+        "confidence_entity": 0.9620293378829956,
+        "value": "semana que vem",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tem algum horário livre para pediatra amanhã de manhã?",
+    "entities": [
+      {
+        "start": 29,
+        "end": 37,
+        "value": "pediatra",
+        "entity": "especialidade"
+      },
+      {
+        "start": 38,
+        "end": 53,
+        "value": "amanhã de manhã",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 29,
+        "end": 37,
+        "confidence_entity": 0.9908334612846375,
+        "value": "pediatra",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "data",
+        "start": 38,
+        "end": 44,
+        "confidence_entity": 0.9825677275657654,
+        "value": "amanhã",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "quero agendar com convênio Unimed pra cardiologia",
+    "entities": [
+      {
+        "start": 18,
+        "end": 33,
+        "value": "convênio Unimed",
+        "entity": "convenio"
+      },
+      {
+        "start": 38,
+        "end": 49,
+        "value": "cardiologia",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "convenio",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.9991371035575867,
+        "value": "Unimed",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "especialidade",
+        "start": 38,
+        "end": 49,
+        "confidence_entity": 0.9987936019897461,
+        "value": "cardiologia",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tem vaga pra dia 15?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 19,
+        "value": "dia 15",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 17,
+        "end": 19,
+        "confidence_entity": 0.9981904625892639,
+        "value": "15",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "atende SulAmérica?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 17,
+        "value": "SulAmérica",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "não, deixa pra depois",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 15,
+        "end": 21,
+        "confidence_entity": 0.9951927661895752,
+        "value": "depois",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "deixa que eu ligo depois",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.9953910112380981,
+        "value": "depois",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "quanto é 25 vezes 4?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 9,
+        "end": 11,
+        "confidence_entity": 0.9994639754295349,
+        "value": "25",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "data",
+        "start": 18,
+        "end": 19,
+        "confidence_entity": 0.9994489550590515,
+        "value": "4",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "até que horas consigo chegar aí hoje?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 29,
+        "end": 31,
+        "confidence_entity": 0.5886501669883728,
+        "value": "aí",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

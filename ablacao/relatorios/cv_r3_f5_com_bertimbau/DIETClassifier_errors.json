@@ -1,0 +1,59 @@
+[
+  {
+    "text": "tem vaga pra dia 15?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 19,
+        "value": "dia 15",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 17,
+        "end": 19,
+        "confidence_entity": 0.9594477415084839,
+        "value": "15",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "trabalham com Amil?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 18,
+        "value": "Amil",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "eu tenho particular, consigo marcar consulta?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 19,
+        "value": "particular",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "atende SulAmérica?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 17,
+        "value": "SulAmérica",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

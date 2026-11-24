@@ -1,0 +1,70 @@
+[
+  {
+    "text": "tem vaga para endocrinologia amanhã?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 28,
+        "value": "endocrinologia",
+        "entity": "especialidade"
+      },
+      {
+        "start": 29,
+        "end": 35,
+        "value": "amanhã",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 14,
+        "end": 35,
+        "confidence_entity": 0.7499790787696838,
+        "value": "endocrinologia amanhã",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "preciso ver um cardiologista o quanto antes",
+    "entities": [
+      {
+        "start": 15,
+        "end": 28,
+        "value": "cardiologista",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "preciso trocar o dia da minha consulta com endocrinologista",
+    "entities": [
+      {
+        "start": 43,
+        "end": 59,
+        "value": "endocrinologista",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "tem expediente no sábado?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.9995137453079224,
+        "value": "sábado",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

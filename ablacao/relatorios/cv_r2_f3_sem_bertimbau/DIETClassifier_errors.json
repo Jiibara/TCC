@@ -1,0 +1,143 @@
+[
+  {
+    "text": "quero agendar com convênio Unimed pra cardiologia",
+    "entities": [
+      {
+        "start": 18,
+        "end": 33,
+        "value": "convênio Unimed",
+        "entity": "convenio"
+      },
+      {
+        "start": 38,
+        "end": 49,
+        "value": "cardiologia",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "convenio",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.9994370341300964,
+        "value": "Unimed",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "especialidade",
+        "start": 38,
+        "end": 49,
+        "confidence_entity": 0.9993501305580139,
+        "value": "cardiologia",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "quero marcar consulta pro dia 01",
+    "entities": [
+      {
+        "start": 30,
+        "end": 32,
+        "value": "01",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 26,
+        "end": 32,
+        "confidence_entity": 0.9791685938835144,
+        "value": "dia 01",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "cancela minha consulta com o cardiologista",
+    "entities": [
+      {
+        "start": 29,
+        "end": 42,
+        "value": "cardiologista",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "dá pra remarcar pra semana que vem?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 34,
+        "value": "semana que vem",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 31,
+        "end": 34,
+        "confidence_entity": 0.9221291542053223,
+        "value": "vem",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "eu tenho particular, consigo marcar consulta?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 19,
+        "value": "particular",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "atende SulAmérica?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 17,
+        "value": "SulAmérica",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "quanto é 25 vezes 4?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 9,
+        "end": 11,
+        "confidence_entity": 0.950569748878479,
+        "value": "25",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "data",
+        "start": 18,
+        "end": 19,
+        "confidence_entity": 0.986997127532959,
+        "value": "4",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

@@ -1,0 +1,194 @@
+{
+  "afirmar": {
+    "precision": 0.7272727272727273,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.6956521739130435,
+    "support": 12,
+    "confused_with": {
+      "confirmarLembrete": 2,
+      "agradecimento": 1
+    }
+  },
+  "negar_data": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1-score": 0.888888888888889,
+    "support": 5,
+    "confused_with": {
+      "afirmar": 1
+    }
+  },
+  "atualizar_cadastro": {
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1-score": 0.8000000000000002,
+    "support": 5,
+    "confused_with": {
+      "politica_privacidade": 1
+    }
+  },
+  "saudacao": {
+    "precision": 0.8571428571428571,
+    "recall": 1.0,
+    "f1-score": 0.923076923076923,
+    "support": 6,
+    "confused_with": {}
+  },
+  "consultar_preco_particular": {
+    "precision": 0.75,
+    "recall": 0.6,
+    "f1-score": 0.6666666666666665,
+    "support": 5,
+    "confused_with": {
+      "agendarConsulta": 1,
+      "informarConvenio": 1
+    }
+  },
+  "consultarAgendamento": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "politica_privacidade": {
+    "precision": 0.7142857142857143,
+    "recall": 1.0,
+    "f1-score": 0.8333333333333333,
+    "support": 5,
+    "confused_with": {}
+  },
+  "agradecimento": {
+    "precision": 0.6,
+    "recall": 0.75,
+    "f1-score": 0.6666666666666665,
+    "support": 4,
+    "confused_with": {
+      "despedida": 1
+    }
+  },
+  "reagendarConsulta": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11,
+    "confused_with": {}
+  },
+  "despedida": {
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1-score": 0.5,
+    "support": 4,
+    "confused_with": {
+      "saudacao": 1,
+      "agradecimento": 1
+    }
+  },
+  "falar_com_atendente": {
+    "precision": 1.0,
+    "recall": 0.6,
+    "f1-score": 0.7499999999999999,
+    "support": 5,
+    "confused_with": {
+      "fora_do_escopo": 2
+    }
+  },
+  "revogar_consentimento": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1-score": 0.888888888888889,
+    "support": 5,
+    "confused_with": {
+      "politica_privacidade": 1
+    }
+  },
+  "informarConvenio": {
+    "precision": 0.8571428571428571,
+    "recall": 0.8571428571428571,
+    "f1-score": 0.8571428571428571,
+    "support": 7,
+    "confused_with": {
+      "agendarConsulta": 1
+    }
+  },
+  "agendarConsulta": {
+    "precision": 0.8461538461538461,
+    "recall": 1.0,
+    "f1-score": 0.9166666666666666,
+    "support": 11,
+    "confused_with": {}
+  },
+  "fora_do_escopo": {
+    "precision": 0.75,
+    "recall": 0.6,
+    "f1-score": 0.6666666666666665,
+    "support": 10,
+    "confused_with": {
+      "endereco_clinica": 1,
+      "atualizar_cadastro": 1
+    }
+  },
+  "negar": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "endereco_clinica": {
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1-score": 0.8571428571428571,
+    "support": 3,
+    "confused_with": {}
+  },
+  "emergencia": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "cancelarConsulta": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12,
+    "confused_with": {}
+  },
+  "confirmarLembrete": {
+    "precision": 0.6,
+    "recall": 0.6,
+    "f1-score": 0.6,
+    "support": 5,
+    "confused_with": {
+      "afirmar": 2
+    }
+  },
+  "horario_funcionamento": {
+    "precision": 0.8571428571428571,
+    "recall": 1.0,
+    "f1-score": 0.923076923076923,
+    "support": 6,
+    "confused_with": {}
+  },
+  "accuracy": 0.85,
+  "macro avg": {
+    "precision": 0.8385305171019458,
+    "recall": 0.8368480725623584,
+    "f1-score": 0.8301842624823992,
+    "support": 140
+  },
+  "weighted avg": {
+    "precision": 0.8556579135150564,
+    "recall": 0.85,
+    "f1-score": 0.8467980949347409,
+    "support": 140
+  },
+  "micro avg": {
+    "precision": 0.85,
+    "recall": 0.85,
+    "f1-score": 0.85,
+    "support": 140
+  }
+}

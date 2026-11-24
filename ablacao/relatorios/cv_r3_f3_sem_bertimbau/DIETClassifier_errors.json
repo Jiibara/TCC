@@ -1,0 +1,161 @@
+[
+  {
+    "text": "confirmo a consulta de amanhã",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 23,
+        "end": 29,
+        "confidence_entity": 0.9993792772293091,
+        "value": "amanhã",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "queria agendar uma consulta com o convênio Unimed",
+    "entities": [
+      {
+        "start": 43,
+        "end": 49,
+        "value": "Unimed",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "convenio",
+        "start": 34,
+        "end": 42,
+        "confidence_entity": 0.9492228627204895,
+        "value": "convênio",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "convenio",
+        "start": 43,
+        "end": 49,
+        "confidence_entity": 0.9854322075843811,
+        "value": "Unimed",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "gostaria de agendar um atendimento para 23/11 às 09:00",
+    "entities": [
+      {
+        "start": 40,
+        "end": 45,
+        "value": "23/11",
+        "entity": "data"
+      },
+      {
+        "start": 49,
+        "end": 54,
+        "value": "09:00",
+        "entity": "horario"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 40,
+        "end": 45,
+        "confidence_entity": 0.999518632888794,
+        "value": "23/11",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "data",
+        "start": 49,
+        "end": 54,
+        "confidence_entity": 0.9799485206604004,
+        "value": "09:00",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "pode mudar minha consulta para as 15h?",
+    "entities": [
+      {
+        "start": 34,
+        "end": 37,
+        "value": "15h",
+        "entity": "horario"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "quero remarcar minha consulta de amanhã com o cardiologista",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 33,
+        "end": 39,
+        "confidence_entity": 0.9994852542877197,
+        "value": "amanhã",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "especialidade",
+        "start": 46,
+        "end": 59,
+        "confidence_entity": 0.9993270635604858,
+        "value": "cardiologista",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "vocês aceitam o convênio Unimed?",
+    "entities": [
+      {
+        "start": 25,
+        "end": 31,
+        "value": "Unimed",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "convenio",
+        "start": 16,
+        "end": 24,
+        "confidence_entity": 0.9554393887519836,
+        "value": "convênio",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "convenio",
+        "start": 25,
+        "end": 31,
+        "confidence_entity": 0.9600657224655151,
+        "value": "Unimed",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

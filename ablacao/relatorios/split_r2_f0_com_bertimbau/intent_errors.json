@@ -1,0 +1,146 @@
+[
+  {
+    "text": "qual a rua da clínica?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.38288894295692444
+    }
+  },
+  {
+    "text": "até a próxima",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.4583282172679901
+    }
+  },
+  {
+    "text": "era isso, obrigado pela ajuda",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.8933920860290527
+    }
+  },
+  {
+    "text": "ok, muito obrigado, até mais",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.5716745257377625
+    }
+  },
+  {
+    "text": "vou comparecer na consulta",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.8207244873046875
+    }
+  },
+  {
+    "text": "confirmo o horário",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9854806065559387
+    }
+  },
+  {
+    "text": "preciso mudar meu telefone",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.9957139492034912
+    }
+  },
+  {
+    "text": "quero mudar meu convênio no cadastro",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.9757338166236877
+    }
+  },
+  {
+    "text": "qual o valor pra endocrinologia particular?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.8957079648971558
+    }
+  },
+  {
+    "text": "preciso de ajuda com um problema jurídico",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.40118518471717834
+    }
+  },
+  {
+    "text": "qual seu nome?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.558314859867096
+    }
+  },
+  {
+    "text": "isso aqui é seguro? vocês vazam meus dados?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.9660746455192566
+    }
+  },
+  {
+    "text": "qual o telefone da prefeitura?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "endereco_clinica",
+      "confidence": 0.2783133387565613
+    }
+  },
+  {
+    "text": "quanto é 25 vezes 4?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.9372317790985107
+    }
+  },
+  {
+    "text": "você pode marcar uma reunião de trabalho pra mim?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9868245720863342
+    }
+  },
+  {
+    "text": "preciso trocar o dia da minha consulta com endocrinologista",
+    "intent": "reagendarConsulta",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.6098683476448059
+    }
+  },
+  {
+    "text": "preciso cancelar meu atendimento com endocrinologista",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.6393490433692932
+    }
+  },
+  {
+    "text": "pode confirmar",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.5427629351615906
+    }
+  }
+]

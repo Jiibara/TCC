@@ -1,0 +1,105 @@
+ciclo,passo,mensagem,segundos,status_http,resposta_ok
+1,1,oi,0.2532,200,1
+1,2,vocês aceitam Unimed?,0.2924,200,1
+1,3,quero marcar uma consulta com cardiologista,0.3450,200,1
+1,4,1,0.3136,200,1
+1,5,sim,0.3357,200,1
+1,6,qual data eu agendei?,0.3319,200,1
+1,7,quero cancelar minha consulta,0.3150,200,1
+1,8,sim,0.3263,200,1
+2,1,oi,0.2588,200,1
+2,2,vocês aceitam Unimed?,0.2999,200,1
+2,3,quero marcar uma consulta com cardiologista,0.3328,200,1
+2,4,1,0.2866,200,1
+2,5,sim,0.3556,200,1
+2,6,qual data eu agendei?,0.2959,200,1
+2,7,quero cancelar minha consulta,0.2922,200,1
+2,8,sim,0.3690,200,1
+3,1,oi,0.2947,200,1
+3,2,vocês aceitam Unimed?,0.2991,200,1
+3,3,quero marcar uma consulta com cardiologista,0.3442,200,1
+3,4,1,0.2998,200,1
+3,5,sim,0.3350,200,1
+3,6,qual data eu agendei?,0.3224,200,1
+3,7,quero cancelar minha consulta,0.2956,200,1
+3,8,sim,0.3279,200,1
+4,1,oi,0.2582,200,1
+4,2,vocês aceitam Unimed?,0.2946,200,1
+4,3,quero marcar uma consulta com cardiologista,0.3249,200,1
+4,4,1,0.2808,200,1
+4,5,sim,0.3505,200,1
+4,6,qual data eu agendei?,0.2969,200,1
+4,7,quero cancelar minha consulta,0.3249,200,1
+4,8,sim,0.3337,200,1
+5,1,oi,0.2865,200,1
+5,2,vocês aceitam Unimed?,0.2910,200,1
+5,3,quero marcar uma consulta com cardiologista,0.3261,200,1
+5,4,1,0.2783,200,1
+5,5,sim,0.3381,200,1
+5,6,qual data eu agendei?,0.3097,200,1
+5,7,quero cancelar minha consulta,0.2896,200,1
+5,8,sim,0.3603,200,1
+6,1,oi,0.2683,200,1
+6,2,vocês aceitam Unimed?,0.2919,200,1
+6,3,quero marcar uma consulta com cardiologista,0.3313,200,1
+6,4,1,0.3025,200,1
+6,5,sim,0.3680,200,1
+6,6,qual data eu agendei?,0.2864,200,1
+6,7,quero cancelar minha consulta,0.2996,200,1
+6,8,sim,0.3404,200,1
+7,1,oi,0.2661,200,1
+7,2,vocês aceitam Unimed?,0.3081,200,1
+7,3,quero marcar uma consulta com cardiologista,0.3202,200,1
+7,4,1,0.2772,200,1
+7,5,sim,0.3269,200,1
+7,6,qual data eu agendei?,0.2941,200,1
+7,7,quero cancelar minha consulta,0.3065,200,1
+7,8,sim,0.3395,200,1
+8,1,oi,0.2470,200,1
+8,2,vocês aceitam Unimed?,0.3069,200,1
+8,3,quero marcar uma consulta com cardiologista,0.3253,200,1
+8,4,1,0.2788,200,1
+8,5,sim,0.3213,200,1
+8,6,qual data eu agendei?,0.2990,200,1
+8,7,quero cancelar minha consulta,0.2899,200,1
+8,8,sim,0.3292,200,1
+9,1,oi,0.2615,200,1
+9,2,vocês aceitam Unimed?,0.2903,200,1
+9,3,quero marcar uma consulta com cardiologista,0.3401,200,1
+9,4,1,0.2804,200,1
+9,5,sim,0.3675,200,1
+9,6,qual data eu agendei?,0.3346,200,1
+9,7,quero cancelar minha consulta,0.3259,200,1
+9,8,sim,0.3726,200,1
+10,1,oi,0.3037,200,1
+10,2,vocês aceitam Unimed?,0.3159,200,1
+10,3,quero marcar uma consulta com cardiologista,0.3472,200,1
+10,4,1,0.2973,200,1
+10,5,sim,0.3433,200,1
+10,6,qual data eu agendei?,0.3118,200,1
+10,7,quero cancelar minha consulta,0.3321,200,1
+10,8,sim,0.4099,200,1
+11,1,oi,0.2870,200,1
+11,2,vocês aceitam Unimed?,0.3078,200,1
+11,3,quero marcar uma consulta com cardiologista,0.3446,200,1
+11,4,1,0.3077,200,1
+11,5,sim,0.3991,200,1
+11,6,qual data eu agendei?,0.3296,200,1
+11,7,quero cancelar minha consulta,0.3285,200,1
+11,8,sim,0.3339,200,1
+12,1,oi,0.2821,200,1
+12,2,vocês aceitam Unimed?,0.2933,200,1
+12,3,quero marcar uma consulta com cardiologista,0.3278,200,1
+12,4,1,0.2669,200,1
+12,5,sim,0.3346,200,1
+12,6,qual data eu agendei?,0.2953,200,1
+12,7,quero cancelar minha consulta,0.3188,200,1
+12,8,sim,0.3301,200,1
+13,1,oi,0.2520,200,1
+13,2,vocês aceitam Unimed?,0.3093,200,1
+13,3,quero marcar uma consulta com cardiologista,0.3215,200,1
+13,4,1,0.2698,200,1
+13,5,sim,0.3468,200,1
+13,6,qual data eu agendei?,0.3015,200,1
+13,7,quero cancelar minha consulta,0.3086,200,1
+13,8,sim,0.3472,200,1

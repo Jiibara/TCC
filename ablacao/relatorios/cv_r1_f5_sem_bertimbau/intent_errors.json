@@ -1,0 +1,202 @@
+[
+  {
+    "text": "troquei de plano de saúde",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9967718720436096
+    }
+  },
+  {
+    "text": "o meu nome está escrito errado",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.7758398652076721
+    }
+  },
+  {
+    "text": "meus dados estão seguros",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "atualizar_cadastro",
+      "confidence": 0.6325380802154541
+    }
+  },
+  {
+    "text": "quem tem acesso aos meus dados",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.7264888286590576
+    }
+  },
+  {
+    "text": "quais informações vocês guardam",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "revogar_consentimento",
+      "confidence": 0.5204778909683228
+    }
+  },
+  {
+    "text": "preciso de atendimento com endocrinologista urgente",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "emergencia",
+      "confidence": 0.6259253025054932
+    }
+  },
+  {
+    "text": "apaga minha consulta marcada",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.9554993510246277
+    }
+  },
+  {
+    "text": "vou sim",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.48958808183670044
+    }
+  },
+  {
+    "text": "confirmo minha ida",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9972997307777405
+    }
+  },
+  {
+    "text": "cancela esse horário",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9999551773071289
+    }
+  },
+  {
+    "text": "esse não, cancela",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.901954710483551
+    }
+  },
+  {
+    "text": "não quero segunda",
+    "intent": "negar_data",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.9602605104446411
+    }
+  },
+  {
+    "text": "qual seu nome?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.9328650236129761
+    }
+  },
+  {
+    "text": "isso é uma pegadinha?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.898501455783844
+    }
+  },
+  {
+    "text": "tem vaga de estágio aí?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9997426867485046
+    }
+  },
+  {
+    "text": "me conta uma história",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9949759244918823
+    }
+  },
+  {
+    "text": "que dia é hoje?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.6376038193702698
+    }
+  },
+  {
+    "text": "alo",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.19220325350761414
+    }
+  },
+  {
+    "text": "bom dia pra você",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9965910911560059
+    }
+  },
+  {
+    "text": "era só isso, obrigado",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9403925538063049
+    }
+  },
+  {
+    "text": "era isso, obrigado pela ajuda",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.9257144927978516
+    }
+  },
+  {
+    "text": "como chego até aí?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "despedida",
+      "confidence": 0.3013274669647217
+    }
+  },
+  {
+    "text": "o retorno é cobrado?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.30411604046821594
+    }
+  },
+  {
+    "text": "isso aqui tem atendimento humano?",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.5617530941963196
+    }
+  },
+  {
+    "text": "ele caiu e não acorda",
+    "intent": "emergencia",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.8493965268135071
+    }
+  }
+]

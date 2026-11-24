@@ -1,0 +1,170 @@
+[
+  {
+    "text": "confirmo",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9920612573623657
+    }
+  },
+  {
+    "text": "confirmo o horário",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9577684998512268
+    }
+  },
+  {
+    "text": "preciso mudar meu telefone",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.6270187497138977
+    }
+  },
+  {
+    "text": "quero saber sobre a LGPD",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.4634464979171753
+    }
+  },
+  {
+    "text": "termos de uso dos dados",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "revogar_consentimento",
+      "confidence": 0.6218727827072144
+    }
+  },
+  {
+    "text": "desmarca minha consulta de 23/11",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9998677968978882
+    }
+  },
+  {
+    "text": "não tenho mais interesse, cancela",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.8152678608894348
+    }
+  },
+  {
+    "text": "quero reagendar minha consulta de pediatria para 24/11",
+    "intent": "reagendarConsulta",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9999114274978638
+    }
+  },
+  {
+    "text": "eu tenho particular, consigo marcar consulta?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.2983618378639221
+    }
+  },
+  {
+    "text": "oi, vocês atendem pelo Unimed?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.5800789594650269
+    }
+  },
+  {
+    "text": "confirmado, obrigado",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.8850879073143005
+    }
+  },
+  {
+    "text": "vou sim",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9929024577140808
+    }
+  },
+  {
+    "text": "confirmo minha ida",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9979198575019836
+    }
+  },
+  {
+    "text": "esse horário não funciona pra mim",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.6273500919342041
+    }
+  },
+  {
+    "text": "quanto é 25 vezes 4?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9999920129776001
+    }
+  },
+  {
+    "text": "me explica como funciona o SUS",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.9694827795028687
+    }
+  },
+  {
+    "text": "quero enviar meu currículo",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "revogar_consentimento",
+      "confidence": 0.2840547263622284
+    }
+  },
+  {
+    "text": "me conta uma história",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9924368262290955
+    }
+  },
+  {
+    "text": "o retorno é cobrado?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.30787527561187744
+    }
+  },
+  {
+    "text": "quero fazer uma reclamação",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.5081123113632202
+    }
+  },
+  {
+    "text": "meu filho está engasgado",
+    "intent": "emergencia",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.5253139138221741
+    }
+  }
+]

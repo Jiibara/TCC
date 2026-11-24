@@ -1,0 +1,94 @@
+[
+  {
+    "text": "preciso ver um cardiologista o quanto antes",
+    "entities": [
+      {
+        "start": 15,
+        "end": 28,
+        "value": "cardiologista",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "quero remarcar meu horário com convênio Unimed",
+    "entities": [
+      {
+        "start": 40,
+        "end": 46,
+        "value": "Unimed",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "convenio",
+        "start": 31,
+        "end": 39,
+        "confidence_entity": 0.7284956574440002,
+        "value": "convênio",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "convenio",
+        "start": 40,
+        "end": 46,
+        "confidence_entity": 0.9979523420333862,
+        "value": "Unimed",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tem expediente no sábado?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.9997443556785583,
+        "value": "sábado",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "quanto é a consulta com o clínico geral?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 34,
+        "end": 39,
+        "confidence_entity": 0.9990076422691345,
+        "value": "geral",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "quanto fica a consulta de pediatria?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 26,
+        "end": 35,
+        "confidence_entity": 0.5227283835411072,
+        "value": "pediatria",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

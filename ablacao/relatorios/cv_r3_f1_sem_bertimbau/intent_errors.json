@@ -1,0 +1,194 @@
+[
+  {
+    "text": "sim, vou comparecer",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9999368190765381
+    }
+  },
+  {
+    "text": "sim, confirmo",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.998923122882843
+    }
+  },
+  {
+    "text": "tudo certo, confirmo minha ida",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9999146461486816
+    }
+  },
+  {
+    "text": "troquei de plano de saúde",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9995063543319702
+    }
+  },
+  {
+    "text": "não concordo mais com o uso dos meus dados",
+    "intent": "revogar_consentimento",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.5216010212898254
+    }
+  },
+  {
+    "text": "preciso ver um cardiologista o quanto antes",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.8475600481033325
+    }
+  },
+  {
+    "text": "não tenho mais interesse, cancela",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.7689204812049866
+    }
+  },
+  {
+    "text": "vcs atendem convenio Unimed?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.8872867822647095
+    }
+  },
+  {
+    "text": "oi, vocês atendem pelo Unimed?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.6755567193031311
+    }
+  },
+  {
+    "text": "pode confirmar",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.8074156641960144
+    }
+  },
+  {
+    "text": "qual seu nome?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.8107403516769409
+    }
+  },
+  {
+    "text": "isso aqui é seguro? vocês vazam meus dados?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.9393177032470703
+    }
+  },
+  {
+    "text": "qual é a capital da França?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.36825719475746155
+    }
+  },
+  {
+    "text": "que dia é hoje?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.34538397192955017
+    }
+  },
+  {
+    "text": "e aí",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.4404570758342743
+    }
+  },
+  {
+    "text": "falou",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.9501805305480957
+    }
+  },
+  {
+    "text": "já vou indo, obrigado",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.5256110429763794
+    }
+  },
+  {
+    "text": "vou nessa, obrigado",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.5511321425437927
+    }
+  },
+  {
+    "text": "encerro por aqui, obrigado",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.7112911939620972
+    }
+  },
+  {
+    "text": "vlw",
+    "intent": "agradecimento",
+    "intent_prediction": {
+      "name": "despedida",
+      "confidence": 0.8243363499641418
+    }
+  },
+  {
+    "text": "a recepção abre que horas?",
+    "intent": "horario_funcionamento",
+    "intent_prediction": {
+      "name": "falar_com_atendente",
+      "confidence": 0.5049356818199158
+    }
+  },
+  {
+    "text": "tem estacionamento aí perto?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.8719414472579956
+    }
+  },
+  {
+    "text": "tem algum valor fixo ou varia por especialidade?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.7786011695861816
+    }
+  },
+  {
+    "text": "o retorno é cobrado?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.1326170563697815
+    }
+  }
+]

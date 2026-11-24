@@ -1,0 +1,178 @@
+[
+  {
+    "text": "confirmo minha presença",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9946574568748474
+    }
+  },
+  {
+    "text": "tá confirmado",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.8490304946899414
+    }
+  },
+  {
+    "text": "confirmar presença",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9785916805267334
+    }
+  },
+  {
+    "text": "meus dados estão seguros",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "atualizar_cadastro",
+      "confidence": 0.4781186580657959
+    }
+  },
+  {
+    "text": "quais informações vocês guardam",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "revogar_consentimento",
+      "confidence": 0.39886587858200073
+    }
+  },
+  {
+    "text": "surgiu um imprevisto, não vou poder comparecer",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.5447258949279785
+    }
+  },
+  {
+    "text": "trabalham com Amil?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.2859928011894226
+    }
+  },
+  {
+    "text": "vocês têm parceria com algum plano de saúde?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.5529398322105408
+    }
+  },
+  {
+    "text": "vou comparecer sim",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9844412803649902
+    }
+  },
+  {
+    "text": "não pode ser terça",
+    "intent": "negar_data",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.9921546578407288
+    }
+  },
+  {
+    "text": "isso aqui é seguro? vocês vazam meus dados?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.7973749041557312
+    }
+  },
+  {
+    "text": "isso é uma pegadinha?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.6627363562583923
+    }
+  },
+  {
+    "text": "qual o valor do aluguel dessa sala?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.9677861928939819
+    }
+  },
+  {
+    "text": "vocês estão contratando médicos?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.5242360234260559
+    }
+  },
+  {
+    "text": "como faço pra trabalhar na clínica?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.235978901386261
+    }
+  },
+  {
+    "text": "o que está passando na TV agora?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "emergencia",
+      "confidence": 0.8974069952964783
+    }
+  },
+  {
+    "text": "bom dia pra você",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9938836097717285
+    }
+  },
+  {
+    "text": "já vou indo, obrigado",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.4726077616214752
+    }
+  },
+  {
+    "text": "vlw",
+    "intent": "agradecimento",
+    "intent_prediction": {
+      "name": "despedida",
+      "confidence": 0.9041567444801331
+    }
+  },
+  {
+    "text": "vocês parcelam a consulta particular?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9329929947853088
+    }
+  },
+  {
+    "text": "vocês aceitam cartão de crédito?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.7696508169174194
+    }
+  },
+  {
+    "text": "chama a recepcionista",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "emergencia",
+      "confidence": 0.5770861506462097
+    }
+  }
+]

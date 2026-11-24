@@ -1,0 +1,267 @@
+version: "3.1"
+
+rules:
+
+# ---------------------------------------------------------------
+# Porta de entrada do agendamento: passa por action_verificar_cadastro,
+# que decide entre ir direto aos horários ou abrir o cadastro_form
+# (consentimento LGPD + dados mínimos). Dentro do escolha_horario_form
+# o comportamento antigo foi preservado (refaz a busca).
+# ---------------------------------------------------------------
+- rule: agendar consulta - verificar cadastro
+  condition:
+    - active_loop: null
+  steps:
+    - intent: agendarConsulta
+    - action: action_verificar_cadastro
+
+- rule: reagendar consulta - verificar cadastro
+  condition:
+    - active_loop: null
+  steps:
+    - intent: reagendarConsulta
+    - action: action_verificar_cadastro
+
+- rule: agendar durante a escolha de horario - refaz a busca
+  condition:
+    - active_loop: escolha_horario_form
+  steps:
+    - intent: agendarConsulta
+    - action: action_consultar_disponibilidade
+
+- rule: reagendar durante a escolha de horario - refaz a busca
+  condition:
+    - active_loop: escolha_horario_form
+  steps:
+    - intent: reagendarConsulta
+    - action: action_consultar_disponibilidade
+
+- rule: perguntar especialidade e seguir para os horarios
+  condition:
+    - active_loop: especialidade_form
+  steps:
+    - action: especialidade_form
+    - active_loop: null
+    - action: action_consultar_disponibilidade
+
+- rule: processar escolha de horario
+  condition:
+    - active_loop: escolha_horario_form
+  steps:
+    - action: escolha_horario_form
+    - active_loop: null
+    - action: action_selecionar_horario
+
+# Paciente com mais de uma consulta: depois de escolher qual, segue para
+# a confirmação do cancelamento ou para a busca de horários (remarcar).
+- rule: processar escolha de consulta
+  condition:
+    - active_loop: escolha_consulta_form
+  steps:
+    - action: escolha_consulta_form
+    - active_loop: null
+    - action: action_selecionar_consulta
+
+# ---------------------------------------------------------------
+# Cadastro + consentimento (RF10/RF11)
+# ---------------------------------------------------------------
+- rule: concluir cadastro
+  condition:
+    - active_loop: cadastro_form
+  steps:
+    - action: cadastro_form
+    - active_loop: null
+    - action: action_finalizar_cadastro
+    - action: action_log_interacao
+
+- rule: atualizar cadastro
+  condition:
+    - active_loop: null
+  steps:
+    - intent: atualizar_cadastro
+    - action: action_atualizar_cadastro
+    - action: action_log_interacao
+
+# Revogar vale em qualquer momento, inclusive no meio de um form.
+- rule: revogar consentimento
+  steps:
+    - intent: revogar_consentimento
+    - action: action_deactivate_loop
+    - active_loop: null
+    - action: action_revogar_consentimento
+    - action: action_log_interacao
+
+- rule: politica de privacidade
+  condition:
+    - active_loop: null
+  steps:
+    - intent: politica_privacidade
+    - action: utter_politica_privacidade
+    - action: action_log_interacao
+
+# Perguntou da política no meio do cadastro: responde e volta à pergunta.
+- rule: politica de privacidade durante o cadastro
+  condition:
+    - active_loop: cadastro_form
+  steps:
+    - intent: politica_privacidade
+    - action: utter_politica_privacidade
+    - action: cadastro_form
+    - active_loop: cadastro_form
+
+# ---------------------------------------------------------------
+# Lembretes (RF08/RF09): o envio é feito por enviar_lembretes.py;
+# aqui só a confirmação de presença que volta pelo chat.
+# ---------------------------------------------------------------
+- rule: confirmar presenca no lembrete
+  condition:
+    - active_loop: null
+  steps:
+    - intent: confirmarLembrete
+    - action: action_confirmar_presenca
+    - action: action_log_interacao
+
+# ---------------------------------------------------------------
+# Confirmação de horário/cancelamento. Só valem fora de form: durante
+# o cadastro, "sim"/"não" são respostas ao consentimento e quem lê é o form.
+# ---------------------------------------------------------------
+- rule: confirmar horario sugerido (agendar ou reagendar)
+  condition:
+    - active_loop: null
+    - slot_was_set:
+        - horario_id_disponivel
+  steps:
+    - intent: afirmar
+    - action: action_confirmar_agendamento
+    - action: action_registrar_lembrete
+    - action: action_log_interacao
+
+- rule: recusar horario sugerido
+  condition:
+    - active_loop: null
+    - slot_was_set:
+        - horario_id_disponivel
+  steps:
+    - intent: negar
+    - action: action_negar_agendamento
+    - action: action_log_interacao
+
+- rule: pedir outro horario excluindo uma data
+  condition:
+    - active_loop: null
+    - slot_was_set:
+        - horario_id_disponivel
+  steps:
+    - intent: negar_data
+    - action: action_consultar_disponibilidade
+    - action: action_log_interacao
+
+# Só vale fora do form: durante a escolha de horário, "cancela essa opção"
+# deve ser lida pelo form (cancela a ESCOLHA), não como cancelar a consulta.
+# O cancelamento só acontece depois do "sim" (action_confirmar_agendamento).
+- rule: cancelar consulta (pede confirmação)
+  condition:
+    - active_loop: null
+  steps:
+    - intent: cancelarConsulta
+    - action: action_pedir_confirmacao_cancelamento
+    - action: action_log_interacao
+
+# ---------------------------------------------------------------
+# Demais intenções. As que costumam ser confundidas com respostas do
+# cadastro (nome, data, telefone, convênio) só valem fora de form.
+# ---------------------------------------------------------------
+- rule: informar convenio
+  condition:
+    - active_loop: null
+  steps:
+    - intent: informarConvenio
+    - action: action_informar_convenio
+    - action: action_log_interacao
+
+- rule: saudacao
+  condition:
+    - active_loop: null
+  steps:
+    - intent: saudacao
+    - action: utter_saudacao
+    - action: action_log_interacao
+
+- rule: despedida
+  steps:
+    - intent: despedida
+    - action: utter_despedida
+    - action: action_log_interacao
+
+- rule: agradecimento
+  steps:
+    - intent: agradecimento
+    - action: utter_agradecimento
+    - action: action_log_interacao
+
+- rule: horario de funcionamento
+  condition:
+    - active_loop: null
+  steps:
+    - intent: horario_funcionamento
+    - action: utter_horario_funcionamento
+    - action: action_log_interacao
+
+- rule: endereco da clinica
+  condition:
+    - active_loop: null
+  steps:
+    - intent: endereco_clinica
+    - action: utter_endereco_clinica
+    - action: action_log_interacao
+
+- rule: preco particular
+  condition:
+    - active_loop: null
+  steps:
+    - intent: consultar_preco_particular
+    - action: utter_preco_particular
+    - action: action_log_interacao
+
+# Os dois blocos abaixo funcionam mesmo no meio de qualquer form:
+# action_deactivate_loop encerra o form antes de sair do fluxo.
+- rule: falar com atendente
+  steps:
+    - intent: falar_com_atendente
+    - action: action_deactivate_loop
+    - active_loop: null
+    - action: action_encaminhar_atendimento_humano
+    - action: action_log_interacao
+
+- rule: emergencia
+  steps:
+    - intent: emergencia
+    - action: action_deactivate_loop
+    - active_loop: null
+    - action: utter_emergencia
+    - action: action_log_interacao
+
+- rule: consultar agendamento
+  condition:
+    - active_loop: null
+  steps:
+    - intent: consultarAgendamento
+    - action: action_consultar_agendamento
+    - action: action_log_interacao
+
+- rule: mensagem fora do escopo aciona fallback
+  condition:
+    - active_loop: null
+  steps:
+    - intent: fora_do_escopo
+    - action: utter_fora_do_escopo
+    - action: action_log_interacao
+
+- rule: baixa confianca do NLU aciona fallback (RF12)
+  condition:
+    - active_loop: null
+  steps:
+    - intent: nlu_fallback
+    - action: utter_fallback
+    - action: action_encaminhar_atendimento_humano
+    - action: action_log_interacao

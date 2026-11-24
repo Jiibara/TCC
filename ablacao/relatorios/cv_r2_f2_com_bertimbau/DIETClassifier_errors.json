@@ -1,0 +1,89 @@
+[
+  {
+    "text": "preciso ver um cardiologista o quanto antes",
+    "entities": [
+      {
+        "start": 15,
+        "end": 28,
+        "value": "cardiologista",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "menos quinta mesmo",
+    "entities": [
+      {
+        "start": 6,
+        "end": 12,
+        "value": "quinta",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "não quero segunda",
+    "entities": [
+      {
+        "start": 10,
+        "end": 17,
+        "value": "segunda",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "tem expediente no sábado?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.9882506132125854,
+        "value": "sábado",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "quanto é a consulta com o clínico geral?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 26,
+        "end": 39,
+        "confidence_entity": 0.576558530330658,
+        "value": "clínico geral",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "quanto fica a consulta de pediatria?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 26,
+        "end": 35,
+        "confidence_entity": 0.9818511009216309,
+        "value": "pediatria",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

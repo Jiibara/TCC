@@ -1,0 +1,186 @@
+[
+  {
+    "text": "estarei lá",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9967377781867981
+    }
+  },
+  {
+    "text": "pode confirmar minha consulta",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.8765478134155273
+    }
+  },
+  {
+    "text": "com certeza vou",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9999469518661499
+    }
+  },
+  {
+    "text": "mudei de convênio",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.5737642645835876
+    }
+  },
+  {
+    "text": "quero revisar meus dados",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.385413259267807
+    }
+  },
+  {
+    "text": "não quero que guardem meus dados",
+    "intent": "revogar_consentimento",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.9628969430923462
+    }
+  },
+  {
+    "text": "quais horários vocês têm pra pediatria?",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9526894688606262
+    }
+  },
+  {
+    "text": "preciso ver um cardiologista o quanto antes",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.5518279075622559
+    }
+  },
+  {
+    "text": "apaga minha consulta marcada",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.9918277263641357
+    }
+  },
+  {
+    "text": "dá pra mover minha consulta uns dias?",
+    "intent": "reagendarConsulta",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9988119602203369
+    }
+  },
+  {
+    "text": "preciso de um novo horário pra minha consulta",
+    "intent": "reagendarConsulta",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9077399373054504
+    }
+  },
+  {
+    "text": "quero mover minha consulta para outro dia",
+    "intent": "reagendarConsulta",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9956856966018677
+    }
+  },
+  {
+    "text": "meu convênio ainda não foi liberado, posso marcar mesmo assim?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.5192939639091492
+    }
+  },
+  {
+    "text": "tudo certo, vou sim",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9944639801979065
+    }
+  },
+  {
+    "text": "menos quinta mesmo",
+    "intent": "negar_data",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.8620151281356812
+    }
+  },
+  {
+    "text": "não quero segunda",
+    "intent": "negar_data",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.9707886576652527
+    }
+  },
+  {
+    "text": "quero saber o número da loteria de ontem",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "atualizar_cadastro",
+      "confidence": 0.7904385328292847
+    }
+  },
+  {
+    "text": "quantos anos você tem?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.2489762157201767
+    }
+  },
+  {
+    "text": "por hoje é só, valeu",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9782974123954773
+    }
+  },
+  {
+    "text": "até que horas consigo chegar aí hoje?",
+    "intent": "horario_funcionamento",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.7446354031562805
+    }
+  },
+  {
+    "text": "qual a rua da clínica?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.48238828778266907
+    }
+  },
+  {
+    "text": "qual CEP da clínica?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.6290495991706848
+    }
+  },
+  {
+    "text": "quanto é a consulta com o clínico geral?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.803162693977356
+    }
+  }
+]

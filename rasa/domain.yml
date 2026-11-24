@@ -1,0 +1,421 @@
+version: "3.1"
+
+intents:
+  - agendarConsulta
+  - cancelarConsulta
+  - reagendarConsulta
+  - informarConvenio
+  - afirmar
+  - negar
+  - negar_data
+  - saudacao
+  - despedida
+  - agradecimento
+  - horario_funcionamento
+  - endereco_clinica
+  - consultar_preco_particular
+  - falar_com_atendente
+  - consultarAgendamento
+  - emergencia
+  - confirmarLembrete
+  - atualizar_cadastro
+  - revogar_consentimento
+  - politica_privacidade
+  - fora_do_escopo
+  - nlu_fallback
+
+entities:
+  - data
+  - horario
+  - especialidade
+  - convenio
+
+forms:
+  escolha_horario_form:
+    required_slots:
+      - horario_escolhido
+
+  # Paciente com mais de uma consulta futura escolhe qual cancelar ou remarcar.
+  escolha_consulta_form:
+    required_slots:
+      - consulta_escolhida
+
+  # Pergunta a especialidade quando o pedido de agendamento não a traz.
+  especialidade_form:
+    required_slots:
+      - especialidade
+
+  # Consentimento LGPD (RF11) vem ANTES de qualquer dado pessoal; depois, o
+  # cadastro mínimo do paciente (RF10). Ordem importa: convênio é o último,
+  # porque a mensagem final do form é relida pela busca de horários.
+  cadastro_form:
+    required_slots:
+      - consent_agendamento
+      - consent_lembretes
+      - cadastro_nome
+      - cadastro_nascimento
+      - cadastro_telefone
+      - cadastro_convenio
+
+slots:
+  especialidade:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: especialidade
+      - type: from_text
+        not_intent:
+          - emergencia
+          - falar_com_atendente
+        conditions:
+          - active_loop: especialidade_form
+            requested_slot: especialidade
+
+  data_consulta:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: data
+
+  data_excluida:
+    type: text
+    mappings:
+      - type: custom
+
+  horario_consulta:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: horario
+
+  convenio:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: convenio
+
+  horario_id_disponivel:
+    type: any
+    mappings:
+      - type: custom
+
+  acao_pendente:
+    type: text
+    mappings:
+      - type: custom
+
+  horarios_oferecidos:
+    type: any
+    mappings:
+      - type: custom
+
+  horarios_candidatos:
+    type: any
+    mappings:
+      - type: custom
+
+  horario_escolhido:
+    type: text
+    mappings:
+      - type: from_text
+        # pedidos de ajuda/urgência não podem ser lidos como "escolha de horário"
+        not_intent:
+          - emergencia
+          - falar_com_atendente
+        conditions:
+          - active_loop: escolha_horario_form
+
+  tentativas_escolha:
+    type: float
+    initial_value: 0.0
+    influence_conversation: false
+    min_value: 0.0
+    max_value: 10.0
+    mappings:
+      - type: custom
+
+  atendimento_humano:
+    type: bool
+    initial_value: false
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  paciente_id:
+    type: any
+    mappings:
+      - type: custom
+
+  cancelamento_pendente:
+    type: any
+    mappings:
+      - type: custom
+
+  # consulta que o paciente pode trocar pelo horário escolhido (2º ciclo DSR)
+  troca_consulta_id:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  # escolha entre várias consultas futuras (parecer, item A2)
+  consulta_escolhida:
+    type: text
+    mappings:
+      - type: from_text
+        not_intent:
+          - emergencia
+          - falar_com_atendente
+        conditions:
+          - active_loop: escolha_consulta_form
+
+  consultas_candidatas:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  # "cancelar" ou "reagendar" enquanto escolhe; "escolhida" depois da escolha para remarcar
+  acao_consulta:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  consulta_id:
+    type: any
+    mappings:
+      - type: custom
+
+  consent_agendamento:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        not_intent:
+          - emergencia
+          - falar_com_atendente
+        conditions:
+          - active_loop: cadastro_form
+            requested_slot: consent_agendamento
+
+  consent_lembretes:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        not_intent:
+          - emergencia
+          - falar_com_atendente
+        conditions:
+          - active_loop: cadastro_form
+            requested_slot: consent_lembretes
+
+  cadastro_nome:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        not_intent:
+          - emergencia
+          - falar_com_atendente
+        conditions:
+          - active_loop: cadastro_form
+            requested_slot: cadastro_nome
+
+  cadastro_nascimento:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        not_intent:
+          - emergencia
+          - falar_com_atendente
+        conditions:
+          - active_loop: cadastro_form
+            requested_slot: cadastro_nascimento
+
+  cadastro_telefone:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        not_intent:
+          - emergencia
+          - falar_com_atendente
+        conditions:
+          - active_loop: cadastro_form
+            requested_slot: cadastro_telefone
+
+  cadastro_convenio:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        not_intent:
+          - emergencia
+          - falar_com_atendente
+        conditions:
+          - active_loop: cadastro_form
+            requested_slot: cadastro_convenio
+
+  consent_ts:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  cadastro_cancelado:
+    type: bool
+    initial_value: false
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  modo_cadastro:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  dados_atuais:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+responses:
+  utter_saudacao:
+    - text: "Olá! Sou o assistente virtual da clínica. Posso ajudar você a agendar, cancelar ou reagendar consultas, tirar dúvidas sobre convênios, preços e horário de funcionamento. Como posso ajudar?\n\nSeus dados só são tratados com a sua autorização. Para saber mais, digite \"política de privacidade\"."
+
+  utter_despedida:
+    - text: "Até mais! Se precisar de algo, é só chamar."
+
+  utter_agradecimento:
+    - text: "Por nada! Qualquer coisa, estou por aqui."
+
+  utter_horario_funcionamento:
+    - text: "Nosso horário de atendimento é de segunda a sexta, das 8h às 18h. Fora desse período, você ainda pode agendar por aqui — a consulta é que será marcada para o próximo dia útil disponível."
+
+  utter_endereco_clinica:
+    - text: "Este é um protótipo acadêmico e não representa uma clínica real, então não há um endereço físico configurado. Numa implantação real, esta mensagem traria o endereço completo e um link de mapa."
+
+  utter_preco_particular:
+    - text: "Este é um protótipo acadêmico, então os valores de consulta particular não foram configurados. Numa implantação real, esta resposta traria os preços por especialidade."
+
+  utter_pedir_especialidade:
+    - text: "Para qual especialidade você gostaria de agendar a consulta?"
+
+  utter_pedir_data:
+    - text: "Para qual data você gostaria de marcar?"
+
+  utter_sem_disponibilidade:
+    - text: "Não encontrei horários disponíveis para essa especialidade/data. Posso sugerir outras datas próximas."
+
+  utter_confirmar_agendamento:
+    - text: "Encontrei um horário disponível. Confirma o agendamento?"
+
+  utter_ask_horario_escolhido:
+    - text: "Qual desses horários você prefere? Responda com o número da opção (1, 2, 3...), o horário (ex.: 08:30) ou o nome do médico."
+
+  utter_aviso_cadastro:
+    - text: "Para agendar, preciso fazer seu cadastro rápido e registrar a sua autorização para o uso dos dados (LGPD). Você pode digitar \"cancelar\" a qualquer momento."
+
+  utter_ask_consent_agendamento:
+    - text: "Consentimento (Lei Geral de Proteção de Dados, Lei 13.709/2018): para agendar consultas vou registrar seu nome, data de nascimento, telefone e convênio, além das consultas marcadas. São dados de saúde, considerados sensíveis, e serão usados somente para agendamento e atendimento administrativo da clínica, com acesso restrito à equipe. Você pode revogar essa autorização quando quiser, dizendo \"revogar consentimento\". Você autoriza? Responda SIM ou NÃO."
+
+  utter_ask_consent_lembretes:
+    - text: "Você também autoriza o envio de lembretes de consulta por este chat e a confirmação de presença? É opcional: se responder NÃO, você agenda normalmente, mas não recebe lembretes. Responda SIM ou NÃO."
+
+  utter_ask_cadastro_nome:
+    - text: "Qual é o seu nome completo?"
+    - text: "Qual é o seu nome completo? (ou \"manter\" para não alterar)"
+      condition:
+        - type: slot
+          name: modo_cadastro
+          value: atualizacao
+
+  utter_ask_cadastro_nascimento:
+    - text: "Qual é a sua data de nascimento? (dd/mm/aaaa)"
+    - text: "Qual é a sua data de nascimento? (dd/mm/aaaa, ou \"manter\")"
+      condition:
+        - type: slot
+          name: modo_cadastro
+          value: atualizacao
+
+  utter_ask_cadastro_telefone:
+    - text: "Qual é o seu telefone com DDD?"
+    - text: "Qual é o seu telefone com DDD? (ou \"manter\")"
+      condition:
+        - type: slot
+          name: modo_cadastro
+          value: atualizacao
+
+  utter_ask_cadastro_convenio:
+    - text: "Você tem convênio? Informe o nome ou responda \"particular\"."
+    - text: "Qual é o seu convênio? (nome, \"particular\" ou \"manter\")"
+      condition:
+        - type: slot
+          name: modo_cadastro
+          value: atualizacao
+
+  utter_sem_consentimento:
+    - text: "Entendido. Sem a sua autorização não posso registrar seus dados, então não consigo agendar por aqui. Nenhuma informação foi guardada. Se mudar de ideia, é só pedir para agendar de novo, ou posso encaminhar você à recepção."
+
+  utter_politica_privacidade:
+    - text: "Política de privacidade (resumo): coletamos apenas nome, data de nascimento, telefone, convênio e as consultas marcadas, sempre com o seu consentimento (LGPD, art. 7º, I e art. 11, I). Usamos esses dados somente para agendar e para enviar lembretes, se você autorizar. Você pode pedir para revogar o consentimento, atualizar seus dados ou excluí-los falando com a recepção."
+
+  utter_agendamento_confirmado:
+    - text: "Consulta agendada com sucesso! Você receberá um lembrete automático próximo à data."
+
+  utter_cancelamento_confirmado:
+    - text: "Sua consulta foi cancelada com sucesso."
+
+  utter_reagendamento_confirmado:
+    - text: "Sua consulta foi reagendada com sucesso."
+
+  utter_consulta_nao_encontrada:
+    - text: "Não localizei nenhuma consulta agendada em seu nome. Para marcar uma, é só dizer \"quero agendar uma consulta\"."
+
+  utter_agradecer_confirmacao:
+    - text: "Perfeito, presença confirmada! Até lá."
+
+  utter_fallback:
+    - text: "Desculpe, não entendi bem sua solicitação."
+
+  utter_fora_do_escopo:
+    - text: "Desculpe, só consigo ajudar com agendamento, cancelamento e reagendamento de consultas, convênios e informações da clínica. Posso ajudar com algum desses assuntos?"
+
+  utter_emergencia:
+    - text: "Se isso é uma emergência, não espere por este assistente: ligue agora para o SAMU (192) ou vá ao pronto-socorro mais próximo. Este canal não atende urgências."
+
+  utter_encaminhar_humano:
+    - text: "Um momento, vou te transferir para um atendente da recepção."
+
+actions:
+  - action_consultar_disponibilidade
+  - action_confirmar_agendamento
+  - action_negar_agendamento
+  - action_selecionar_horario
+  - validate_escolha_horario_form
+  - action_ask_consulta_escolhida
+  - validate_escolha_consulta_form
+  - action_selecionar_consulta
+  - action_pedir_confirmacao_cancelamento
+  - action_consultar_agendamento
+  - action_informar_convenio
+  - action_registrar_lembrete
+  - action_verificar_cadastro
+  - action_ask_especialidade
+  - validate_especialidade_form
+  - action_atualizar_cadastro
+  - validate_cadastro_form
+  - action_finalizar_cadastro
+  - action_revogar_consentimento
+  - action_confirmar_presenca
+  - action_log_interacao
+  - action_encaminhar_atendimento_humano
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

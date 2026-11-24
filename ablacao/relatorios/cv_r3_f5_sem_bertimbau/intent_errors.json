@@ -1,0 +1,202 @@
+[
+  {
+    "text": "estarei lá",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9997100234031677
+    }
+  },
+  {
+    "text": "vou estar presente",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.6806675791740417
+    }
+  },
+  {
+    "text": "com certeza vou",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.821747362613678
+    }
+  },
+  {
+    "text": "confirmo, obrigado pelo lembrete",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9200238585472107
+    }
+  },
+  {
+    "text": "trocar meus dados",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.9780294895172119
+    }
+  },
+  {
+    "text": "mudei de convênio",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9843243360519409
+    }
+  },
+  {
+    "text": "cancelar meu consentimento",
+    "intent": "revogar_consentimento",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9826416969299316
+    }
+  },
+  {
+    "text": "quero saber sobre a LGPD",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.3335539400577545
+    }
+  },
+  {
+    "text": "termos de uso dos dados",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "revogar_consentimento",
+      "confidence": 0.9666991233825684
+    }
+  },
+  {
+    "text": "quero fazer um agendamento de consulta",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.6270736455917358
+    }
+  },
+  {
+    "text": "preciso de atendimento com endocrinologista urgente",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "emergencia",
+      "confidence": 0.8639717698097229
+    }
+  },
+  {
+    "text": "eu tenho particular, consigo marcar consulta?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.6858153939247131
+    }
+  },
+  {
+    "text": "tudo certo, vou sim",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9971515536308289
+    }
+  },
+  {
+    "text": "não, obrigado",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.625505268573761
+    }
+  },
+  {
+    "text": "quanto é 25 vezes 4?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.8391340970993042
+    }
+  },
+  {
+    "text": "qual o telefone da farmácia mais próxima?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "despedida",
+      "confidence": 0.4905673861503601
+    }
+  },
+  {
+    "text": "como faço pra trabalhar na clínica?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.43724462389945984
+    }
+  },
+  {
+    "text": "o que está passando na TV agora?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "emergencia",
+      "confidence": 0.9317951798439026
+    }
+  },
+  {
+    "text": "alo",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.3476836085319519
+    }
+  },
+  {
+    "text": "por hoje é só, valeu",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9940513968467712
+    }
+  },
+  {
+    "text": "era isso, obrigado pela ajuda",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.5082889199256897
+    }
+  },
+  {
+    "text": "até que horas consigo chegar aí hoje?",
+    "intent": "horario_funcionamento",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9205326437950134
+    }
+  },
+  {
+    "text": "tem algum ponto de referência pra chegar aí?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.5027355551719666
+    }
+  },
+  {
+    "text": "chama a recepcionista",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "emergencia",
+      "confidence": 0.34447744488716125
+    }
+  },
+  {
+    "text": "ele caiu e não acorda",
+    "intent": "emergencia",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.6443719267845154
+    }
+  }
+]

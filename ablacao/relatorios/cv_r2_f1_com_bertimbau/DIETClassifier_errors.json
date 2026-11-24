@@ -1,0 +1,31 @@
+[
+  {
+    "text": "confirmo a consulta de amanhã",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 23,
+        "end": 29,
+        "confidence_entity": 0.9902575016021729,
+        "value": "amanhã",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "trabalham com Amil?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 18,
+        "value": "Amil",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

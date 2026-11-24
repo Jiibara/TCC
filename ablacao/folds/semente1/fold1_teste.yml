@@ -1,0 +1,185 @@
+version: "3.1"
+nlu:
+- intent: confirmarLembrete
+  examples: |
+    - estarei lá
+    - presença confirmada
+    - vou estar presente
+    - confirmar presença
+    - estarei presente no horário marcado
+- intent: atualizar_cadastro
+  examples: |
+    - quero corrigir meu nome
+    - alterar meus dados cadastrais
+    - quero alterar meu telefone
+    - quero revisar meus dados
+    - corrigir cadastro
+- intent: revogar_consentimento
+  examples: |
+    - cancelar meu consentimento
+    - parar os lembretes
+    - não permito mais o tratamento dos meus dados
+    - cancelar a autorização de lembretes
+    - quero revogar o consentimento dos lembretes
+- intent: politica_privacidade
+  examples: |
+    - privacidade
+    - quero ver a política de privacidade
+    - o que vocês fazem com meus dados pessoais
+    - como vocês cuidam das minhas informações
+    - quero entender como usam meus dados
+- intent: agendarConsulta
+  examples: |
+    - gostaria de marcar uma consulta com [cardiologista](especialidade)
+    - tem vaga para [endocrinologia](especialidade) [amanhã](data)?
+    - queria saber se tem vaga pra consulta com [Dra. Ana Ferreira](especialidade)
+    - preciso consultar com [clinico geral](especialidade), tem horario?
+    - quero marcar um horário, sou paciente do [Unimed](convenio)
+    - tem como marcar pra [depois de amanhã](data)?
+    - preciso ver um [cardiologista](especialidade) o quanto antes
+    - quero marcar consulta pro dia [01](data)
+    - oi, quero marcar com [cardiologista](especialidade) pelo [Bradesco Saúde](convenio)
+    - tem horário livre pra [amanhã](data)?
+    - consegue marcar pra [semana que vem](data)?
+    - quero marcar uma consulta nova
+- intent: cancelarConsulta
+  examples: |
+    - gostaria de cancelar o agendamento
+    - preciso desmarcar, surgiu um imprevisto
+    - quero cancelar meu horário das [14h](horario)
+    - vou ter que cancelar, não consigo ir
+    - cancela essa consulta pra mim
+    - não vai dar pra eu ir na consulta, cancela
+    - surgiu um imprevisto, não vou poder comparecer
+    - desculpa mas vou ter que cancelar minha consulta
+    - quero cancelar essa marcação
+    - exclui minha consulta da agenda por favor
+    - quero dar baixa na minha consulta
+    - quero excluir minha consulta
+- intent: reagendarConsulta
+  examples: |
+    - quero remarcar minha consulta
+    - preciso trocar o dia da minha consulta com [endocrinologista](especialidade)
+    - preciso mudar minha consulta de horário
+    - quero reagendar minha consulta de [pediatria](especialidade) para [24/11](data)
+    - preciso remarcar meu agendamento
+    - vou ter que remarcar, não vou poder no dia marcado
+    - preciso reagendar, deu um imprevisto no meu trabalho
+    - dá pra mudar o horário da minha consulta pra mais tarde?
+    - dá pra mover minha consulta uns dias?
+    - quero passar minha consulta pra semana que vem
+- intent: informarConvenio
+  examples: |
+    - quais convênios vocês trabalham?
+    - a clínica atende [Bradesco Saúde](convenio)?
+    - trabalham com [Amil](convenio)?
+    - bom dia, meu plano cobre consulta aí?
+    - meu convênio ainda não foi liberado, posso marcar mesmo assim?
+    - qual convênio é mais barato pra consulta particular?
+    - quais operadoras de saúde a clínica tem contrato?
+    - vocês aceitam [Bradesco Saúde](convenio)?
+- intent: afirmar
+  examples: |
+    - sim
+    - isso mesmo
+    - sim, por favor
+    - beleza, pode marcar
+    - vou comparecer sim
+    - sim, já anotei aqui
+    - claro, vou sim
+    - com certeza vou comparecer
+    - ótimo, confirmo
+    - sim, pode contar comigo
+    - ótimo, pode ser
+    - sim, aceito
+- intent: negar
+  examples: |
+    - não confirma não
+    - não é esse
+    - esse não serve
+    - não, cancela essa opção
+    - não, por enquanto não
+    - acho que não vai dar
+- intent: negar_data
+  examples: |
+    - não pode ser [terça](data)
+    - sem ser [amanhã](data)
+    - não pode ser nesse dia, [amanhã](data) não dá
+    - menos [sábado](data), qualquer outro dia serve
+    - exceto [segunda-feira](data), pode ser qualquer um
+- intent: fora_do_escopo
+  examples: |
+    - qual o resultado do jogo de ontem?
+    - me indica um restaurante bom aqui perto
+    - você pode fazer minha declaração de imposto de renda?
+    - me ajuda a resolver um problema no meu computador
+    - quero saber sobre vagas de emprego na clínica
+    - me dá uma dica de filme pra assistir hoje
+    - meu computador não liga, pode me ajudar?
+    - como tá o trânsito aí perto?
+    - quero saber o número da loteria de ontem
+    - você pode diagnosticar meus sintomas?
+- intent: saudacao
+  examples: |
+    - oie
+    - oi, boa tarde
+    - oi tudo bem
+    - oi, gostaria de uma informação
+    - salve
+    - fala
+- intent: despedida
+  examples: |
+    - tchau
+    - já vou indo, obrigado
+    - tchau tchau
+    - certo, até mais ver
+- intent: agradecimento
+  examples: |
+    - vlw
+    - obrigado pela ajuda
+    - valeu pela atenção
+    - adorei, obrigada
+- intent: horario_funcionamento
+  examples: |
+    - qual o horário de funcionamento da clínica?
+    - que horas vocês fecham?
+    - a clínica funciona aos sábados?
+    - a recepção abre que horas?
+    - qual o horário comercial da clínica?
+- intent: endereco_clinica
+  examples: |
+    - onde fica a clínica?
+    - qual CEP da clínica?
+    - qual endereço completo pra eu digitar no mapa?
+- intent: consultar_preco_particular
+  examples: |
+    - tem desconto pra pagamento à vista?
+    - qual o preço da consulta de cardiologia particular?
+    - qual o valor pra endocrinologia particular?
+    - aceita cartão pra pagar a consulta?
+    - a consulta particular tem algum valor específico?
+    - qual o valor de uma consulta de cardiologia?
+- intent: falar_com_atendente
+  examples: |
+    - eu quero falar com uma pessoa de verdade
+    - pode me transferir pra uma pessoa de verdade?
+    - quero falar com um humano
+    - quero reclamar do atendimento de ontem
+    - me coloca com um atendente
+- intent: consultarAgendamento
+  examples: |
+    - qual data eu agendei?
+    - com quem é minha consulta?
+    - ver meus agendamentos
+    - me diz o horário que eu marquei
+    - em que dia ficou a consulta?
+    - tem alguma consulta no meu nome?
+    - só queria saber a data da minha consulta
+    - ver minha agenda de consultas
+- intent: emergencia
+  examples: |
+    - pode chamar um médico agora, é urgente
+    - preciso de uma ambulância
+    - preciso de socorro urgente
+    - minha mãe não está respirando direito
+    - ele desmaiou

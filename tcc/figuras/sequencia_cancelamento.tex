@@ -1,0 +1,86 @@
+% Diagrama de sequencia do cancelamento e do reagendamento. Gera DiagragmaCancelaCorrigida.png.
+\documentclass[border=8pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[underline=false]{pgf-umlsd}
+\renewcommand{\familydefault}{\sfdefault}
+% \mess do pgf-umlsd usa o texto como nome de no (quebra com parenteses); versao sem isso:
+\makeatletter
+\renewcommand{\mess}[4][0]{%
+  \stepcounter{seqlevel}%
+  \path (#2)+(0,-\theseqlevel*\unitfactor-0.7*\unitfactor) node (mess from) {};%
+  \addtocounter{seqlevel}{#1}%
+  \path (#4)+(0,-\theseqlevel*\unitfactor-0.7*\unitfactor) node (mess to) {};%
+  \draw[->,>=angle 60] (mess from) -- (mess to) node[midway, above] {#3};}
+\makeatother
+\begin{document}
+\small
+\begin{sequencediagram}
+  \global\def\unitfactor{0.46}
+  \newthread[white]{p}{Paciente}
+  \newinst[3.3]{r}{Rasa (NLU e diálogo)}
+  \newinst[2.4]{a}{Servidor de ações}
+  \newinst[4.1]{b}{Banco de dados}
+
+  \begin{sdblock}{Cancelamento}{[RF05]}
+    \mess{p}{``quero cancelar minha consulta''}{r}
+    \begin{callself}{r}{classifica cancelarConsulta}{}
+    \end{callself}
+    \begin{call}{r}{action\_pedir\_confirmacao\_cancelamento}{a}{dados da consulta}
+      \begin{call}{a}{SELECT consultas ativas futuras do paciente}{b}{consultas}
+      \end{call}
+    \end{call}
+    \mess{r}{[mais de uma] pergunta qual consulta}{p}
+    \mess{p}{[mais de uma] escolhe a consulta}{r}
+    \mess{r}{``Quer cancelar a consulta de ...? (sim/não)''}{p}
+    \mess{p}{``sim'', em até 5 minutos}{r}
+    \begin{call}{r}{action\_confirmar\_agendamento}{a}{}
+      \begin{call}{a}{UPDATE consulta: cancelada, mantida como histórico}{b}{}
+      \end{call}
+      \begin{call}{a}{UPDATE horario: disponivel}{b}{}
+      \end{call}
+      \begin{call}{a}{UPDATE lembretes pendentes: ignorado; COMMIT}{b}{}
+      \end{call}
+    \end{call}
+    \mess{r}{``Sua consulta foi cancelada com sucesso.''}{p}
+  \end{sdblock}
+
+  \begin{sdblock}{Reagendamento}{[RF06]}
+    \mess{p}{``quero remarcar minha consulta''}{r}
+    \begin{call}{r}{action\_verificar\_cadastro}{a}{}
+    \end{call}
+    \begin{call}{r}{action\_consultar\_disponibilidade}{a}{consultas}
+      \begin{call}{a}{SELECT consultas ativas futuras do paciente}{b}{consultas}
+      \end{call}
+    \end{call}
+    \mess{r}{[mais de uma] pergunta qual consulta}{p}
+    \mess{p}{[mais de uma] escolhe a consulta}{r}
+    \begin{call}{r}{action\_consultar\_disponibilidade}{a}{até 3 opções}
+      \begin{call}{a}{SELECT horários disponíveis}{b}{horários}
+      \end{call}
+    \end{call}
+    \mess{r}{apresenta as opções}{p}
+    \mess{p}{escolhe uma opção e responde ``sim''}{r}
+    \begin{call}{r}{action\_confirmar\_agendamento}{a}{}
+      \begin{call}{a}{UPDATE novo horario: reservado, se ainda disponivel}{b}{linhas alteradas}
+      \end{call}
+      \begin{call}{a}{UPDATE horario antigo: disponivel}{b}{}
+      \end{call}
+      \begin{call}{a}{UPDATE lembretes pendentes: ignorado}{b}{}
+      \end{call}
+      \begin{call}{a}{UPDATE consulta: novo horário, reagendada; COMMIT}{b}{}
+      \end{call}
+    \end{call}
+    \begin{call}{r}{action\_registrar\_lembrete}{a}{}
+      \begin{call}{a}{INSERT lembrete do novo horário (RF08)}{b}{}
+      \end{call}
+    \end{call}
+    \mess{r}{``Sua consulta foi reagendada com sucesso!''}{p}
+  \end{sdblock}
+
+  \begin{call}{r}{action\_log\_interacao}{a}{}
+    \begin{call}{a}{INSERT log\_interacao (RF13)}{b}{}
+    \end{call}
+  \end{call}
+\end{sequencediagram}
+\end{document}

@@ -1,0 +1,162 @@
+[
+  {
+    "text": "confirmo",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9995172023773193
+    }
+  },
+  {
+    "text": "confirmo o horário",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9567115902900696
+    }
+  },
+  {
+    "text": "preciso mudar meu telefone",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.990009605884552
+    }
+  },
+  {
+    "text": "preciso trocar meu número de telefone",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.8004300594329834
+    }
+  },
+  {
+    "text": "quero saber sobre a LGPD",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.21016860008239746
+    }
+  },
+  {
+    "text": "termos de uso dos dados",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "revogar_consentimento",
+      "confidence": 0.8600314259529114
+    }
+  },
+  {
+    "text": "desmarca minha consulta de 23/11",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9999278783798218
+    }
+  },
+  {
+    "text": "quero reagendar minha consulta de pediatria para 24/11",
+    "intent": "reagendarConsulta",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9999905824661255
+    }
+  },
+  {
+    "text": "eu tenho particular, consigo marcar consulta?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.9409182667732239
+    }
+  },
+  {
+    "text": "oi, vocês atendem pelo Unimed?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.8006206750869751
+    }
+  },
+  {
+    "text": "confirmado, obrigado",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.5200335383415222
+    }
+  },
+  {
+    "text": "vou sim",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.987419068813324
+    }
+  },
+  {
+    "text": "confirmo minha ida",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9990553259849548
+    }
+  },
+  {
+    "text": "quanto é 25 vezes 4?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9999457597732544
+    }
+  },
+  {
+    "text": "me explica como funciona o SUS",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.6574119329452515
+    }
+  },
+  {
+    "text": "quero enviar meu currículo",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "atualizar_cadastro",
+      "confidence": 0.6734963655471802
+    }
+  },
+  {
+    "text": "me conta uma história",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.7951985001564026
+    }
+  },
+  {
+    "text": "salve",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.5293465852737427
+    }
+  },
+  {
+    "text": "encerro por aqui, obrigado",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.4330730140209198
+    }
+  },
+  {
+    "text": "quanto sai no total sem usar convênio?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.7530183792114258
+    }
+  }
+]

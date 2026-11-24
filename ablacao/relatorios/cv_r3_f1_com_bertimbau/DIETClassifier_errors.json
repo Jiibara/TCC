@@ -1,0 +1,52 @@
+[
+  {
+    "text": "preciso ver um cardiologista o quanto antes",
+    "entities": [
+      {
+        "start": 15,
+        "end": 28,
+        "value": "cardiologista",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "remarca minha consulta de clínica geral por favor",
+    "entities": [
+      {
+        "start": 26,
+        "end": 39,
+        "value": "clínica geral",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 34,
+        "end": 39,
+        "confidence_entity": 0.9413478970527649,
+        "value": "geral",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tem expediente no sábado?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.7582910656929016,
+        "value": "sábado",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

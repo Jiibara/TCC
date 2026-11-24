@@ -1,0 +1,178 @@
+[
+  {
+    "text": "estarei lá",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9937665462493896
+    }
+  },
+  {
+    "text": "presença confirmada",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.8608344793319702
+    }
+  },
+  {
+    "text": "vou estar presente",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.5292767286300659
+    }
+  },
+  {
+    "text": "confirmar presença",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9637854099273682
+    }
+  },
+  {
+    "text": "quero revisar meus dados",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.4390987157821655
+    }
+  },
+  {
+    "text": "cancelar meu consentimento",
+    "intent": "revogar_consentimento",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.7505441308021545
+    }
+  },
+  {
+    "text": "surgiu um imprevisto, não vou poder comparecer",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.6438755989074707
+    }
+  },
+  {
+    "text": "trabalham com Amil?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.8576532006263733
+    }
+  },
+  {
+    "text": "meu convênio ainda não foi liberado, posso marcar mesmo assim?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9465813040733337
+    }
+  },
+  {
+    "text": "vou comparecer sim",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.992354154586792
+    }
+  },
+  {
+    "text": "com certeza vou comparecer",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9991503953933716
+    }
+  },
+  {
+    "text": "ótimo, confirmo",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.6864834427833557
+    }
+  },
+  {
+    "text": "me indica um restaurante bom aqui perto",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "endereco_clinica",
+      "confidence": 0.42902183532714844
+    }
+  },
+  {
+    "text": "quero saber sobre vagas de emprego na clínica",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.3364624083042145
+    }
+  },
+  {
+    "text": "me dá uma dica de filme pra assistir hoje",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.6867997050285339
+    }
+  },
+  {
+    "text": "meu computador não liga, pode me ajudar?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.8317509889602661
+    }
+  },
+  {
+    "text": "como tá o trânsito aí perto?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "endereco_clinica",
+      "confidence": 0.6642988324165344
+    }
+  },
+  {
+    "text": "quero saber o número da loteria de ontem",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "atualizar_cadastro",
+      "confidence": 0.14528346061706543
+    }
+  },
+  {
+    "text": "salve",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.11522780358791351
+    }
+  },
+  {
+    "text": "vlw",
+    "intent": "agradecimento",
+    "intent_prediction": {
+      "name": "despedida",
+      "confidence": 0.8310520648956299
+    }
+  },
+  {
+    "text": "qual endereço completo pra eu digitar no mapa?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "atualizar_cadastro",
+      "confidence": 0.581419825553894
+    }
+  },
+  {
+    "text": "pode chamar um médico agora, é urgente",
+    "intent": "emergencia",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.5417892932891846
+    }
+  }
+]

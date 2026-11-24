@@ -1,0 +1,63 @@
+[
+  {
+    "text": "quanto é a consulta com o clínico geral?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 34,
+        "end": 39,
+        "confidence_entity": 0.9216307997703552,
+        "value": "geral",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "qual o valor pra endocrinologia particular?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 17,
+        "end": 31,
+        "confidence_entity": 0.997423529624939,
+        "value": "endocrinologia",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "queria horário com cardiologista pra sexta de tarde",
+    "entities": [
+      {
+        "start": 19,
+        "end": 32,
+        "value": "cardiologista",
+        "entity": "especialidade"
+      },
+      {
+        "start": 37,
+        "end": 42,
+        "value": "sexta",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 37,
+        "end": 42,
+        "confidence_entity": 0.9987919926643372,
+        "value": "sexta",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

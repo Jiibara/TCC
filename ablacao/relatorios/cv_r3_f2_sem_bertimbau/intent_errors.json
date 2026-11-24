@@ -1,0 +1,202 @@
+[
+  {
+    "text": "não quero que guardem meus dados",
+    "intent": "revogar_consentimento",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.6404607892036438
+    }
+  },
+  {
+    "text": "meus dados estão seguros",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.30595722794532776
+    }
+  },
+  {
+    "text": "como meus dados são tratados",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.7680670022964478
+    }
+  },
+  {
+    "text": "pode retirar minha consulta do sistema",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "revogar_consentimento",
+      "confidence": 0.3877362906932831
+    }
+  },
+  {
+    "text": "não quero mais a consulta",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.8932389616966248
+    }
+  },
+  {
+    "text": "confirmo",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9945584535598755
+    }
+  },
+  {
+    "text": "confirmo minha presença",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9984793066978455
+    }
+  },
+  {
+    "text": "ótimo, confirmo",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.8570104241371155
+    }
+  },
+  {
+    "text": "bora",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.9509679079055786
+    }
+  },
+  {
+    "text": "positivo",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.48133033514022827
+    }
+  },
+  {
+    "text": "cancela esse horário",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9999641180038452
+    }
+  },
+  {
+    "text": "esse não, cancela",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9932316541671753
+    }
+  },
+  {
+    "text": "não pode ser terça",
+    "intent": "negar_data",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.5760216116905212
+    }
+  },
+  {
+    "text": "não quero segunda",
+    "intent": "negar_data",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.8397564888000488
+    }
+  },
+  {
+    "text": "você é um robô?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "falar_com_atendente",
+      "confidence": 0.5698469281196594
+    }
+  },
+  {
+    "text": "vocês fazem exames de sangue aqui?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.8515353202819824
+    }
+  },
+  {
+    "text": "qual o valor do aluguel dessa sala?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.9721118807792664
+    }
+  },
+  {
+    "text": "me explica como funciona o SUS",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.6981126666069031
+    }
+  },
+  {
+    "text": "qual a melhor dieta pra emagrecer?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.1989579200744629
+    }
+  },
+  {
+    "text": "qual o telefone da prefeitura?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "atualizar_cadastro",
+      "confidence": 0.5837716460227966
+    }
+  },
+  {
+    "text": "bom dia pra você",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9132379293441772
+    }
+  },
+  {
+    "text": "qual a rua da clínica?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.42574307322502136
+    }
+  },
+  {
+    "text": "qual CEP da clínica?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.5877257585525513
+    }
+  },
+  {
+    "text": "quanto é a consulta com o clínico geral?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9943212270736694
+    }
+  },
+  {
+    "text": "consultar meu agendamento",
+    "intent": "consultarAgendamento",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.5786851048469543
+    }
+  }
+]

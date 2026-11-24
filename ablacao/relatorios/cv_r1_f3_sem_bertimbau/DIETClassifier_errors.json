@@ -1,0 +1,112 @@
+[
+  {
+    "text": "gostaria de agendar um atendimento para 23/11 às 09:00",
+    "entities": [
+      {
+        "start": 40,
+        "end": 45,
+        "value": "23/11",
+        "entity": "data"
+      },
+      {
+        "start": 49,
+        "end": 54,
+        "value": "09:00",
+        "entity": "horario"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 40,
+        "end": 45,
+        "confidence_entity": 0.965022087097168,
+        "value": "23/11",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "data",
+        "start": 49,
+        "end": 54,
+        "confidence_entity": 0.5352303981781006,
+        "value": "09:00",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "quero marcar um horário pra sexta de manhã",
+    "entities": [
+      {
+        "start": 28,
+        "end": 33,
+        "value": "sexta",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 28,
+        "end": 33,
+        "confidence_entity": 0.9971730709075928,
+        "value": "sexta",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "data",
+        "start": 37,
+        "end": 42,
+        "confidence_entity": 0.5523963570594788,
+        "value": "manhã",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "dá pra remarcar pra semana que vem?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 34,
+        "value": "semana que vem",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "eu não tenho convênio, posso ser atendido como particular?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "convenio",
+        "start": 47,
+        "end": 57,
+        "confidence_entity": 0.9411987662315369,
+        "value": "particular",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tem atendimento no fim de semana?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 26,
+        "end": 32,
+        "confidence_entity": 0.6297836303710938,
+        "value": "semana",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

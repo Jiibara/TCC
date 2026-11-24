@@ -1,0 +1,154 @@
+[
+  {
+    "text": "vou sim",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9982435703277588
+    }
+  },
+  {
+    "text": "vou comparecer na consulta",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.6793810129165649
+    }
+  },
+  {
+    "text": "confirmo, obrigado pelo lembrete",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.8639811277389526
+    }
+  },
+  {
+    "text": "troquei de plano de saúde",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.8799391984939575
+    }
+  },
+  {
+    "text": "confirmo minha ida",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.998887836933136
+    }
+  },
+  {
+    "text": "cancela esse horário",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9996310472488403
+    }
+  },
+  {
+    "text": "esse não, cancela",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9787437319755554
+    }
+  },
+  {
+    "text": "não quero segunda",
+    "intent": "negar_data",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.931577205657959
+    }
+  },
+  {
+    "text": "qual seu nome?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.3869844675064087
+    }
+  },
+  {
+    "text": "você pode marcar uma reunião de trabalho pra mim?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.7925967574119568
+    }
+  },
+  {
+    "text": "isso é uma pegadinha?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9097759127616882
+    }
+  },
+  {
+    "text": "tem vaga de estágio aí?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9974744915962219
+    }
+  },
+  {
+    "text": "me conta uma história",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.32041212916374207
+    }
+  },
+  {
+    "text": "alo",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.2496587485074997
+    }
+  },
+  {
+    "text": "bom dia pra você",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9490572810173035
+    }
+  },
+  {
+    "text": "era só isso, obrigado",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.8381220698356628
+    }
+  },
+  {
+    "text": "era isso, obrigado pela ajuda",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.7978690266609192
+    }
+  },
+  {
+    "text": "isso aqui tem atendimento humano?",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.4612344801425934
+    }
+  },
+  {
+    "text": "confirma pra mim o horário da minha consulta",
+    "intent": "consultarAgendamento",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.8996275663375854
+    }
+  }
+]

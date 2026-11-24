@@ -1,0 +1,90 @@
+[
+  {
+    "text": "confirmo a consulta de amanhã",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 23,
+        "end": 29,
+        "confidence_entity": 0.9977208971977234,
+        "value": "amanhã",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "quanto é a consulta com o clínico geral?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 26,
+        "end": 39,
+        "confidence_entity": 0.9990156888961792,
+        "value": "clínico geral",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "quanto é 25 vezes 4?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 9,
+        "end": 11,
+        "confidence_entity": 0.998040497303009,
+        "value": "25",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "data",
+        "start": 18,
+        "end": 19,
+        "confidence_entity": 0.9944829344749451,
+        "value": "4",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "será que dá pra marcar uma consulta com endocrinologista essa semana?",
+    "entities": [
+      {
+        "start": 40,
+        "end": 56,
+        "value": "endocrinologista",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 40,
+        "end": 56,
+        "confidence_entity": 0.9990642666816711,
+        "value": "endocrinologista",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "data",
+        "start": 62,
+        "end": 68,
+        "confidence_entity": 0.991832971572876,
+        "value": "semana",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

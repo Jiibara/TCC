@@ -1,0 +1,178 @@
+[
+  {
+    "text": "confirmo minha presença",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9689685702323914
+    }
+  },
+  {
+    "text": "pode confirmar minha consulta",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.7286450862884521
+    }
+  },
+  {
+    "text": "tudo certo, confirmo minha ida",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.999640703201294
+    }
+  },
+  {
+    "text": "não quero mais que usem meus dados",
+    "intent": "revogar_consentimento",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.3911895155906677
+    }
+  },
+  {
+    "text": "quero saber sobre a LGPD",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.3510586619377136
+    }
+  },
+  {
+    "text": "termos de uso dos dados",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "revogar_consentimento",
+      "confidence": 0.9751282334327698
+    }
+  },
+  {
+    "text": "quero fazer um agendamento de consulta",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.9425860643386841
+    }
+  },
+  {
+    "text": "quais horários vocês têm pra pediatria?",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9860987663269043
+    }
+  },
+  {
+    "text": "não tenho mais interesse, cancela",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.9094210267066956
+    }
+  },
+  {
+    "text": "sim, confirmo",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9689017534255981
+    }
+  },
+  {
+    "text": "confirmo",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9984205961227417
+    }
+  },
+  {
+    "text": "vocês fazem exames de sangue aqui?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.7327617406845093
+    }
+  },
+  {
+    "text": "me explica como funciona o SUS",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.6792967319488525
+    }
+  },
+  {
+    "text": "você pode escrever um poema pra mim?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.3232610821723938
+    }
+  },
+  {
+    "text": "tem algum concurso público aberto na área da saúde?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.4189873933792114
+    }
+  },
+  {
+    "text": "vocês estão contratando médicos?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.2506387233734131
+    }
+  },
+  {
+    "text": "abriu concurso pra enfermeiro?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.44660910964012146
+    }
+  },
+  {
+    "text": "qual a melhor dieta pra emagrecer?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.8119325041770935
+    }
+  },
+  {
+    "text": "qual o telefone da prefeitura?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "atualizar_cadastro",
+      "confidence": 0.5764121413230896
+    }
+  },
+  {
+    "text": "por hoje é só, valeu",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9743731021881104
+    }
+  },
+  {
+    "text": "tem estacionamento aí perto?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.937076985836029
+    }
+  },
+  {
+    "text": "meu filho está engasgado",
+    "intent": "emergencia",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.8738880753517151
+    }
+  }
+]

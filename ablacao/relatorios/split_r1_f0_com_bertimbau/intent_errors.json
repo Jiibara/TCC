@@ -1,0 +1,130 @@
+[
+  {
+    "text": "era isso, obrigado pela ajuda",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.46386614441871643
+    }
+  },
+  {
+    "text": "ok, muito obrigado, até mais",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.6909531950950623
+    }
+  },
+  {
+    "text": "confirmo o horário",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9845340251922607
+    }
+  },
+  {
+    "text": "preciso mudar meu telefone",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.9861829280853271
+    }
+  },
+  {
+    "text": "quero mudar meu convênio no cadastro",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.7851260900497437
+    }
+  },
+  {
+    "text": "quero saber sobre a LGPD",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.5015097260475159
+    }
+  },
+  {
+    "text": "qual o preço da consulta de endocrinologia?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9446536898612976
+    }
+  },
+  {
+    "text": "quanto é a consulta com o clínico geral?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.7649834156036377
+    }
+  },
+  {
+    "text": "qual o valor pra endocrinologia particular?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9327751398086548
+    }
+  },
+  {
+    "text": "preciso de ajuda com um problema jurídico",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.20653672516345978
+    }
+  },
+  {
+    "text": "qual seu nome?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.8553118705749512
+    }
+  },
+  {
+    "text": "isso aqui é seguro? vocês vazam meus dados?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.7272456884384155
+    }
+  },
+  {
+    "text": "qual o telefone da prefeitura?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.3224257826805115
+    }
+  },
+  {
+    "text": "quanto é 25 vezes 4?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.6842407584190369
+    }
+  },
+  {
+    "text": "você pode marcar uma reunião de trabalho pra mim?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.8274592161178589
+    }
+  },
+  {
+    "text": "confirmado, obrigado",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.5629374980926514
+    }
+  }
+]

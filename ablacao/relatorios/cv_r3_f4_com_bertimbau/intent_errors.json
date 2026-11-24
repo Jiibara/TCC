@@ -1,0 +1,138 @@
+[
+  {
+    "text": "confirmo",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9998387098312378
+    }
+  },
+  {
+    "text": "confirmo minha presença",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9991264939308167
+    }
+  },
+  {
+    "text": "vou sim",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9999963045120239
+    }
+  },
+  {
+    "text": "bom dia, preciso desmarcar o meu horário",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.9357621669769287
+    }
+  },
+  {
+    "text": "sim, confirmo",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9981030225753784
+    }
+  },
+  {
+    "text": "pode agendar esse",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9997976422309875
+    }
+  },
+  {
+    "text": "vou comparecer sim",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9926800727844238
+    }
+  },
+  {
+    "text": "sim, já anotei aqui",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.7344635725021362
+    }
+  },
+  {
+    "text": "pode agendar",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9999115467071533
+    }
+  },
+  {
+    "text": "prefiro outro horário",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.6217745542526245
+    }
+  },
+  {
+    "text": "tem vaga de estágio aí?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.998115062713623
+    }
+  },
+  {
+    "text": "salve",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.32810765504837036
+    }
+  },
+  {
+    "text": "flw",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.8980516791343689
+    }
+  },
+  {
+    "text": "vlw flw",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.9822571873664856
+    }
+  },
+  {
+    "text": "estão abertos agora?",
+    "intent": "horario_funcionamento",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9356033802032471
+    }
+  },
+  {
+    "text": "como chego até aí?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.5777674317359924
+    }
+  },
+  {
+    "text": "vocês aceitam cartão de crédito?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.33263540267944336
+    }
+  }
+]

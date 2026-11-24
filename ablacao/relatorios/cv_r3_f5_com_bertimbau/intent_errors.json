@@ -1,0 +1,146 @@
+[
+  {
+    "text": "estarei lá",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9911866784095764
+    }
+  },
+  {
+    "text": "com certeza vou",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9661766886711121
+    }
+  },
+  {
+    "text": "confirmo, obrigado pelo lembrete",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9664708971977234
+    }
+  },
+  {
+    "text": "mudei de convênio",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9785609245300293
+    }
+  },
+  {
+    "text": "quero mudar meu convênio no cadastro",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.976934552192688
+    }
+  },
+  {
+    "text": "cancelar meu consentimento",
+    "intent": "revogar_consentimento",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.8882817625999451
+    }
+  },
+  {
+    "text": "termos de uso dos dados",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "revogar_consentimento",
+      "confidence": 0.6005555987358093
+    }
+  },
+  {
+    "text": "preciso de atendimento com endocrinologista urgente",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "emergencia",
+      "confidence": 0.3071184754371643
+    }
+  },
+  {
+    "text": "agendar",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9612013697624207
+    }
+  },
+  {
+    "text": "eu tenho particular, consigo marcar consulta?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.5779688954353333
+    }
+  },
+  {
+    "text": "tudo certo, vou sim",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9929072856903076
+    }
+  },
+  {
+    "text": "quanto é 25 vezes 4?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.530862033367157
+    }
+  },
+  {
+    "text": "como faço pra trabalhar na clínica?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "endereco_clinica",
+      "confidence": 0.5622192025184631
+    }
+  },
+  {
+    "text": "alo",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9284946322441101
+    }
+  },
+  {
+    "text": "oi, gostaria de uma informação",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.7398128509521484
+    }
+  },
+  {
+    "text": "por hoje é só, valeu",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9994446635246277
+    }
+  },
+  {
+    "text": "até que horas consigo chegar aí hoje?",
+    "intent": "horario_funcionamento",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9873629808425903
+    }
+  },
+  {
+    "text": "chama a recepcionista",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "atualizar_cadastro",
+      "confidence": 0.25288519263267517
+    }
+  }
+]

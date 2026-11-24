@@ -1,0 +1,138 @@
+[
+  {
+    "text": "era isso, obrigado pela ajuda",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.894486665725708
+    }
+  },
+  {
+    "text": "ok, muito obrigado, até mais",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.7390641570091248
+    }
+  },
+  {
+    "text": "vou comparecer na consulta",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9934002161026001
+    }
+  },
+  {
+    "text": "confirmo o horário",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.8988103866577148
+    }
+  },
+  {
+    "text": "preciso mudar meu telefone",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.9902501702308655
+    }
+  },
+  {
+    "text": "quero mudar meu convênio no cadastro",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.93443363904953
+    }
+  },
+  {
+    "text": "qual o preço da consulta de endocrinologia?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.5700548887252808
+    }
+  },
+  {
+    "text": "quanto é a consulta com o clínico geral?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.965781569480896
+    }
+  },
+  {
+    "text": "vocês parcelam a consulta particular?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9332036972045898
+    }
+  },
+  {
+    "text": "qual o valor pra endocrinologia particular?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9708079695701599
+    }
+  },
+  {
+    "text": "preciso de ajuda com um problema jurídico",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "falar_com_atendente",
+      "confidence": 0.5482088327407837
+    }
+  },
+  {
+    "text": "qual seu nome?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.36417311429977417
+    }
+  },
+  {
+    "text": "isso aqui é seguro? vocês vazam meus dados?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.9905591011047363
+    }
+  },
+  {
+    "text": "quanto é 25 vezes 4?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.6854708194732666
+    }
+  },
+  {
+    "text": "você pode marcar uma reunião de trabalho pra mim?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9536901712417603
+    }
+  },
+  {
+    "text": "beleza, confirmado",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.5318117141723633
+    }
+  },
+  {
+    "text": "confirmado, obrigado",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9236941933631897
+    }
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "text": "confirmado",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9999206066131592
+    }
+  },
+  {
+    "text": "tá confirmado",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9999796152114868
+    }
+  },
+  {
+    "text": "meus dados estão errados",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.9652870297431946
+    }
+  },
+  {
+    "text": "o meu nome está escrito errado",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.28494513034820557
+    }
+  },
+  {
+    "text": "meu convênio ainda não foi liberado, posso marcar mesmo assim?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.35736119747161865
+    }
+  },
+  {
+    "text": "vou sim",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9890467524528503
+    }
+  },
+  {
+    "text": "confirmo minha ida",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9969745874404907
+    }
+  },
+  {
+    "text": "deixa que eu ligo depois",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.6192553639411926
+    }
+  },
+  {
+    "text": "meu computador não liga, pode me ajudar?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.5676820278167725
+    }
+  },
+  {
+    "text": "vocês estão contratando médicos?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.24962951242923737
+    }
+  },
+  {
+    "text": "que horas são agora?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.6974595785140991
+    }
+  },
+  {
+    "text": "quanto sai no total sem usar convênio?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.7220532298088074
+    }
+  }
+]

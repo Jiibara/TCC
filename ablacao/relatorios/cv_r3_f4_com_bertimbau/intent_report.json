@@ -1,0 +1,189 @@
+{
+  "agendarConsulta": {
+    "precision": 0.7857142857142857,
+    "recall": 1.0,
+    "f1-score": 0.88,
+    "support": 11,
+    "confused_with": {}
+  },
+  "informarConvenio": {
+    "precision": 0.875,
+    "recall": 1.0,
+    "f1-score": 0.9333333333333333,
+    "support": 7,
+    "confused_with": {}
+  },
+  "politica_privacidade": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "reagendarConsulta": {
+    "precision": 0.8461538461538461,
+    "recall": 1.0,
+    "f1-score": 0.9166666666666666,
+    "support": 11,
+    "confused_with": {}
+  },
+  "saudacao": {
+    "precision": 1.0,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.9090909090909091,
+    "support": 6,
+    "confused_with": {
+      "negar": 1
+    }
+  },
+  "atualizar_cadastro": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "negar_data": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "negar": {
+    "precision": 0.8333333333333334,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.8333333333333334,
+    "support": 6,
+    "confused_with": {
+      "reagendarConsulta": 1
+    }
+  },
+  "falar_com_atendente": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "cancelarConsulta": {
+    "precision": 1.0,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.9565217391304348,
+    "support": 12,
+    "confused_with": {
+      "reagendarConsulta": 1
+    }
+  },
+  "consultarAgendamento": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "revogar_consentimento": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "endereco_clinica": {
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
+    "support": 3,
+    "confused_with": {
+      "fora_do_escopo": 1
+    }
+  },
+  "fora_do_escopo": {
+    "precision": 0.75,
+    "recall": 0.9,
+    "f1-score": 0.8181818181818182,
+    "support": 10,
+    "confused_with": {
+      "agendarConsulta": 1
+    }
+  },
+  "emergencia": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "confirmarLembrete": {
+    "precision": 0.5,
+    "recall": 0.4,
+    "f1-score": 0.4444444444444445,
+    "support": 5,
+    "confused_with": {
+      "afirmar": 3
+    }
+  },
+  "consultar_preco_particular": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1-score": 0.888888888888889,
+    "support": 5,
+    "confused_with": {
+      "informarConvenio": 1
+    }
+  },
+  "despedida": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 4,
+    "confused_with": {
+      "agradecimento": 2
+    }
+  },
+  "afirmar": {
+    "precision": 0.7,
+    "recall": 0.5833333333333334,
+    "f1-score": 0.6363636363636365,
+    "support": 12,
+    "confused_with": {
+      "agendarConsulta": 2,
+      "confirmarLembrete": 2
+    }
+  },
+  "horario_funcionamento": {
+    "precision": 1.0,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.9090909090909091,
+    "support": 6,
+    "confused_with": {
+      "fora_do_escopo": 1
+    }
+  },
+  "agradecimento": {
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1-score": 0.8,
+    "support": 4,
+    "confused_with": {}
+  },
+  "accuracy": 0.8785714285714286,
+  "macro avg": {
+    "precision": 0.9027080062794349,
+    "recall": 0.8698412698412697,
+    "f1-score": 0.8758372545329068,
+    "support": 140
+  },
+  "weighted avg": {
+    "precision": 0.8867301151229722,
+    "recall": 0.8785714285714286,
+    "f1-score": 0.8745395256916997,
+    "support": 140
+  },
+  "micro avg": {
+    "precision": 0.8785714285714286,
+    "recall": 0.8785714285714286,
+    "f1-score": 0.8785714285714286,
+    "support": 140
+  }
+}

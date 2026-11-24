@@ -1,0 +1,170 @@
+[
+  {
+    "text": "estarei lá",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.998372495174408
+    }
+  },
+  {
+    "text": "pode confirmar minha consulta",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.8836690187454224
+    }
+  },
+  {
+    "text": "com certeza vou",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9999892711639404
+    }
+  },
+  {
+    "text": "meus dados estão errados",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.8803262114524841
+    }
+  },
+  {
+    "text": "quero revisar meus dados",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.6930250525474548
+    }
+  },
+  {
+    "text": "não quero que guardem meus dados",
+    "intent": "revogar_consentimento",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.9396953582763672
+    }
+  },
+  {
+    "text": "quais horários vocês têm pra pediatria?",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9715667963027954
+    }
+  },
+  {
+    "text": "preciso ver um cardiologista o quanto antes",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.4359716773033142
+    }
+  },
+  {
+    "text": "dá pra mover minha consulta uns dias?",
+    "intent": "reagendarConsulta",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9484662413597107
+    }
+  },
+  {
+    "text": "preciso de um novo horário pra minha consulta",
+    "intent": "reagendarConsulta",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.5621436834335327
+    }
+  },
+  {
+    "text": "quero mover minha consulta para outro dia",
+    "intent": "reagendarConsulta",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9980883002281189
+    }
+  },
+  {
+    "text": "sim, já anotei aqui",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "despedida",
+      "confidence": 0.42349669337272644
+    }
+  },
+  {
+    "text": "tudo certo, vou sim",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.964313805103302
+    }
+  },
+  {
+    "text": "menos quinta mesmo",
+    "intent": "negar_data",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.8017888069152832
+    }
+  },
+  {
+    "text": "não quero segunda",
+    "intent": "negar_data",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.8543679118156433
+    }
+  },
+  {
+    "text": "quero saber o número da loteria de ontem",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "atualizar_cadastro",
+      "confidence": 0.39898908138275146
+    }
+  },
+  {
+    "text": "por hoje é só, valeu",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9149529337882996
+    }
+  },
+  {
+    "text": "até que horas consigo chegar aí hoje?",
+    "intent": "horario_funcionamento",
+    "intent_prediction": {
+      "name": "endereco_clinica",
+      "confidence": 0.6413494348526001
+    }
+  },
+  {
+    "text": "qual a rua da clínica?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.30896738171577454
+    }
+  },
+  {
+    "text": "qual CEP da clínica?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.4358762204647064
+    }
+  },
+  {
+    "text": "quanto é a consulta com o clínico geral?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.5614362955093384
+    }
+  }
+]

@@ -1,0 +1,131 @@
+[
+  {
+    "text": "agende uma consulta com cardiologista pra quinta-feira",
+    "entities": [
+      {
+        "start": 42,
+        "end": 54,
+        "value": "quinta-feira",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 24,
+        "end": 37,
+        "confidence_entity": 0.9993506073951721,
+        "value": "cardiologista",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "data",
+        "start": 42,
+        "end": 54,
+        "confidence_entity": 0.9989783763885498,
+        "value": "quinta-feira",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "quero agendar com convênio Unimed pra cardiologia",
+    "entities": [
+      {
+        "start": 18,
+        "end": 33,
+        "value": "convênio Unimed",
+        "entity": "convenio"
+      },
+      {
+        "start": 38,
+        "end": 49,
+        "value": "cardiologia",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "convenio",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.9945409893989563,
+        "value": "Unimed",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "especialidade",
+        "start": 38,
+        "end": 49,
+        "confidence_entity": 0.9973816275596619,
+        "value": "cardiologia",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "preciso desmarcar a consulta de amanhã",
+    "entities": [
+      {
+        "start": 32,
+        "end": 38,
+        "value": "amanhã",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "quero remarcar minha consulta de cardiologista para outro dia",
+    "entities": [
+      {
+        "start": 33,
+        "end": 46,
+        "value": "cardiologista",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "dá pra remarcar meu horário das 09h30?",
+    "entities": [
+      {
+        "start": 32,
+        "end": 37,
+        "value": "09h30",
+        "entity": "horario"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "quero passar minha consulta pra semana que vem",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 32,
+        "end": 46,
+        "confidence_entity": 0.9903192520141602,
+        "value": "semana que vem",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

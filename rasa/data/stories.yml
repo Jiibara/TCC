@@ -1,0 +1,9 @@
+version: "3.1"
+
+# Os fluxos deste protótipo agora estão todos em data/rules.yml,
+# como regras determinísticas (sem ambiguidade de ML). Este arquivo
+# fica reservado para fluxos futuros que realmente dependam de
+# histórico de conversa (múltiplos turnos, ex.: pedir confirmação
+# explícita antes de agendar) — nesse caso, stories fazem mais
+# sentido que rules.
+stories: []

@@ -1,0 +1,5 @@
+action_endpoint:
+  # 127.0.0.1 em vez de localhost: no Windows, "localhost" tenta primeiro
+  # o IPv6 (::1), onde o servidor de acoes nao escuta, e cada chamada
+  # perde cerca de 2 s ate cair no IPv4.
+  url: "http://127.0.0.1:5055/webhook"

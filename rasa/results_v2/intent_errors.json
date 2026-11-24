@@ -1,0 +1,418 @@
+[
+  {
+    "text": "quero dar baixa na minha consulta",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.9864423274993896
+    }
+  },
+  {
+    "text": "oi, vocês atendem pelo Unimed?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.45648297667503357
+    }
+  },
+  {
+    "text": "fechado",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.5245184898376465
+    }
+  },
+  {
+    "text": "certo, fechado então",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "despedida",
+      "confidence": 0.8042992353439331
+    }
+  },
+  {
+    "text": "quero saber sobre vagas de emprego na clínica",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9097046852111816
+    }
+  },
+  {
+    "text": "tem algum concurso público aberto na área da saúde?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9896949529647827
+    }
+  },
+  {
+    "text": "quanto sai no total sem usar convênio?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9707884192466736
+    }
+  },
+  {
+    "text": "pode chamar alguém pra me ajudar?",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "emergencia",
+      "confidence": 0.7248687744140625
+    }
+  },
+  {
+    "text": "ele desmaiou, o que eu faço?",
+    "intent": "emergencia",
+    "intent_prediction": {
+      "name": "endereco_clinica",
+      "confidence": 0.5075412392616272
+    }
+  },
+  {
+    "text": "tira a minha consulta marcada",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.8263939023017883
+    }
+  },
+  {
+    "text": "eu tenho particular, consigo marcar consulta?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.5641230344772339
+    }
+  },
+  {
+    "text": "não, cancela essa opção",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9999382495880127
+    }
+  },
+  {
+    "text": "qual seu nome?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.8118441104888916
+    }
+  },
+  {
+    "text": "qual o horário de funcionamento do banco?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.9940385818481445
+    }
+  },
+  {
+    "text": "qual é a música mais tocada agora?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "emergencia",
+      "confidence": 0.5750853419303894
+    }
+  },
+  {
+    "text": "quero remarcar... quer dizer, marcar uma consulta nova",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.9919290542602539
+    }
+  },
+  {
+    "text": "tem como marcar pra depois de amanhã?",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "negar_data",
+      "confidence": 0.8417577147483826
+    }
+  },
+  {
+    "text": "prefiro outro horário",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.6571528911590576
+    }
+  },
+  {
+    "text": "qual o telefone da farmácia mais próxima?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "endereco_clinica",
+      "confidence": 0.35743144154548645
+    }
+  },
+  {
+    "text": "quero reclamar do atendimento de ontem",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.5443481206893921
+    }
+  },
+  {
+    "text": "meu computador não liga, pode me ajudar?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.321527361869812
+    }
+  },
+  {
+    "text": "e aí",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9701875448226929
+    }
+  },
+  {
+    "text": "falou",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.5150810480117798
+    }
+  },
+  {
+    "text": "vlw",
+    "intent": "agradecimento",
+    "intent_prediction": {
+      "name": "despedida",
+      "confidence": 0.9927491545677185
+    }
+  },
+  {
+    "text": "vocês parcelam a consulta particular?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9557014107704163
+    }
+  },
+  {
+    "text": "isso aqui tem atendimento humano?",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.9475548267364502
+    }
+  },
+  {
+    "text": "preciso de ajuda de uma pessoa, não do robô",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.2547318637371063
+    }
+  },
+  {
+    "text": "gostaria de agendar um atendimento para 23/11 às 09:00",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.8537274599075317
+    }
+  },
+  {
+    "text": "preciso remover minha consulta da agenda",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.9999934434890747
+    }
+  },
+  {
+    "text": "retira minha consulta de sábado da agenda",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.9247295260429382
+    }
+  },
+  {
+    "text": "exclui minha consulta da agenda por favor",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.9789272546768188
+    }
+  },
+  {
+    "text": "a consulta particular tem algum valor específico?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.9871640205383301
+    }
+  },
+  {
+    "text": "não quero segunda",
+    "intent": "negar_data",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.8694201111793518
+    }
+  },
+  {
+    "text": "vocês vendem remédio aqui?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.4112292230129242
+    }
+  },
+  {
+    "text": "isso aqui é seguro? vocês vazam meus dados?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.7510748505592346
+    }
+  },
+  {
+    "text": "preciso de ajuda com um problema jurídico",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.30478423833847046
+    }
+  },
+  {
+    "text": "encerro por aqui, obrigado",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.8921993970870972
+    }
+  },
+  {
+    "text": "tem expediente à noite?",
+    "intent": "horario_funcionamento",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.4982040226459503
+    }
+  },
+  {
+    "text": "aceita cartão pra pagar a consulta?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.4464932382106781
+    }
+  },
+  {
+    "text": "esqueci que horas é minha consulta",
+    "intent": "consultarAgendamento",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.5453740954399109
+    }
+  },
+  {
+    "text": "isso aí",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.49232596158981323
+    }
+  },
+  {
+    "text": "quanto é 25 vezes 4?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.3999671936035156
+    }
+  },
+  {
+    "text": "como tá o trânsito aí perto?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "endereco_clinica",
+      "confidence": 0.8949635624885559
+    }
+  },
+  {
+    "text": "alo",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.8080601096153259
+    }
+  },
+  {
+    "text": "qual o horário de atendimento?",
+    "intent": "horario_funcionamento",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.7078601717948914
+    }
+  },
+  {
+    "text": "até que horas dá pra marcar consulta hoje?",
+    "intent": "horario_funcionamento",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9995794892311096
+    }
+  },
+  {
+    "text": "me passa o endereço, por favor",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.5023624300956726
+    }
+  },
+  {
+    "text": "qual o valor da consulta sem convênio?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9456239342689514
+    }
+  },
+  {
+    "text": "qual o valor pra endocrinologia particular?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.8728994131088257
+    }
+  },
+  {
+    "text": "tem algum valor promocional pra primeira consulta?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.991327702999115
+    }
+  },
+  {
+    "text": "tenho alguma consulta marcada?",
+    "intent": "consultarAgendamento",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9878766536712646
+    }
+  },
+  {
+    "text": "pode me confirmar a data da minha consulta?",
+    "intent": "consultarAgendamento",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.5619606375694275
+    }
+  }
+]

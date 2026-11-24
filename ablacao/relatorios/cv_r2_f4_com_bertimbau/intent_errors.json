@@ -1,0 +1,210 @@
+[
+  {
+    "text": "sim, vou comparecer",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9995667338371277
+    }
+  },
+  {
+    "text": "tudo certo, confirmo minha ida",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9999836683273315
+    }
+  },
+  {
+    "text": "trocar meus dados",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.5337628722190857
+    }
+  },
+  {
+    "text": "troquei de plano de saúde",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.3861072361469269
+    }
+  },
+  {
+    "text": "cancelar meu consentimento",
+    "intent": "revogar_consentimento",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9624167084693909
+    }
+  },
+  {
+    "text": "como meus dados são tratados",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.674892008304596
+    }
+  },
+  {
+    "text": "agendar",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9772335290908813
+    }
+  },
+  {
+    "text": "não quero mais a consulta",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.3381289839744568
+    }
+  },
+  {
+    "text": "confirmo",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9873314499855042
+    }
+  },
+  {
+    "text": "confirmo minha presença",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9944098591804504
+    }
+  },
+  {
+    "text": "confirmado, até lá",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.6067118048667908
+    }
+  },
+  {
+    "text": "bora",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.9914799928665161
+    }
+  },
+  {
+    "text": "qual seu nome?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "endereco_clinica",
+      "confidence": 0.19385725259780884
+    }
+  },
+  {
+    "text": "você pode marcar uma reunião de trabalho pra mim?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9999227523803711
+    }
+  },
+  {
+    "text": "preciso de ajuda com um problema jurídico",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "falar_com_atendente",
+      "confidence": 0.3943820595741272
+    }
+  },
+  {
+    "text": "quero saber sobre vagas de emprego na clínica",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.6147639155387878
+    }
+  },
+  {
+    "text": "como tá o trânsito aí perto?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "endereco_clinica",
+      "confidence": 0.31588858366012573
+    }
+  },
+  {
+    "text": "tem vaga de estágio aí?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.4645894169807434
+    }
+  },
+  {
+    "text": "qual o telefone da prefeitura?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "atualizar_cadastro",
+      "confidence": 0.4251030683517456
+    }
+  },
+  {
+    "text": "ok, muito obrigado, até mais",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9565139412879944
+    }
+  },
+  {
+    "text": "era isso, obrigado pela ajuda",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.82151859998703
+    }
+  },
+  {
+    "text": "certo, até mais ver",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.6658911108970642
+    }
+  },
+  {
+    "text": "valeu",
+    "intent": "agradecimento",
+    "intent_prediction": {
+      "name": "despedida",
+      "confidence": 0.7801424264907837
+    }
+  },
+  {
+    "text": "brigado",
+    "intent": "agradecimento",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.8760837316513062
+    }
+  },
+  {
+    "text": "estão abertos agora?",
+    "intent": "horario_funcionamento",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.7408086657524109
+    }
+  },
+  {
+    "text": "isso aqui tem atendimento humano?",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.7462998032569885
+    }
+  }
+]

@@ -1,0 +1,178 @@
+[
+  {
+    "text": "confirmo",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9971241354942322
+    }
+  },
+  {
+    "text": "confirmo minha presença",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9956673383712769
+    }
+  },
+  {
+    "text": "vou sim",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9985833168029785
+    }
+  },
+  {
+    "text": "quais informações vocês guardam",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "revogar_consentimento",
+      "confidence": 0.628840446472168
+    }
+  },
+  {
+    "text": "quero reagendar minha consulta de pediatria para 24/11",
+    "intent": "reagendarConsulta",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.883648693561554
+    }
+  },
+  {
+    "text": "sim, confirmo",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9930481910705566
+    }
+  },
+  {
+    "text": "vou comparecer sim",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.99752277135849
+    }
+  },
+  {
+    "text": "pode agendar",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9999703168869019
+    }
+  },
+  {
+    "text": "prefiro outro horário",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.9814392924308777
+    }
+  },
+  {
+    "text": "não quero mais",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.8093939423561096
+    }
+  },
+  {
+    "text": "isso é uma pegadinha?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.6612802147865295
+    }
+  },
+  {
+    "text": "tem vaga de estágio aí?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9995905756950378
+    }
+  },
+  {
+    "text": "quero enviar meu currículo",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "revogar_consentimento",
+      "confidence": 0.757019579410553
+    }
+  },
+  {
+    "text": "quantos anos você tem?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.5361829400062561
+    }
+  },
+  {
+    "text": "salve",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.8752779364585876
+    }
+  },
+  {
+    "text": "flw",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.7659509778022766
+    }
+  },
+  {
+    "text": "vlw flw",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.9910677075386047
+    }
+  },
+  {
+    "text": "qual o horário comercial da clínica?",
+    "intent": "horario_funcionamento",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.7011571526527405
+    }
+  },
+  {
+    "text": "estão abertos agora?",
+    "intent": "horario_funcionamento",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.47452786564826965
+    }
+  },
+  {
+    "text": "como chego até aí?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "despedida",
+      "confidence": 0.7507379055023193
+    }
+  },
+  {
+    "text": "vocês aceitam cartão de crédito?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.586760938167572
+    }
+  },
+  {
+    "text": "minha consulta está confirmada?",
+    "intent": "consultarAgendamento",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9366662502288818
+    }
+  }
+]

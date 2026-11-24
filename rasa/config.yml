@@ -1,0 +1,56 @@
+recipe: default.v1
+language: pt
+
+# ------------------------------------------------------------------
+# Pipeline de NLU
+# Usa o BERTimbau (Souza, Nogueira e Lotufo, 2020) como featurizer
+# de linguagem via LanguageModelFeaturizer, conforme justificado na
+# secao 2.4.2. O DIETClassifier consome tanto os embeddings densos
+# do BERTimbau quanto features esparsas (bag-of-words), combinacao
+# indicada para corpora de treinamento pequenos, como e o caso deste
+# prototipo (703 sentencas em 21 intencoes, secao 3.3.3).
+# ------------------------------------------------------------------
+pipeline:
+- name: WhitespaceTokenizer
+
+- name: LanguageModelFeaturizer
+  model_name: "bert"
+  model_weights: "neuralmind/bert-base-portuguese-cased"    # BERTimbau
+
+- name: RegexFeaturizer
+
+- name: LexicalSyntacticFeaturizer
+
+- name: CountVectorsFeaturizer
+
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+
+- name: DIETClassifier
+  epochs: 150
+  entity_recognition: true
+  constrain_similarities: true
+
+- name: EntitySynonymMapper
+
+- name: FallbackClassifier
+  # Abaixo desse limiar de confianca, a intencao e tratada como
+  # nlu_fallback (RF12: encaminhamento para atendimento humano).
+  threshold: 0.70
+  ambiguity_threshold: 0.10
+
+# ------------------------------------------------------------------
+# Policies de gerenciamento de dialogo
+# O dialogo e definido apenas por rules (data/rules.yml) e forms; nao
+# ha stories. MemoizationPolicy e TEDPolicy aprendem somente com
+# stories e, por isso, nao sao usadas. Quando nenhuma regra se aplica,
+# a RulePolicy aciona o encaminhamento para atendimento humano (RF12).
+# ------------------------------------------------------------------
+policies:
+- name: RulePolicy
+  core_fallback_threshold: 0.40
+  core_fallback_action_name: "action_encaminhar_atendimento_humano"
+  enable_fallback_prediction: true
+assistant_id: 20261003-000111-creamy-emmentaler

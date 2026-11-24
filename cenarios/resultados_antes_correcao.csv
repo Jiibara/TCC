@@ -1,0 +1,2 @@
+quando,cenario,nome,execucao,sucesso,detalhe
+2026-11-18T15:17:53,19,"Confirmação com ""confirmo"" (agendamento e cancelamento)",1,0,"esperava ('agendada com sucesso',), veio 'Não há nenhum lembrete aguardando confirmação no momento.'"

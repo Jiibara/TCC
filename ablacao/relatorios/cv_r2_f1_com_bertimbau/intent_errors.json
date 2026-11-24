@@ -1,0 +1,138 @@
+[
+  {
+    "text": "confirmo minha presença",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9975396394729614
+    }
+  },
+  {
+    "text": "tá confirmado",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.740648627281189
+    }
+  },
+  {
+    "text": "confirmar presença",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9896446466445923
+    }
+  },
+  {
+    "text": "meus dados estão seguros",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "atualizar_cadastro",
+      "confidence": 0.6815416216850281
+    }
+  },
+  {
+    "text": "surgiu um imprevisto, não vou poder comparecer",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9541078805923462
+    }
+  },
+  {
+    "text": "pode agendar",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9958635568618774
+    }
+  },
+  {
+    "text": "isso aqui é seguro? vocês vazam meus dados?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.8248341083526611
+    }
+  },
+  {
+    "text": "isso é uma pegadinha?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.32511433959007263
+    }
+  },
+  {
+    "text": "qual o valor do aluguel dessa sala?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.9144658446311951
+    }
+  },
+  {
+    "text": "vocês estão contratando médicos?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.8688103556632996
+    }
+  },
+  {
+    "text": "como faço pra trabalhar na clínica?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "emergencia",
+      "confidence": 0.17083536088466644
+    }
+  },
+  {
+    "text": "bom dia pra você",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.8852757811546326
+    }
+  },
+  {
+    "text": "já vou indo, obrigado",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.18344396352767944
+    }
+  },
+  {
+    "text": "vlw",
+    "intent": "agradecimento",
+    "intent_prediction": {
+      "name": "despedida",
+      "confidence": 0.934683620929718
+    }
+  },
+  {
+    "text": "vocês parcelam a consulta particular?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.903353750705719
+    }
+  },
+  {
+    "text": "vocês aceitam cartão de crédito?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9480414390563965
+    }
+  },
+  {
+    "text": "pode chamar um médico agora, é urgente",
+    "intent": "emergencia",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.7578209042549133
+    }
+  }
+]

@@ -1,0 +1,95 @@
+[
+  {
+    "text": "tem vaga para endocrinologia amanhã?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 28,
+        "value": "endocrinologia",
+        "entity": "especialidade"
+      },
+      {
+        "start": 29,
+        "end": 35,
+        "value": "amanhã",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 14,
+        "end": 35,
+        "confidence_entity": 0.7394903302192688,
+        "value": "endocrinologia amanhã",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "queria saber se tem vaga pra consulta com Dra. Ana Ferreira",
+    "entities": [
+      {
+        "start": 42,
+        "end": 59,
+        "value": "Dra. Ana Ferreira",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 42,
+        "end": 45,
+        "confidence_entity": 0.9937022924423218,
+        "value": "Dra",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "especialidade",
+        "start": 47,
+        "end": 50,
+        "confidence_entity": 0.8001593947410583,
+        "value": "Ana",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "data",
+        "start": 51,
+        "end": 59,
+        "confidence_entity": 0.426890105009079,
+        "value": "Ferreira",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "quero passar minha consulta pra semana que vem",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 32,
+        "end": 46,
+        "confidence_entity": 0.8522627949714661,
+        "value": "semana que vem",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "trabalham com Amil?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 18,
+        "value": "Amil",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

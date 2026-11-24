@@ -1,0 +1,210 @@
+[
+  {
+    "text": "sim, vou comparecer",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9940282106399536
+    }
+  },
+  {
+    "text": "confirmo, obrigado pelo lembrete",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.592227578163147
+    }
+  },
+  {
+    "text": "tudo certo, confirmo minha ida",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9997705817222595
+    }
+  },
+  {
+    "text": "trocar meus dados",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.9940648674964905
+    }
+  },
+  {
+    "text": "troquei de plano de saúde",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9993197917938232
+    }
+  },
+  {
+    "text": "cancelar meu consentimento",
+    "intent": "revogar_consentimento",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9992852807044983
+    }
+  },
+  {
+    "text": "como meus dados são tratados",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.8505857586860657
+    }
+  },
+  {
+    "text": "não quero mais a consulta",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.30262476205825806
+    }
+  },
+  {
+    "text": "confirmo",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9886882901191711
+    }
+  },
+  {
+    "text": "aceito esse horário",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.7043910026550293
+    }
+  },
+  {
+    "text": "confirmo minha presença",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9990585446357727
+    }
+  },
+  {
+    "text": "com certeza vou comparecer",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9297548532485962
+    }
+  },
+  {
+    "text": "bora",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.943811297416687
+    }
+  },
+  {
+    "text": "qual seu nome?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.8178833723068237
+    }
+  },
+  {
+    "text": "preciso de ajuda com um problema jurídico",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.768220067024231
+    }
+  },
+  {
+    "text": "como tá o trânsito aí perto?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "endereco_clinica",
+      "confidence": 0.6043992042541504
+    }
+  },
+  {
+    "text": "pode me emprestar dinheiro?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.444096177816391
+    }
+  },
+  {
+    "text": "tem vaga de estágio aí?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9323230981826782
+    }
+  },
+  {
+    "text": "que dia é hoje?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.21188053488731384
+    }
+  },
+  {
+    "text": "qual o telefone da prefeitura?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "atualizar_cadastro",
+      "confidence": 0.7621394991874695
+    }
+  },
+  {
+    "text": "era isso, obrigado pela ajuda",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.6765584349632263
+    }
+  },
+  {
+    "text": "valeu",
+    "intent": "agradecimento",
+    "intent_prediction": {
+      "name": "despedida",
+      "confidence": 0.877651572227478
+    }
+  },
+  {
+    "text": "estão abertos agora?",
+    "intent": "horario_funcionamento",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9838097095489502
+    }
+  },
+  {
+    "text": "isso não está resolvendo, quero um atendente",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.5880809426307678
+    }
+  },
+  {
+    "text": "alguém desmaiou aqui",
+    "intent": "emergencia",
+    "intent_prediction": {
+      "name": "falar_com_atendente",
+      "confidence": 0.43895623087882996
+    }
+  },
+  {
+    "text": "ele caiu e não acorda",
+    "intent": "emergencia",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.8098485469818115
+    }
+  }
+]

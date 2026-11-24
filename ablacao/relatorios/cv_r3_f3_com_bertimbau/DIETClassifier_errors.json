@@ -1,0 +1,106 @@
+[
+  {
+    "text": "confirmo a consulta de amanhã",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 23,
+        "end": 29,
+        "confidence_entity": 0.9917910099029541,
+        "value": "amanhã",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "gostaria de agendar um atendimento para 23/11 às 09:00",
+    "entities": [
+      {
+        "start": 40,
+        "end": 45,
+        "value": "23/11",
+        "entity": "data"
+      },
+      {
+        "start": 49,
+        "end": 54,
+        "value": "09:00",
+        "entity": "horario"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 40,
+        "end": 45,
+        "confidence_entity": 0.9968749284744263,
+        "value": "23/11",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "data",
+        "start": 49,
+        "end": 54,
+        "confidence_entity": 0.9425036907196045,
+        "value": "09:00",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "preciso consultar com clinico geral, tem horario?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 35,
+        "value": "clinico geral",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 30,
+        "end": 35,
+        "confidence_entity": 0.9943312406539917,
+        "value": "geral",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "quero remarcar minha consulta de amanhã com o cardiologista",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 33,
+        "end": 39,
+        "confidence_entity": 0.9768726825714111,
+        "value": "amanhã",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "especialidade",
+        "start": 46,
+        "end": 59,
+        "confidence_entity": 0.9995286464691162,
+        "value": "cardiologista",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

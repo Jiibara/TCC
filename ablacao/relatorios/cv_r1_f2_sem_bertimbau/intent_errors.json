@@ -1,0 +1,186 @@
+[
+  {
+    "text": "confirmo o horário",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9442140460014343
+    }
+  },
+  {
+    "text": "com certeza vou",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9999713897705078
+    }
+  },
+  {
+    "text": "sim, confirmo",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9993441700935364
+    }
+  },
+  {
+    "text": "mudei de convênio",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.8468053340911865
+    }
+  },
+  {
+    "text": "atualizar informações pessoais",
+    "intent": "atualizar_cadastro",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.7591809034347534
+    }
+  },
+  {
+    "text": "não quero mais a consulta",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.9731647372245789
+    }
+  },
+  {
+    "text": "preciso de um novo horário pra minha consulta",
+    "intent": "reagendarConsulta",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9738093614578247
+    }
+  },
+  {
+    "text": "atende SulAmérica?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.2267705202102661
+    }
+  },
+  {
+    "text": "oi, vocês atendem pelo Unimed?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.3966539800167084
+    }
+  },
+  {
+    "text": "confirmo minha presença",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9995074272155762
+    }
+  },
+  {
+    "text": "bora",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.7370055913925171
+    }
+  },
+  {
+    "text": "deixa que eu ligo depois",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.495050847530365
+    }
+  },
+  {
+    "text": "quanto é 25 vezes 4?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9547451138496399
+    }
+  },
+  {
+    "text": "vocês vendem remédio aqui?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.4865249693393707
+    }
+  },
+  {
+    "text": "isso aqui é seguro? vocês vazam meus dados?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.9687281250953674
+    }
+  },
+  {
+    "text": "qual remédio eu tomo pra dor de cabeça?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "emergencia",
+      "confidence": 0.23973608016967773
+    }
+  },
+  {
+    "text": "quantos anos você tem?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.1587318480014801
+    }
+  },
+  {
+    "text": "vou nessa, obrigado",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "agradecimento",
+      "confidence": 0.43504729866981506
+    }
+  },
+  {
+    "text": "obg",
+    "intent": "agradecimento",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.8079051971435547
+    }
+  },
+  {
+    "text": "estão abertos agora?",
+    "intent": "horario_funcionamento",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9900021553039551
+    }
+  },
+  {
+    "text": "quanto sai no total sem usar convênio?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.8612924814224243
+    }
+  },
+  {
+    "text": "pode me confirmar a data da minha consulta?",
+    "intent": "consultarAgendamento",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.6271383762359619
+    }
+  },
+  {
+    "text": "minha consulta está confirmada?",
+    "intent": "consultarAgendamento",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.8824976682662964
+    }
+  }
+]

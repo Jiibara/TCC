@@ -1,0 +1,87 @@
+[
+  {
+    "text": "gostaria de agendar um atendimento para 23/11 às 09:00",
+    "entities": [
+      {
+        "start": 40,
+        "end": 45,
+        "value": "23/11",
+        "entity": "data"
+      },
+      {
+        "start": 49,
+        "end": 54,
+        "value": "09:00",
+        "entity": "horario"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 40,
+        "end": 45,
+        "confidence_entity": 0.984794557094574,
+        "value": "23/11",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "data",
+        "start": 49,
+        "end": 54,
+        "confidence_entity": 0.7854817509651184,
+        "value": "09:00",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "agende uma consulta com cardiologista pra quinta-feira",
+    "entities": [
+      {
+        "start": 42,
+        "end": 54,
+        "value": "quinta-feira",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 24,
+        "end": 37,
+        "confidence_entity": 0.9983832836151123,
+        "value": "cardiologista",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "data",
+        "start": 42,
+        "end": 54,
+        "confidence_entity": 0.9971064925193787,
+        "value": "quinta-feira",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "pode mudar minha consulta para as 15h?",
+    "entities": [
+      {
+        "start": 34,
+        "end": 37,
+        "value": "15h",
+        "entity": "horario"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

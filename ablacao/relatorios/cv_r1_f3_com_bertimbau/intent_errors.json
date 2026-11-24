@@ -1,0 +1,138 @@
+[
+  {
+    "text": "confirmo minha presença",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.9984355568885803
+    }
+  },
+  {
+    "text": "pode confirmar minha consulta",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "consultarAgendamento",
+      "confidence": 0.6789868474006653
+    }
+  },
+  {
+    "text": "tudo certo, confirmo minha ida",
+    "intent": "confirmarLembrete",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.999904990196228
+    }
+  },
+  {
+    "text": "quero saber sobre a LGPD",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.33688849210739136
+    }
+  },
+  {
+    "text": "termos de uso dos dados",
+    "intent": "politica_privacidade",
+    "intent_prediction": {
+      "name": "revogar_consentimento",
+      "confidence": 0.5141181349754333
+    }
+  },
+  {
+    "text": "quais horários vocês têm pra pediatria?",
+    "intent": "agendarConsulta",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.9392935633659363
+    }
+  },
+  {
+    "text": "pode retirar minha consulta do sistema",
+    "intent": "cancelarConsulta",
+    "intent_prediction": {
+      "name": "reagendarConsulta",
+      "confidence": 0.5289996862411499
+    }
+  },
+  {
+    "text": "sim, confirmo",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9920977354049683
+    }
+  },
+  {
+    "text": "confirmo",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.5572504997253418
+    }
+  },
+  {
+    "text": "isso aí",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.7620331048965454
+    }
+  },
+  {
+    "text": "você é um robô?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "falar_com_atendente",
+      "confidence": 0.7498417496681213
+    }
+  },
+  {
+    "text": "me explica como funciona o SUS",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "politica_privacidade",
+      "confidence": 0.5134914517402649
+    }
+  },
+  {
+    "text": "tem algum concurso público aberto na área da saúde?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.882173478603363
+    }
+  },
+  {
+    "text": "vocês estão contratando médicos?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.5905293226242065
+    }
+  },
+  {
+    "text": "abriu concurso pra enfermeiro?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "informarConvenio",
+      "confidence": 0.26081863045692444
+    }
+  },
+  {
+    "text": "qual o telefone da prefeitura?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "atualizar_cadastro",
+      "confidence": 0.5657932758331299
+    }
+  },
+  {
+    "text": "tem estacionamento aí perto?",
+    "intent": "endereco_clinica",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.8692420125007629
+    }
+  }
+]

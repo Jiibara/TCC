@@ -1,0 +1,169 @@
+{
+  "horario_funcionamento": {
+    "precision": 0.7619047619047619,
+    "recall": 0.8888888888888888,
+    "f1-score": 0.8205128205128205,
+    "support": 18,
+    "confused_with": {
+      "saudacao": 1,
+      "agendarConsulta": 1
+    }
+  },
+  "despedida": {
+    "precision": 0.9411764705882353,
+    "recall": 0.8,
+    "f1-score": 0.8648648648648648,
+    "support": 20,
+    "confused_with": {
+      "agradecimento": 2,
+      "horario_funcionamento": 1
+    }
+  },
+  "falar_com_atendente": {
+    "precision": 0.7777777777777778,
+    "recall": 0.5384615384615384,
+    "f1-score": 0.6363636363636364,
+    "support": 13,
+    "confused_with": {
+      "fora_do_escopo": 5,
+      "horario_funcionamento": 1
+    }
+  },
+  "consultar_preco_particular": {
+    "precision": 0.7777777777777778,
+    "recall": 0.5384615384615384,
+    "f1-score": 0.6363636363636364,
+    "support": 13,
+    "confused_with": {
+      "informarConvenio": 5,
+      "agendarConsulta": 1
+    }
+  },
+  "negar_data": {
+    "precision": 0.8846153846153846,
+    "recall": 0.92,
+    "f1-score": 0.9019607843137256,
+    "support": 25,
+    "confused_with": {
+      "negar": 1,
+      "afirmar": 1
+    }
+  },
+  "saudacao": {
+    "precision": 0.9545454545454546,
+    "recall": 0.875,
+    "f1-score": 0.9130434782608695,
+    "support": 24,
+    "confused_with": {
+      "agendarConsulta": 2,
+      "afirmar": 1
+    }
+  },
+  "endereco_clinica": {
+    "precision": 0.7142857142857143,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.689655172413793,
+    "support": 15,
+    "confused_with": {
+      "fora_do_escopo": 3,
+      "horario_funcionamento": 2
+    }
+  },
+  "afirmar": {
+    "precision": 0.8979591836734694,
+    "recall": 0.9777777777777777,
+    "f1-score": 0.9361702127659575,
+    "support": 45,
+    "confused_with": {
+      "negar": 1
+    }
+  },
+  "fora_do_escopo": {
+    "precision": 0.7096774193548387,
+    "recall": 0.5945945945945946,
+    "f1-score": 0.6470588235294118,
+    "support": 37,
+    "confused_with": {
+      "informarConvenio": 4,
+      "endereco_clinica": 4
+    }
+  },
+  "reagendarConsulta": {
+    "precision": 0.9024390243902439,
+    "recall": 0.9487179487179487,
+    "f1-score": 0.9249999999999999,
+    "support": 39,
+    "confused_with": {
+      "informarConvenio": 1,
+      "cancelarConsulta": 1
+    }
+  },
+  "informarConvenio": {
+    "precision": 0.7209302325581395,
+    "recall": 0.8857142857142857,
+    "f1-score": 0.7948717948717948,
+    "support": 35,
+    "confused_with": {
+      "agendarConsulta": 2,
+      "consultar_preco_particular": 1
+    }
+  },
+  "agradecimento": {
+    "precision": 0.9,
+    "recall": 0.9473684210526315,
+    "f1-score": 0.9230769230769231,
+    "support": 19,
+    "confused_with": {
+      "despedida": 1
+    }
+  },
+  "negar": {
+    "precision": 0.8695652173913043,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.851063829787234,
+    "support": 24,
+    "confused_with": {
+      "reagendarConsulta": 1,
+      "negar_data": 1
+    }
+  },
+  "agendarConsulta": {
+    "precision": 0.8431372549019608,
+    "recall": 0.9148936170212766,
+    "f1-score": 0.8775510204081632,
+    "support": 47,
+    "confused_with": {
+      "negar_data": 2,
+      "informarConvenio": 2
+    }
+  },
+  "cancelarConsulta": {
+    "precision": 0.9487179487179487,
+    "recall": 0.9024390243902439,
+    "f1-score": 0.9249999999999999,
+    "support": 41,
+    "confused_with": {
+      "reagendarConsulta": 3,
+      "afirmar": 1
+    }
+  },
+  "accuracy": 0.8481927710843373,
+  "macro avg": {
+    "precision": 0.8403006414988675,
+    "recall": 0.8154878423387151,
+    "f1-score": 0.8228371331688554,
+    "support": 415
+  },
+  "weighted avg": {
+    "precision": 0.8484027916974525,
+    "recall": 0.8481927710843373,
+    "f1-score": 0.8446195507527747,
+    "support": 415
+  },
+  "micro avg": {
+    "precision": 0.8481927710843373,
+    "recall": 0.8481927710843373,
+    "f1-score": 0.8481927710843373,
+    "support": 415
+  }
+}

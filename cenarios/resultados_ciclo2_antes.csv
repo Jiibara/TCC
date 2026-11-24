@@ -1,0 +1,6 @@
+quando,cenario,nome,execucao,sucesso,detalhe
+2026-11-19T16:42:37,21,Pedido de troca recusado e nova consulta mantida,1,0,"esperava ('trocar',), veio 'Você escolheu: Dr. Bruno Alves — segunda-feira, 23/11/2026, às 11:00. Confirma o agendamento?'"
+2026-11-19T16:42:42,22,"""Outro horário"" com a lista aberta",1,0,"esperava ('Encontrei estas opções',), veio ""Tudo bem, não vou reservar nada. Se quiser, peça para buscar outros horários (ex.: 'tem outro horário disponível?') ou informe uma data específica."""
+2026-11-19T16:42:47,23,"""Cancelar"" com a lista aberta",1,0,"esperava ('Você quer cancelar a consulta',), veio ""Tudo bem, não vou reservar nada. Se quiser, peça para buscar outros horários (ex.: 'tem outro horário disponível?') ou informe uma data específica."""
+2026-11-19T16:42:57,24,Mensagem repetida pelo Telegram (mesmo update_id),1,0,banco: mensagem processada 2 vezes (esperado 1)
+2026-11-19T16:43:18,20,"Pedido de troca sem ""remarcar"", com troca confirmada",1,0,"esperava ('trocar',), veio 'Você escolheu: Dr. Bruno Alves — segunda-feira, 23/11/2026, às 14:00. Confirma o agendamento?'"

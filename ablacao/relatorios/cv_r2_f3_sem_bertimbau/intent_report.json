@@ -1,0 +1,196 @@
+{
+  "agendarConsulta": {
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1-score": 0.8,
+    "support": 12,
+    "confused_with": {}
+  },
+  "atualizar_cadastro": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1-score": 0.888888888888889,
+    "support": 5,
+    "confused_with": {
+      "reagendarConsulta": 1
+    }
+  },
+  "horario_funcionamento": {
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1-score": 0.8571428571428571,
+    "support": 6,
+    "confused_with": {}
+  },
+  "agradecimento": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3,
+    "confused_with": {}
+  },
+  "reagendarConsulta": {
+    "precision": 0.9,
+    "recall": 0.9,
+    "f1-score": 0.9,
+    "support": 10,
+    "confused_with": {
+      "agendarConsulta": 1
+    }
+  },
+  "saudacao": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "consultarAgendamento": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "confirmarLembrete": {
+    "precision": 0.5,
+    "recall": 0.6,
+    "f1-score": 0.5454545454545454,
+    "support": 5,
+    "confused_with": {
+      "afirmar": 2
+    }
+  },
+  "despedida": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "falar_com_atendente": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1-score": 0.888888888888889,
+    "support": 5,
+    "confused_with": {
+      "agendarConsulta": 1
+    }
+  },
+  "emergencia": {
+    "precision": 1.0,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.9090909090909091,
+    "support": 6,
+    "confused_with": {
+      "fora_do_escopo": 1
+    }
+  },
+  "negar_data": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "afirmar": {
+    "precision": 0.8181818181818182,
+    "recall": 0.75,
+    "f1-score": 0.7826086956521738,
+    "support": 12,
+    "confused_with": {
+      "confirmarLembrete": 3
+    }
+  },
+  "fora_do_escopo": {
+    "precision": 0.8571428571428571,
+    "recall": 0.6,
+    "f1-score": 0.7058823529411764,
+    "support": 10,
+    "confused_with": {
+      "agendarConsulta": 2,
+      "horario_funcionamento": 1
+    }
+  },
+  "consultar_preco_particular": {
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1-score": 0.8000000000000002,
+    "support": 5,
+    "confused_with": {
+      "informarConvenio": 1
+    }
+  },
+  "endereco_clinica": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3,
+    "confused_with": {}
+  },
+  "revogar_consentimento": {
+    "precision": 0.7142857142857143,
+    "recall": 1.0,
+    "f1-score": 0.8333333333333333,
+    "support": 5,
+    "confused_with": {}
+  },
+  "informarConvenio": {
+    "precision": 0.7142857142857143,
+    "recall": 0.7142857142857143,
+    "f1-score": 0.7142857142857143,
+    "support": 7,
+    "confused_with": {
+      "agendarConsulta": 1,
+      "consultar_preco_particular": 1
+    }
+  },
+  "politica_privacidade": {
+    "precision": 1.0,
+    "recall": 0.6,
+    "f1-score": 0.7499999999999999,
+    "support": 5,
+    "confused_with": {
+      "informarConvenio": 1,
+      "revogar_consentimento": 1
+    }
+  },
+  "negar": {
+    "precision": 0.8333333333333334,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.8333333333333334,
+    "support": 6,
+    "confused_with": {
+      "horario_funcionamento": 1
+    }
+  },
+  "cancelarConsulta": {
+    "precision": 1.0,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.9090909090909091,
+    "support": 12,
+    "confused_with": {
+      "agendarConsulta": 1,
+      "negar": 1
+    }
+  },
+  "accuracy": 0.851063829787234,
+  "macro avg": {
+    "precision": 0.8835188620902905,
+    "recall": 0.860204081632653,
+    "f1-score": 0.862761925147749,
+    "support": 141
+  },
+  "weighted avg": {
+    "precision": 0.8720641061066593,
+    "recall": 0.851063829787234,
+    "f1-score": 0.8516982245855294,
+    "support": 141
+  },
+  "micro avg": {
+    "precision": 0.851063829787234,
+    "recall": 0.851063829787234,
+    "f1-score": 0.851063829787234,
+    "support": 141
+  }
+}

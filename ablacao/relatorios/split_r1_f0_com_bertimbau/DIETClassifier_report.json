@@ -1,0 +1,42 @@
+{
+  "data": {
+    "precision": 0.9285714285714286,
+    "recall": 1.0,
+    "f1-score": 0.962962962962963,
+    "support": 13,
+    "confused_with": {}
+  },
+  "convenio": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "especialidade": {
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1-score": 0.8571428571428571,
+    "support": 9,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.8571428571428571,
+    "recall": 1.0,
+    "f1-score": 0.923076923076923,
+    "support": 24
+  },
+  "macro avg": {
+    "precision": 0.8928571428571429,
+    "recall": 1.0,
+    "f1-score": 0.9400352733686067,
+    "support": 24
+  },
+  "weighted avg": {
+    "precision": 0.8675595238095237,
+    "recall": 1.0,
+    "f1-score": 0.9263668430335098,
+    "support": 24
+  },
+  "accuracy": 0.994475138121547
+}

@@ -1,0 +1,580 @@
+[
+  {
+    "text": "tem horário disponível para cardiologia na terça?",
+    "entities": [
+      {
+        "start": 28,
+        "end": 39,
+        "value": "cardiologia",
+        "entity": "especialidade"
+      },
+      {
+        "start": 43,
+        "end": 48,
+        "value": "terça",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 43,
+        "end": 48,
+        "confidence_entity": 0.9911757707595825,
+        "value": "terça",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "bom dia, queria marcar uma consulta de cardiologia",
+    "entities": [
+      {
+        "start": 39,
+        "end": 50,
+        "value": "cardiologia",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "quero agendar com convênio Unimed pra cardiologia",
+    "entities": [
+      {
+        "start": 18,
+        "end": 33,
+        "value": "convênio Unimed",
+        "entity": "convenio"
+      },
+      {
+        "start": 38,
+        "end": 49,
+        "value": "cardiologia",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "convenio",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.9980258941650391,
+        "value": "Unimed",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "gostaria de mudar minha consulta de cardiologia pra sábado",
+    "entities": [
+      {
+        "start": 36,
+        "end": 47,
+        "value": "cardiologia",
+        "entity": "especialidade"
+      },
+      {
+        "start": 52,
+        "end": 58,
+        "value": "sábado",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 52,
+        "end": 58,
+        "confidence_entity": 0.9984570741653442,
+        "value": "sábado",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "meu convênio Unimed cobre consulta de cardiologia?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 19,
+        "value": "Unimed",
+        "entity": "convenio"
+      },
+      {
+        "start": 38,
+        "end": 49,
+        "value": "cardiologia",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "convenio",
+        "start": 13,
+        "end": 19,
+        "confidence_entity": 0.9964373111724854,
+        "value": "Unimed",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "menos quinta mesmo",
+    "entities": [
+      {
+        "start": 6,
+        "end": 12,
+        "value": "quinta",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "tem algum horário livre para pediatra amanhã de manhã?",
+    "entities": [
+      {
+        "start": 29,
+        "end": 37,
+        "value": "pediatra",
+        "entity": "especialidade"
+      },
+      {
+        "start": 38,
+        "end": 53,
+        "value": "amanhã de manhã",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 38,
+        "end": 44,
+        "confidence_entity": 0.9785130023956299,
+        "value": "amanhã",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "data",
+        "start": 48,
+        "end": 53,
+        "confidence_entity": 0.5925915837287903,
+        "value": "manhã",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "queria horário com cardiologista pra sexta de tarde",
+    "entities": [
+      {
+        "start": 19,
+        "end": 32,
+        "value": "cardiologista",
+        "entity": "especialidade"
+      },
+      {
+        "start": 37,
+        "end": 42,
+        "value": "sexta",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 37,
+        "end": 42,
+        "confidence_entity": 0.9947721362113953,
+        "value": "sexta",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "quero marcar consulta pro dia 01",
+    "entities": [
+      {
+        "start": 30,
+        "end": 32,
+        "value": "01",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "horario",
+        "start": 30,
+        "end": 32,
+        "confidence_entity": 0.24084419012069702,
+        "value": "01",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "eu tenho particular, consigo marcar consulta?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 19,
+        "value": "particular",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "poderia me agendar com o Dr. Bruno?",
+    "entities": [
+      {
+        "start": 25,
+        "end": 34,
+        "value": "Dr. Bruno",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 25,
+        "end": 27,
+        "confidence_entity": 0.9830408692359924,
+        "value": "Dr",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "quero consultar com Dr. Bruno Alves",
+    "entities": [
+      {
+        "start": 20,
+        "end": 35,
+        "value": "Dr. Bruno Alves",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 20,
+        "end": 22,
+        "confidence_entity": 0.9521384239196777,
+        "value": "Dr",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tem como marcar pra depois de amanhã?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 36,
+        "value": "depois de amanhã",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 30,
+        "end": 36,
+        "confidence_entity": 0.9973993301391602,
+        "value": "amanhã",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "por favor, cancele meu agendamento com o Dr. Bruno",
+    "entities": [
+      {
+        "start": 41,
+        "end": 50,
+        "value": "Dr. Bruno",
+        "entity": "especialidade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 41,
+        "end": 43,
+        "confidence_entity": 0.9656084775924683,
+        "value": "Dr",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "dá pra remarcar pra semana que vem?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 34,
+        "value": "semana que vem",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 27,
+        "end": 34,
+        "confidence_entity": 0.7814664840698242,
+        "value": "que vem",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "trabalham com Amil?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 18,
+        "value": "Amil",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "a clínica funciona aos sábados?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 23,
+        "end": 30,
+        "confidence_entity": 0.5137258768081665,
+        "value": "sábados",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "quanto custa consultar com pediatra particular?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 27,
+        "end": 35,
+        "confidence_entity": 0.7203548550605774,
+        "value": "pediatra",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "gostaria de agendar um atendimento para 23/11 às 09:00",
+    "entities": [
+      {
+        "start": 40,
+        "end": 45,
+        "value": "23/11",
+        "entity": "data"
+      },
+      {
+        "start": 49,
+        "end": 54,
+        "value": "09:00",
+        "entity": "horario"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 40,
+        "end": 45,
+        "confidence_entity": 0.9969263672828674,
+        "value": "23/11",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "data",
+        "start": 49,
+        "end": 54,
+        "confidence_entity": 0.9593387842178345,
+        "value": "09:00",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "agende uma consulta com cardiologista pra quinta-feira",
+    "entities": [
+      {
+        "start": 42,
+        "end": 54,
+        "value": "quinta-feira",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 24,
+        "end": 37,
+        "confidence_entity": 0.9991959929466248,
+        "value": "cardiologista",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "data",
+        "start": 42,
+        "end": 54,
+        "confidence_entity": 0.9991095662117004,
+        "value": "quinta-feira",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "quero remarcar minha consulta de amanhã com o cardiologista",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 33,
+        "end": 39,
+        "confidence_entity": 0.768798291683197,
+        "value": "amanhã",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "especialidade",
+        "start": 46,
+        "end": 59,
+        "confidence_entity": 0.9994702935218811,
+        "value": "cardiologista",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "não quero segunda",
+    "entities": [
+      {
+        "start": 10,
+        "end": 17,
+        "value": "segunda",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "qual o preço da consulta de cardiologia particular?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 28,
+        "end": 39,
+        "confidence_entity": 0.9835061430931091,
+        "value": "cardiologia",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "atende SulAmérica?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 17,
+        "value": "SulAmérica",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "não, deixa pra depois",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 15,
+        "end": 21,
+        "confidence_entity": 0.37903469800949097,
+        "value": "depois",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tirando amanhã, tem mais alguma opção?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 14,
+        "value": "amanhã",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "qual o valor pra endocrinologia particular?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 17,
+        "end": 31,
+        "confidence_entity": 0.9992731213569641,
+        "value": "endocrinologia",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

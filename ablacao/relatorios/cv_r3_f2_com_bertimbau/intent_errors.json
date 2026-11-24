@@ -1,0 +1,138 @@
+[
+  {
+    "text": "meu convênio Unimed cobre consulta de cardiologia?",
+    "intent": "informarConvenio",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9793963432312012
+    }
+  },
+  {
+    "text": "confirmo",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9925514459609985
+    }
+  },
+  {
+    "text": "confirmo minha presença",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.9977110624313354
+    }
+  },
+  {
+    "text": "ótimo, confirmo",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "confirmarLembrete",
+      "confidence": 0.7023308277130127
+    }
+  },
+  {
+    "text": "bora",
+    "intent": "afirmar",
+    "intent_prediction": {
+      "name": "saudacao",
+      "confidence": 0.9916232228279114
+    }
+  },
+  {
+    "text": "cancela esse horário",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9998888969421387
+    }
+  },
+  {
+    "text": "esse não, cancela",
+    "intent": "negar",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9960747957229614
+    }
+  },
+  {
+    "text": "não quero segunda",
+    "intent": "negar_data",
+    "intent_prediction": {
+      "name": "negar",
+      "confidence": 0.9026440382003784
+    }
+  },
+  {
+    "text": "você é um robô?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "falar_com_atendente",
+      "confidence": 0.6021385192871094
+    }
+  },
+  {
+    "text": "qual o valor do aluguel dessa sala?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.96384197473526
+    }
+  },
+  {
+    "text": "qual a melhor dieta pra emagrecer?",
+    "intent": "fora_do_escopo",
+    "intent_prediction": {
+      "name": "consultar_preco_particular",
+      "confidence": 0.477865070104599
+    }
+  },
+  {
+    "text": "bom dia pra você",
+    "intent": "saudacao",
+    "intent_prediction": {
+      "name": "fora_do_escopo",
+      "confidence": 0.9824451804161072
+    }
+  },
+  {
+    "text": "certo, até mais ver",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "afirmar",
+      "confidence": 0.6454625129699707
+    }
+  },
+  {
+    "text": "quanto é a consulta com o clínico geral?",
+    "intent": "consultar_preco_particular",
+    "intent_prediction": {
+      "name": "agendarConsulta",
+      "confidence": 0.9999804496765137
+    }
+  },
+  {
+    "text": "isso aqui tem atendimento humano?",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "horario_funcionamento",
+      "confidence": 0.8206759095191956
+    }
+  },
+  {
+    "text": "isso não está resolvendo, quero um atendente",
+    "intent": "falar_com_atendente",
+    "intent_prediction": {
+      "name": "emergencia",
+      "confidence": 0.3860873878002167
+    }
+  },
+  {
+    "text": "consultar meu agendamento",
+    "intent": "consultarAgendamento",
+    "intent_prediction": {
+      "name": "cancelarConsulta",
+      "confidence": 0.9674739837646484
+    }
+  }
+]

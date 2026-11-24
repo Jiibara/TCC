@@ -1,0 +1,72 @@
+% Diagrama de sequencia do agendamento. Gera DiagramaAgendaCorrigida.png.
+\documentclass[border=8pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[underline=false]{pgf-umlsd}
+\renewcommand{\familydefault}{\sfdefault}
+% \mess do pgf-umlsd usa o texto como nome de no (quebra com parenteses); versao sem isso:
+\makeatletter
+\renewcommand{\mess}[4][0]{%
+  \stepcounter{seqlevel}%
+  \path (#2)+(0,-\theseqlevel*\unitfactor-0.7*\unitfactor) node (mess from) {};%
+  \addtocounter{seqlevel}{#1}%
+  \path (#4)+(0,-\theseqlevel*\unitfactor-0.7*\unitfactor) node (mess to) {};%
+  \draw[->,>=angle 60] (mess from) -- (mess to) node[midway, above] {#3};}
+\makeatother
+\begin{document}
+\small
+\begin{sequencediagram}
+  \global\def\unitfactor{0.46}
+  \newthread[white]{p}{Paciente}
+  \newinst[3.3]{r}{Rasa (NLU e diálogo)}
+  \newinst[2.4]{a}{Servidor de ações}
+  \newinst[4.1]{b}{Banco de dados}
+
+  \mess{p}{``quero marcar consulta com cardiologista''}{r}
+  \begin{callself}{r}{classifica agendarConsulta (RF01) e extrai a especialidade (RF02)}{}
+  \end{callself}
+  \begin{call}{r}{action\_verificar\_cadastro}{a}{}
+    \begin{call}{a}{SELECT paciente e consentimento pelo chat}{b}{dados}
+    \end{call}
+  \end{call}
+  \begin{sdblock}{opt}{[sem cadastro ou consentimento: fluxo de cadastro e consentimento (Figura 13)]}
+    \mess{r}{pede autorização e dados do cadastro}{p}
+  \end{sdblock}
+  \begin{call}{r}{action\_consultar\_disponibilidade}{a}{até 3 opções}
+    \begin{call}{a}{SELECT horários disponíveis da especialidade}{b}{horários}
+    \end{call}
+  \end{call}
+  \mess{r}{apresenta as opções (RF03)}{p}
+  \mess{p}{escolhe uma opção (``1'')}{r}
+  \begin{call}{r}{action\_selecionar\_horario}{a}{}
+  \end{call}
+  \mess{r}{``Confirma o agendamento?''}{p}
+  \mess{p}{``sim''}{r}
+  \begin{call}{r}{action\_confirmar\_agendamento}{a}{resultado}
+    \begin{call}{a}{UPDATE horario: reservado, se ainda disponivel}{b}{linhas alteradas}
+    \end{call}
+    \begin{sdblock}{alt}{[1 linha: horário ainda livre]}
+      \begin{call}{a}{INSERT consulta agendada e COMMIT}{b}{}
+      \end{call}
+    \end{sdblock}
+    \begin{sdblock}{senão}{[0 linhas: horário tomado por outra pessoa]}
+      \begin{call}{a}{ROLLBACK}{b}{}
+      \end{call}
+    \end{sdblock}
+  \end{call}
+  \begin{sdblock}{alt}{[agendado]}
+    \begin{call}{r}{action\_registrar\_lembrete}{a}{}
+      \begin{call}{a}{INSERT lembrete, se houver consentimento (RF08)}{b}{}
+      \end{call}
+    \end{call}
+    \mess{r}{``Consulta agendada com sucesso!'' (RF04)}{p}
+  \end{sdblock}
+  \begin{sdblock}{senão}{[horário tomado]}
+    \mess{r}{``Esse horário acabou de ser reservado por outra pessoa''}{p}
+  \end{sdblock}
+  \begin{call}{r}{action\_log\_interacao}{a}{}
+    \begin{call}{a}{INSERT log\_interacao (RF13)}{b}{}
+    \end{call}
+  \end{call}
+\end{sequencediagram}
+\end{document}

@@ -1,0 +1,240 @@
+[
+  {
+    "text": "confirmo a consulta de amanhã",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 23,
+        "end": 29,
+        "confidence_entity": 0.7524566650390625,
+        "value": "amanhã",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "gostaria de marcar consulta de pediatria para semana que vem",
+    "entities": [
+      {
+        "start": 31,
+        "end": 40,
+        "value": "pediatria",
+        "entity": "especialidade"
+      },
+      {
+        "start": 46,
+        "end": 60,
+        "value": "semana que vem",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 28,
+        "end": 30,
+        "confidence_entity": 0.9938387274742126,
+        "value": "de",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "especialidade",
+        "start": 31,
+        "end": 40,
+        "confidence_entity": 0.9969601631164551,
+        "value": "pediatria",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "data",
+        "start": 46,
+        "end": 60,
+        "confidence_entity": 0.9893540143966675,
+        "value": "semana que vem",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tem horário disponível para cardiologia na terça?",
+    "entities": [
+      {
+        "start": 28,
+        "end": 39,
+        "value": "cardiologia",
+        "entity": "especialidade"
+      },
+      {
+        "start": 43,
+        "end": 48,
+        "value": "terça",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 28,
+        "end": 42,
+        "confidence_entity": 0.4250730276107788,
+        "value": "cardiologia na",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "data",
+        "start": 43,
+        "end": 48,
+        "confidence_entity": 0.5751593112945557,
+        "value": "terça",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "dá pra marcar uma consulta particular pra sábado?",
+    "entities": [
+      {
+        "start": 42,
+        "end": 48,
+        "value": "sábado",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "convenio",
+        "start": 27,
+        "end": 37,
+        "confidence_entity": 0.9917281866073608,
+        "value": "particular",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "data",
+        "start": 42,
+        "end": 48,
+        "confidence_entity": 0.9984540939331055,
+        "value": "sábado",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "queria horário com cardiologista pra sexta de tarde",
+    "entities": [
+      {
+        "start": 19,
+        "end": 32,
+        "value": "cardiologista",
+        "entity": "especialidade"
+      },
+      {
+        "start": 37,
+        "end": 42,
+        "value": "sexta",
+        "entity": "data"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "data",
+        "start": 37,
+        "end": 42,
+        "confidence_entity": 0.9965565204620361,
+        "value": "sexta",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "dá pra remarcar meu horário das 09h30?",
+    "entities": [
+      {
+        "start": 32,
+        "end": 37,
+        "value": "09h30",
+        "entity": "horario"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "trabalham com Amil?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 18,
+        "value": "Amil",
+        "entity": "convenio"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "eu não tenho convênio, posso ser atendido como particular?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "convenio",
+        "start": 47,
+        "end": 57,
+        "confidence_entity": 0.9849473237991333,
+        "value": "particular",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "vocês têm parceria com algum plano de saúde?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "convenio",
+        "start": 38,
+        "end": 43,
+        "confidence_entity": 0.963290810585022,
+        "value": "saúde",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tive um problema com a clínica e quero falar com alguém",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "especialidade",
+        "start": 23,
+        "end": 30,
+        "confidence_entity": 0.7586975693702698,
+        "value": "clínica",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

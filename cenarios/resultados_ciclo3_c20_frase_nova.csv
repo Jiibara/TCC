@@ -1,0 +1,4 @@
+quando,cenario,nome,execucao,sucesso,detalhe
+2026-11-23T16:42:06,20,"Pedido de troca sem ""remarcar"", com troca confirmada",1,1,
+2026-11-23T16:42:13,20,"Pedido de troca sem ""remarcar"", com troca confirmada",2,1,
+2026-11-23T16:42:21,20,"Pedido de troca sem ""remarcar"", com troca confirmada",3,1,
