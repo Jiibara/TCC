@@ -2886,4 +2886,42 @@ Este questionário faz parte do Trabalho de Conclusão de Curso de Adnan Omar Ji
 \medskip
 \noindent ( ) Concordo em participar \qquad ( ) Não concordo
 
+\newpage
+\apendice{Repositório do código-fonte}
+\label{ap:repositorio}
+
+O código-fonte do protótipo, o corpus de treinamento, os \textit{scripts} de teste e de análise e o texto deste trabalho estão disponíveis em repositório público:
+
+\begin{center}
+\url{https://github.com/Jiibara/TCC}
+\end{center}
+
+A versão descrita e avaliada neste trabalho corresponde à marcação (\textit{tag}) \texttt{v1.0-banca} do repositório, que preserva o estado do código na data da entrega, mesmo que o repositório receba alterações posteriores. A Tabela~\ref{tab:repositorio} apresenta a organização do repositório.
+
+\begin{table}[H]
+\centering
+\caption{Organização do repositório}
+\label{tab:repositorio}
+\small
+\begin{tabularx}{\textwidth}{L{3.3cm}YL{3.0cm}}
+\hline
+\textbf{Pasta ou arquivo} & \textbf{Conteúdo} & \textbf{Onde aparece no trabalho} \\
+\hline
+\texttt{rasa/} & Projeto Rasa: configuração do \textit{pipeline} (\texttt{config.yml}), domínio, corpus e regras (\texttt{data/}), ações customizadas (\texttt{actions/\allowbreak actions.py}), canal do Telegram (\texttt{telegram\_\allowbreak custom.py}), serviço de lembretes (\texttt{enviar\_\allowbreak lembretes.py}) e a divisão em treino e teste (\texttt{train\_\allowbreak test\_\allowbreak split/}) & Capítulos~\ref{cap:metodologia} e~\ref{cap:projeto}; Apêndices~\ref{ap:config} e~\ref{ap:corpus} \\
+\texttt{schema.sql} e \texttt{seed\_\allowbreak horarios.py} & Esquema do banco de dados e criação da agenda simulada & Seção~\ref{sec:modelagem-bd}; Apêndice~\ref{ap:ddl} \\
+\texttt{cenarios/} & Testes funcionais automatizados (\texttt{cenarios.py}) e os resultados de cada ciclo de refinamento (\texttt{*.csv}) & Seção~\ref{sec:resultados_obtidos}; Apêndice~\ref{ap:cenarios} \\
+\texttt{ablacao/} & Experimento com e sem o BERTimbau, partições de validação cruzada e testes estatísticos & Seção~\ref{sec:resultados_obtidos} \\
+\texttt{resultados/} & Medições do tempo de resposta e cálculo da pontuação SUS & Seção~\ref{sec:resultados_obtidos} \\
+\texttt{tcc/} & Texto deste trabalho em \LaTeX{} e as figuras & -- \\
+\hline
+\end{tabularx}
+\vspace{0.3cm}
+
+\footnotesize{Fonte: Elaborado pelo autor, 2026.}
+\end{table}
+
+\textbf{Execução.} O protótipo requer Python 3.8 e um \textit{bot} do Telegram. As instruções de instalação, de treinamento do modelo e de execução dos três processos (servidor do Rasa, servidor de ações e serviço de lembretes) estão no arquivo \texttt{README.md} do repositório. Os testes funcionais devem ser executados em um banco de dados de teste, indicado pela variável de ambiente \texttt{CLINICA\_DB}.
+
+\textbf{Itens não publicados.} Por segurança e em respeito à privacidade, não fazem parte do repositório: o \textit{token} de acesso do \textit{bot} do Telegram (substituído por um arquivo de exemplo, \texttt{credentials.exemplo.yml}), os bancos de dados SQLite e as respostas individuais do questionário SUS.
+
 \end{document}
